@@ -1,0 +1,843 @@
+{
+  "main-search": "Search...",
+  "lms": "LMS",
+  "comman-fields": {
+    "all-courses": "All Courses",
+    "content-search": {
+      "label": "Search",
+      "placeholder": "Search contents..."
+    },
+    "button": {
+      "add-user": "Add User",
+      "cancel": "Cancel"
+    },
+    "status": {
+      "label": "Status",
+      "all": "All Status",
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "department": {
+      "label": "Department",
+      "placeholder": "Select...",
+      "helper-text": "Select departments that can access this course",
+      "options-all-departments": "All Departments",
+      "options-engineering": "Engineering",
+      "options-human-resources": "Human Resources",
+      "options-marketing": "Marketing",
+      "options-sales": "Sales"
+    }
+  },
+  "tabs": {
+    "courses": "Courses",
+    "modules": "Modules",
+    "contents": "Contents"
+  },
+  "profile-dropdown": {
+    "welcome": "Welcome Admin!",
+    "menu": {
+      "profile": "Profile",
+      "messages": "Messages",
+      "taskboard": "Taskboard",
+      "help": "Help",
+      "balance": "Balance :",
+      "settings": "Settings",
+      "lock-screen": "Lock screen",
+      "logout": "Logout"
+    },
+    "badges": {
+      "new": "New"
+    }
+  },
+  "web-apps": {
+    "title": "Web Apps",
+    "view-all": "View All Apps >",
+    "github": "GitHub",
+    "bitbucket": "Bitbucket",
+    "dribbble": "Dribbble",
+    "dropbox": "Dropbox",
+    "mail-chimp": "Mail Chimp",
+    "slack": "Slack"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "menu": {
+      "user-management": "User Management",
+      "course-management": "Course Management"
+    },
+
+    "user-management": {
+      "title": "User Management",
+      "stats": {
+        "total-users": "Total Users",
+        "admins": "Admins",
+        "department-heads": "Department Heads",
+        "learners": "Learners"
+      },
+      "filters": {
+        "search": {
+          "placeholder": "Search users by name, email or departement..."
+        },
+        "roles": {
+          "all-roles": "All Roles",
+          "super-admin": "Super Admin",
+          "admin": "Admin",
+          "dept-head": "Dept Head",
+          "learner": "Learner"
+        }
+      },
+      "buttons": {
+        "export-csv": "Export CSV"
+      },
+      "table": {
+        "name": "Name",
+        "role": "Role",
+        "user-id": "User ID",
+        "department": "Department",
+        "course-progress": "Course Progress",
+        "action": "Action"
+      },
+      "user-detail": {
+        "title": "Select a user",
+        "subtitle": "Click on a user to view their details"
+      }
+    },
+    "course-management": {
+      "title": "Course Management",
+      "stats": {
+        "total-courses-label": "Total Courses",
+        "total-courses-description": "All courses in system",
+        "total-modules-label": "Total Modules",
+        "total-modules-description": "Across all courses",
+        "total-contents-label": "Total Contents",
+        "total-contents-description": "Videos, PDFs, etc.",
+        "active-courses-label": "Active Courses",
+        "active-courses-description": "Currently available",
+        "total-enrollments-label": "Total Enrollments",
+        "total-enrollments-description": "All user enrollments",
+        "completed-label": "Completed",
+        "completed-description": "Successfully finished"
+      },
+      "filters": {
+        "courses-search-label": "Search",
+        "courses-search-placeholder": "Search courses...",
+        "courses-department-label": "Department",
+        "courses-department-all": "All Departments",
+        "modules-search-label": "Search",
+        "modules-search-placeholder": "Search modules...",
+        "modules-course-label": "Course",
+        "modules-course-all": "All Courses",
+        "contents-module-label": "Module",
+        "contents-module-all": "All Modules",
+        "contents-content-type-label": "Content Type",
+        "contents-content-type-all": "All Types",
+        "reset-label": "Reset"
+      },
+      "buttons": {
+        "add-course": "Add Course",
+        "add-module": "Add Module",
+        "add-content": "Add Content"
+      },
+      "table": {
+        "courses-title": "Title",
+        "courses-description": "Description",
+        "courses-department": "Department",
+        "courses-details": "Details",
+        "courses-actions": "Actions",
+        "modules-title": "Title",
+        "modules-course": "Course",
+        "modules-order": "Order",
+        "modules-actions": "Actions",
+        "contents-title": "Title",
+        "contents-modules-and-courses": "Modules & Courses",
+        "contents-order": "Order",
+        "contents-actions": "Actions"
+      }
+    }
+  },
+  "quiz-management": {
+    "title": "Quiz Management",
+    "menu": {
+      "content-quiz-assignment": "Content Quiz Assignment",
+      "course-quick-tests": "Course Quick Tests"
+    },
+    "content-quiz-assignment": {
+      "title": "Content Quiz Assignment",
+      "stats": {
+        "total-quizzes": "Total Quizzes",
+        "active-quizzes": "Active Quizzes",
+        "total-questions": "Total Questions",
+        "contents-with-quiz": "Contents with Quiz",
+        "attempts": "Attempts",
+        "pass-rate": "Pass Rate"
+      },
+      "filters": {
+        "search-label": "Search",
+        "search-placeholder": "Search contents...",
+        "course-label": "Course",
+        "course-all": "All Courses",
+        "module-label": "Module",
+        "module-all": "All Modules",
+        "module-select-course-first": "Select Course First",
+        "content-type-label": "Content Type",
+        "content-type-all": "All Types",
+        "clear-filters": "Clear Filters"
+      },
+      "tabs": {
+        "contents": "Contents",
+        "quizzes": "Quizzes"
+      },
+      "contents-table": {
+        "content": "Content",
+        "modules": "Modules",
+        "quiz-status": "Quiz Status",
+        "actions": "Actions",
+        "video": "Video",
+        "module": "Module"
+      },
+      "quizzes-table": {
+        "quiz-title": "Quiz Title",
+        "type-questions": "Type & Questions",
+        "settings": "Settings",
+        "status": "Status",
+        "actions": "Actions"
+      },
+      "status": {
+        "active": "Active",
+        "inactive": "Inactive",
+        "no-quiz": "No Quiz"
+      },
+      "actions": {
+        "edit-quiz": "Edit Quiz",
+        "add-quiz": "Add Quiz"
+      }
+    },
+    "course-quick-tests": {
+      "title": "Course Quick Tests",
+      "stats": {
+        "total-tests": "Total Tests",
+        "active-tests": "Active Tests",
+        "inactive-tests": "Inactive Tests",
+        "total-questions": "Total Questions",
+        "avg-questions": "Avg Questions",
+        "courses-covered": "Courses Covered"
+      },
+      "buttons": {
+        "create-new-quick-test": "Create New Quick Test"
+      },
+      "filters": {
+        "search-tests-label": "Search Tests",
+        "search-tests-placeholder": "Search by test name or course...",
+        "filter-by-course-label": "Filter by Course",
+        "filter-by-course-all": "All Courses",
+        "filter-by-status-label": "Filter by Status",
+        "filter-by-status-all": "All Status",
+        "filter-by-status-active": "Active",
+        "filter-by-status-inactive": "Inactive"
+      },
+      "showing": "Showing {{count}} quick tests",
+      "table": {
+        "quick-test-name": "Quick Test Name",
+        "associated-course": "Associated Course",
+        "questions": "Questions",
+        "pass-percentage": "Pass %",
+        "status": "Status",
+        "actions": "Actions"
+      },
+      "course-id": "Course ID: {{id}}",
+      "brief-assessment": "A brief assessment to test your understanding of key concepts."
+    }
+  },
+  "course-quiz": {
+    "title": "Course Quiz",
+    "breadcrumb": {
+      "learning": "Learning"
+    },
+    "course-info": {
+      "title": "Art History",
+      "description": "Survey of art through the ages"
+    },
+    "badges": {
+      "modules": "Modules",
+      "total-quizzes": "Total Quizzes",
+      "available": "Available"
+    },
+    "buttons": {
+      "refresh": "Refresh",
+      "all-quizzes": "All Quizzes",
+      "back-to-courses": "Back to Courses",
+      "take-final-assessment": "Take Final Assessment",
+      "take-quiz": "Take Quiz"
+    },
+    "final-assessment": {
+      "title": "Final Course Assessment",
+      "description": "Take a comprehensive test covering all course material to earn your certification",
+      "no-active": "No active assessment available"
+    },
+    "learning-path": {
+      "title": "Learning Path",
+      "description": "Complete modules step-by-step and take individual content quizzes"
+    },
+    "table": {
+      "module-and-content": "Module & Content",
+      "quiz-info": "Quiz Info",
+      "your-progress": "Your Progress",
+      "status": "Status",
+      "action": "Action"
+    }
+  },
+  "certificates": {
+    "title": "Certificates",
+    "menu": {
+      "my-certificates": "My Certificates",
+      "all-users-certificates": "All Users Certificates"
+    },
+    "my-certificates": {
+      "title": "MY CERTIFICATES",
+      "your-certificates": "Your Certificates",
+      "congratulations": "Congratulations on your achievements! You have earned {{count}} certificates.",
+      "stats": {
+        "module": "Module",
+        "course": "Course"
+      },
+      "tabs": {
+        "module-certificates": "Module Certificates",
+        "course-certificates": "Course Certificates"
+      },
+      "certificate-card": {
+        "certificate-number": "Certificate Number:",
+        "user": "User:",
+        "average-score": "Average Score:",
+        "progress": "Progress:",
+        "issued": "Issued:",
+        "contents": "Contents",
+        "valid": "Valid"
+      },
+      "buttons": {
+        "view-details": "View Details",
+        "download-pdf": "Download PDF"
+      }
+    },
+    "all-users-certificates": {
+      "title": "CERTIFICATES",
+      "stats": {
+        "total-certificates": "Total Certificates",
+        "module-certificates": "Module Certificates",
+        "course-certificates": "Course Certificates",
+        "active-certificates": "Active Certificates"
+      },
+      "search": {
+        "placeholder": "Search by name or email..."
+      },
+      "show-per-page": "Show: {{count}} per page",
+      "filters": {
+        "15-users": "15 Users",
+        "81-modules": "81 Modules",
+        "6-courses": "6 Courses"
+      },
+      "table": {
+        "name": "Name",
+        "email": "Email",
+        "module-certs": "Module Certs",
+        "course-certs": "Course Certs",
+        "actions": "Actions"
+      }
+    }
+  },
+  "add-user-modal": {
+    "title": "Add User",
+    "edit": "Edit User",
+    "buttons": {
+      "close": "Close",
+      "update": "Update",
+      "add-user": "Add User",
+      "updating": "Updating...",
+      "creating": "Creating..."
+    },
+    "first-name": {
+      "label": "First Name",
+      "placeholder": "Enter First Name"
+    },
+    "last-name": {
+      "label": "Last Name",
+      "placeholder": "Enter Last Name"
+    },
+    "email": {
+      "label": "Email",
+      "placeholder": "Enter Email"
+    },
+    "role": {
+      "label": "Role",
+      "placeholder": "Select Role",
+      "options-learner": "Learner",
+      "options-admin": "Admin",
+      "options-department-head": "Department Head",
+      "options-super-admin": "Super Admin",
+      "helper-text": "You can create Admins, Department Heads, and Learners"
+    },
+    "password": {
+      "label": "Password",
+      "placeholder": "Enter Password"
+    },
+    "confirm-password": {
+      "label": "Confirm Password",
+      "placeholder": "Confirm Password"
+    },
+    "user-id": {
+      "label": "User ID",
+      "placeholder": "External company user ID"
+    },
+    "date-of-birth": {
+      "label": "Date of Birth"
+    },
+    "start-date": {
+      "label": "Start Date"
+    },
+    "end-date": {
+      "label": "End Date"
+    },
+    "status": {
+      "label": "Status",
+      "options-active": "Active",
+      "options-inactive": "Inactive"
+    },
+    "language-skills": {
+      "label": "Language Skills",
+      "language": "Language",
+      "language-placeholder": "Select language...",
+      "proficiency": "Proficiency",
+      "proficiency-placeholder": "Select proficiency...",
+      "options-english": "English",
+      "options-german": "German",
+      "options-french": "French",
+      "options-spanish": "Spanish",
+      "options-chinese": "Chinese",
+      "button": "Add Language"
+    },
+    "notifications": {
+      "creating-learner": "You are creating a Learner",
+      "creating-admin": "You are creating an Admin",
+      "creating-department-head": "You are creating a Department Head",
+      "creating-super-admin": "You are creating a Super Admin"
+    }
+  },
+  "create-course-modal": {
+    "title": "Create New Course",
+    "edit": "Edit New Course",
+    "course-title": {
+      "label": "Course Title",
+      "placeholder": "Enter course title"
+    },
+    "description": {
+      "label": "Description",
+      "placeholder": "Enter course description"
+    },
+    "passing-score": {
+      "label": "Passing Score"
+    },
+    "deadline": {
+      "label": "Deadline (Days)"
+    },
+    "language": {
+      "label": "Language",
+      "placeholder": "English",
+      "options-english": "English",
+      "options-german": "German"
+    },
+    "status": {
+      "label": "Status",
+      "active-course": "Active Course",
+      "helper-text": "Inactive courses won't be visible to learners"
+    },
+    "buttons": {
+      "cancel": "Cancel",
+      "create-course": "Create Course",
+      "update-course": "Update Course",
+      "saving": "Saving..."
+    }
+  },
+  "create-module-modal": {
+    "title": "Create New Module",
+    "edit": "Edit New Course",
+    "course-selection": {
+      "label": "Courses",
+      "placeholder": "Select courses..."
+    },
+    "module-title": {
+      "label": "Module Title",
+      "placeholder": "Enter module title"
+    },
+    "description": {
+      "label": "Description",
+      "placeholder": "Enter module description"
+    },
+    "status": {
+      "label": "Status",
+      "active-module": "Active Module",
+      "helper-text": "Inactive modules won't be visible to learners"
+    },
+    "buttons": {
+      "cancel": "Cancel",
+      "create-module": "Create Module",
+      "update-module": "Update Module",
+      "saving": "Saving...",
+      "validating-order": "Validating Order...",
+      "fix-order-conflict": "Fix Order Conflict"
+    }
+  },
+  "create-content-modal": {
+    "title": "Create New Content",
+    "edit": "Edit Content",
+    "module-selection": {
+      "label": "Modules",
+      "placeholder": "Select...",
+      "course-label": "Course"
+    },
+    "content-type": {
+      "label": "Content Type",
+      "placeholder": "Select content type...",
+      "options-video": "Video",
+      "options-audio": "Audio",
+      "options-image": "Image",
+      "options-pdf": "PDF"
+    },
+    "content-title": {
+      "label": "Title",
+      "placeholder": "Enter content title",
+      "required-text": "Content title is required"
+    },
+    "mandatory": {
+      "label": "Mandatory",
+      "required-for-completion": "Required for completion"
+    },
+    "requires-previous": {
+      "label": "Requires Previous",
+      "complete-previous-first": "Complete previous content first"
+    },
+    "video-file": {
+      "label": "Video File",
+      "button": "Browse...",
+      "no-file-selected": "No file selected.",
+      "supported-formats": "Supported formats: MP4, MOV, AVI, WebM (Max 2GB)",
+      "upload-status": "Upload Status",
+      "current-status": "Current Status",
+      "ready-to-upload": "Ready to upload after creation",
+      "uploading": "Uploading...",
+      "processing": "Processing video...",
+      "upload-complete": "✓ Upload complete!",
+      "upload-failed": "✗ Upload failed",
+      "ready-to-play": "✓ Ready to play",
+      "processing-failed": "✗ Processing failed",
+      "creating-content": "Creating content...",
+      "uploading-video": "Uploading video...",
+      "processing-video": "Processing video...",
+      "video-id": "Video ID"
+    },
+    "allow-skipping": {
+      "label": "Allow Skipping",
+      "allow-learners": "Allow learners to skip video"
+    },
+    "transcript": {
+      "label": "Transcript",
+      "placeholder": "Video transcript text"
+    },
+    "buttons": {
+      "cancel": "Cancel",
+      "create-content": "Create Content",
+      "update-content": "Update Content",
+      "saving": "Saving...",
+      "creating-content": "Creating Content...",
+      "uploading-video": "Uploading Video...",
+      "processing": "Processing..."
+    }
+  },
+  "create-quick-test-modal": {
+    "title": "Create New Quick Test",
+    "edit": "Edit Quick Test",
+    "steps": {
+      "basic-info": "Basic Information",
+      "question-selection": "Question Selection",
+      "review-finalize": "Review & Finalize"
+    },
+    "test-name": {
+      "label": "Quick Test Name",
+      "placeholder": "e.g., Python 101 - Final Certification",
+      "required-text": "Test name is required"
+    },
+    "select-course": {
+      "label": "Select Course",
+      "placeholder": "Select a course...",
+      "required-text": "Please select a course"
+    },
+    "description": {
+      "label": "Description",
+      "placeholder": "Instructions or notes about the test (optional)"
+    },
+    "passing-score": {
+      "label": "Passing Score",
+      "placeholder": "Enter passing score percentage",
+      "helper-text": "Minimum score required to pass"
+    },
+    "time-limit": {
+      "label": "Time Limit (minutes)",
+      "placeholder": "Enter time limit in minutes",
+      "helper-text": "Set duration for the test"
+    },
+    "max-attempts": {
+      "label": "Max Attempts",
+      "placeholder": "Enter max attempts allowed",
+      "helper-text": "Number of retries allowed for this test"
+    },
+    "activate-test": {
+      "label": "Activate test immediately"
+    },
+    "buttons": {
+      "cancel": "Cancel",
+      "next": "Next",
+      "previous": "Previous",
+      "create-test": "Create Test",
+      "update-quick-test": "Update Quick Test",
+      "updating": "Updating...",
+      "creating": "Creating..."
+    },
+    "course-selected-message": "Course selected",
+    "proceed-to-questions-message": "You can proceed to the next step to select questions for this test.",
+    "available-questions": {
+      "title": "Available Questions",
+      "module-based-selection": "Module-Based Selection",
+      "filter-by-module": "Filter by Module",
+      "filter-by-content": "Filter by Content",
+      "all-modules": "All Modules",
+      "all-contents": "All Contents",
+      "search-placeholder": "Search questions...",
+      "no-modules-found": "No modules found for this course.",
+      "no-questions-available": "No questions available for this course",
+      "no-questions-match-filters": "No questions match your filters",
+      "selected": "selected"
+    },
+    "selected-questions": {
+      "title": "Selected Questions",
+      "no-questions-message": "No questions selected yet.",
+      "add-questions-hint": "Add questions from the left panel.",
+      "shuffle": "Shuffle",
+      "summary-title": "Course Quick Test Summary",
+      "total-questions": "Total Questions",
+      "of": "of",
+      "available": "available",
+      "coverage": "Coverage",
+      "modules": "modules",
+      "drag-drop-hint": "Drag and drop questions to reorder them",
+      "remove-question": "Remove question"
+    },
+    "review-finalize-step": {
+      "title": "Review & Finalize",
+      "test-information-title": "Test Information",
+      "test-information-test-name": "Test Name:",
+      "test-information-course": "Course:",
+      "test-information-description": "Description:",
+      "test-information-passing-score": "Passing Score:",
+      "question-summary-title": "Question Summary",
+      "question-summary-total-questions": "Total Questions:",
+      "question-summary-total-questions-value": 11,
+      "question-summary-total-points": "Total Points:",
+      "question-summary-total-points-value": 21,
+      "question-summary-question-types": "Question Types:",
+      "success-message-text": "Your quick test is ready to be created!",
+      "success-message-updated": "Your quick test is ready to be updated!",
+      "success-message-icon": "checkmark",
+      "success-message-background-color": "light-green",
+      "selected-questions-title": "Selected Questions (in order)",
+      "no-description": "No description",
+      "type-label": "Type",
+      "points-label": "Points",
+      "selected-questions-data": [
+        {
+          "id": 1,
+          "number": 1,
+          "text": "Put expert trouble piece.?",
+          "type": "mcq",
+          "points": 2
+        },
+        {
+          "id": 2,
+          "number": 2,
+          "text": "Effect answer we itself run start suddenly.?",
+          "type": "order",
+          "points": 1
+        },
+        {
+          "id": 3,
+          "number": 3,
+          "text": "Off five program speech expert news music.?",
+          "type": "order",
+          "points": 1
+        },
+        {
+          "id": 4,
+          "number": 4,
+          "text": "Policy increase site audience television treat thing.?",
+          "type": "true_false",
+          "points": 1
+        },
+        {
+          "id": 5,
+          "number": 5,
+          "text": "Field computer effort miss it.?",
+          "type": "mcq",
+          "points": 3
+        }
+      ],
+      "buttons": {
+        "previous": "Previous",
+        "create-test": "Create Test"
+      },
+      "question-type-labels": {
+        "mcq": "mcq",
+        "order": "order",
+        "true_false": "true_false"
+      }
+    }
+  },
+  "certificate-details-modal": {
+    "title": "Certificate Details",
+    "certificate-information-title": "CERTIFICATE INFORMATION",
+    "certificate-information-certificate-number": "Certificate Number",
+    "certificate-information-user": "User",
+    "certificate-information-module": "Module",
+    "certificate-information-course": "Course",
+    "certificate-information-issued-date": "Issued Date",
+    "certificate-information-expiry-date": "Expiry Date",
+    "score-details-title": "SCORE DETAILS",
+    "score-details-average-score": "Average Score",
+    "score-details-content-completion": "Content Completion",
+    "score-details-individual-content-scores": "Individual Content Scores:",
+    "score-details-overall-score": "Overall Score",
+    "score-details-modules-average": "Modules Average",
+    "score-details-70-weight": "(70% weight)",
+    "score-details-final-assessment": "Final Assessment",
+    "score-details-30-weight": "(30% weight)",
+    "score-details-modules-completed": "Modules Completed",
+    "score-details-individual-module-scores": "Individual Module Scores:",
+    "contents": "Contents",
+    "modules": "Modules",
+    "cert": "Cert",
+    "certificate-revoked": "Certificate Revoked",
+    "buttons": {
+      "close": "Close",
+      "download-pdf": "Download PDF"
+    },
+    "toast": {
+      "generating-pdf": "Generating certificate PDF...",
+      "certificate-downloaded": "Certificate downloaded",
+      "failed-to-generate-pdf": "Failed to generate certificate PDF"
+    }
+  },
+  "course-quiz-view": {
+    "breadcrumb": {
+      "title": "Course Quiz",
+      "page-title": "Learning"
+    },
+    "table": {
+      "columns": {
+        "attempt-number": "#",
+        "date-time": "Date & Time",
+        "score": "Score",
+        "correct-answers": "Correct Answers",
+        "time-taken": "Time Taken",
+        "status": "Status",
+        "completed-on": "Completed On",
+        "attempts-used": "Attempts Used"
+      }
+    },
+    "badges": {
+      "best": "Best",
+      "incomplete": "Incomplete",
+      "in-progress": "In Progress",
+      "passed": "Passed",
+      "not-passed": "Not Passed",
+      "modules": "Modules",
+      "total-quizzes": "Total Quizzes",
+      "available": "Available"
+    },
+    "labels": {
+      "required": "Required",
+      "percent-correct": "% correct",
+      "of": "of",
+      "min": "min",
+      "minutes": "minutes",
+      "total": "total",
+      "na": "N/A",
+      "remaining": "remaining"
+    },
+    "buttons": {
+      "refresh": "Refresh",
+      "all-quizzes": "All Quizzes",
+      "back-to-courses": "Back to Courses",
+      "take-final-assessment": "Take Final Assessment",
+      "try-again": "Try Again",
+      "download-certificate": "Download Certificate",
+      "view-all-certificates": "View All My Certificates",
+      "generating": "Generating..."
+    },
+    "sections": {
+      "final-assessment": {
+        "title": "Final Course Assessment",
+        "description": "Take a comprehensive test covering all course material to earn your certification",
+        "time-limit": "Time Limit",
+        "questions": "Questions",
+        "attempts": "Attempts",
+        "passing-score": "Passing Score",
+        "your-best-score": "Your Best Score",
+        "required-to-pass": "Required to Pass",
+        "complete-modules-hint": "Complete all modules to unlock Final Assessment",
+        "max-attempts-reached": "Max attempts reached",
+        "no-active-assessment": "No active assessment available"
+      },
+      "best-performance": {
+        "title": "Your Best Performance",
+        "need-more": "Need",
+        "percent-more": "% more"
+      },
+      "attempt-history": {
+        "title": "Attempt History",
+        "total-attempts-singular": "Total Attempt",
+        "total-attempts-plural": "Total Attempts"
+      },
+      "certificate": {
+        "title": "Course Certificate Earned!",
+        "description": "Congratulations! You have successfully completed this course and earned your certificate.",
+        "certificate-number": "Certificate Number",
+        "issued-date": "Issued Date",
+        "final-score": "Final Score"
+      },
+      "learning-path": {
+        "title": "Learning Path",
+        "description": "Complete modules step-by-step and take individual content quizzes",
+        "mode": "Traditional Learning Mode"
+      },
+      "no-modules": {
+        "title": "No Modules Found",
+        "description": "This course doesn't have any modules with quizzes yet."
+      }
+    },
+    "errors": {
+      "no-modules-found": "No modules found for this course",
+      "course-not-found": "Course not found or no quiz modules available",
+      "no-permission": "You do not have permission to access this course",
+      "failed-to-load-course": "Failed to load course data",
+      "complete-content-first": "Complete the content before taking the quiz",
+      "max-attempts-reached": "Maximum quiz attempts reached",
+      "cooldown-wait": "Please wait before taking another quiz",
+      "failed-to-start-quiz": "Failed to start quiz session",
+      "no-active-assessment": "No active final assessment available for this course",
+      "failed-to-start-assessment": "Failed to start final assessment",
+      "error-loading-course": "Error Loading Course"
+    },
+    "toast": {
+      "generating-certificate-pdf": "Generating your certificate PDF...",
+      "certificate-downloaded": "Certificate downloaded",
+      "failed-to-generate-pdf": "Failed to generate certificate PDF. Please try again.",
+      "quiz-session-started": "Quiz session started successfully!"
+    }
+  }
+}

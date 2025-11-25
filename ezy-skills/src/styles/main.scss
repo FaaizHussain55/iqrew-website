@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 :root {
   color-scheme: light only;
@@ -16,7 +16,7 @@
 
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background: #fff;
   color: var(--brand-blue);
   line-height: 1.6;
@@ -36,23 +36,31 @@ img {
 
 .btn {
   border: none;
-  border-radius: 999px;
+  border-radius: 8px;
   font-weight: 600;
-  padding: 0.85rem 1.75rem;
-  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.95rem;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: all 0.2s ease;
+  white-space: nowrap;
 
   &--primary {
     background: var(--brand-orange);
     color: #fff;
-    box-shadow: 0 12px 24px rgba(255, 122, 0, 0.25);
+
+    &:hover {
+      background: #e66a00;
+    }
   }
 
   &--ghost {
     background: transparent;
-    color: var(--brand-blue);
-    border: 1px solid rgba(7, 33, 68, 0.15);
+    color: var(--brand-orange);
+    border: 1px solid var(--brand-orange);
+
+    &:hover {
+      background: rgba(255, 122, 0, 0.05);
+    }
   }
 
   &--block {
@@ -60,8 +68,23 @@ img {
     text-align: center;
   }
 
-  &:hover {
-    transform: translateY(-2px);
+  &--blue {
+    background: var(--brand-blue);
+    color: #fff;
+    
+    &:hover {
+      background: #051a35;
+    }
+  }
+
+  &--outline {
+    background: transparent;
+    color: var(--brand-orange);
+    border: 1px solid var(--brand-orange);
+    
+    &:hover {
+      background: rgba(255, 122, 0, 0.05);
+    }
   }
 }
 
