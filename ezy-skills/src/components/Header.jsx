@@ -1,5 +1,7 @@
 import "./Header.scss";
+import logo from "../assets/images/iqrew-logo.png";
 import { Link, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 const navLinks = [
   { label: "Home", path: "/", isActive: false },
@@ -10,50 +12,77 @@ const navLinks = [
   { label: "Contact US", path: "/contact", isActive: false },
 ];
 
+// Map of pathname to class to apply when at top
+const topPageClasses = {
+  "/pricing": "temp-blue-backdrop",
+  "/faq": "temp-orange-backdrop",
+  "/contact": "temp-orange-backdrop",
+};
+
 export default function Header() {
   const location = useLocation();
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const header = document.querySelector(".site-header");
+      if (!header) return;
+
+      const { pathname } = location;
+
+      // Add 'scrolled' class if scrolled more than 50px
+      if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+
+      // Remove all possible top-page classes first
+      Object.values(topPageClasses).forEach((cls) => header.classList.remove(cls));
+
+      // Add the class corresponding to pathname if scrollY === 0
+      if (window.scrollY <= 50 && topPageClasses[pathname]) {
+        header.classList.add(topPageClasses[pathname]);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Run once on mount to check initial state
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [location]);
+
   return (
-    <header className="site-header">
-      <div className="container header__container">
-        <Link to="/" className="header__brand" aria-label="EZY Skills Home">
-          <div className="brand__logo">
-            <div className="logo__hexagon">
-              <svg className="logo__cap-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2L3 7L3 17L12 22L21 17L21 7L12 2Z" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M12 22L12 12" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M3 7L12 12L21 7" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </div>
-          </div>
-          <div className="brand__text">
-            <span className="brand__title">EZY</span>
-            <span className="brand__subtitle">SKILLS</span>
-            <span className="brand__tagline">EMPOWER YOUR SKILLS</span>
-          </div>
-        </Link>
-
-        <nav className="header__nav" aria-label="Primary navigation">
-          {navLinks.map((link) => {
-            const isActive = location.pathname === link.path;
-            const LinkComponent = link.path.startsWith("#") ? "a" : Link;
-            const linkProps = link.path.startsWith("#") ? { href: link.path } : { to: link.path };
-
-            return (
-              <LinkComponent key={link.label} {...linkProps} className={`nav__link${isActive || link.isActive ? " nav__link--active" : ""}`}>
-                {link.label}
-              </LinkComponent>
-            );
-          })}
-        </nav>
-
-        <div className="header__actions">
-          <Link to="/login" className="btn btn--ghost">
-            Log In
+    <header className="site-header temp-orange-backdrop">
+      <div className="container">
+        <div className="header-flex">
+          <Link to="/" className="brand-logo" aria-label="iQrew Home">
+            <img src={logo} alt="iQrew Logo" />
           </Link>
-          <Link to="/signup" className="btn btn--primary">
-            Create Account
-          </Link>
+          <nav className="header-nav" aria-label="Primary navigation">
+            {navLinks.map((link) => {
+              const isActive = location.pathname === link.path;
+              const LinkComponent = link.path.startsWith("#") ? "a" : Link;
+              const linkProps = link.path.startsWith("#") ? { href: link.path } : { to: link.path };
+
+              return (
+                <LinkComponent key={link.label} {...linkProps} className={`nav__link${isActive || link.isActive ? " nav__link--active" : ""}`}>
+                  {link.label}
+                </LinkComponent>
+              );
+            })}
+          </nav>
+          <div className="header-actions">
+            <Link to="/login" className="btn btn--md btn-outline-orange">
+              Log In
+            </Link>
+            <Link to="/signup" className="btn btn--md btn--orange">
+              Create Account
+            </Link>
+          </div>
         </div>
       </div>
     </header>

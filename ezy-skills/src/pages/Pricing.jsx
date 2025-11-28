@@ -1,4 +1,5 @@
 import "./Pricing.scss";
+import vectorWave from "../assets/images/vector-wave.svg";
 
 const pricingPlans = [
   {
@@ -34,11 +35,16 @@ const pricingPlans = [
 export default function Pricing() {
   return (
     <div className="pricing-page">
-      <section className="pricing-section">
-        <div className="pricing-dots-left"></div>
-        <div className="pricing-dots-right"></div>
+      <section className="curve-top-section blue-curve pricing1">
         <div className="container">
-          <h1 className="pricing-title">LMS Pricing Plans</h1>
+          <h1 className="page-title">
+            Our <span className="text-orange">Pricing</span>
+          </h1>
+        </div>
+        <img className="vector-wave" src={vectorWave} alt="Vector Wave" />
+      </section>
+      <section className="pricing-section pricing2">
+        <div className="container">
           <div className="pricing-cards">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`pricing-card ${plan.featured ? "pricing-card--featured" : ""}`}>

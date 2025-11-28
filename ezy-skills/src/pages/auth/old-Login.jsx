@@ -1,8 +1,8 @@
-import "../App.scss";
-import heroIllustration from "../assets/hero-illustration.svg";
+import "./old-auth.scss";
+import heroIllustration from "../../assets/hero-illustration.svg";
 import { Link } from "react-router-dom";
 
-export default function Login() {
+export default function OldLogin() {
   return (
     <section className="hero" id="login">
       <div className="container">

@@ -1,5 +1,10 @@
 import { useState } from "react";
 import "./FAQ.scss";
+import vectorWave from "../assets/images/vector-wave.svg";
+import formVector1 from "../assets/images/vector-contact-form-dots.svg";
+import formVector2 from "../assets/images/vector-circle-orange.svg";
+import iconFaqMinus from "../assets/icons/icon-minus-orange.svg";
+import iconFaqPlus from "../assets/icons/icon-plus-orange.svg";
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(0);
@@ -88,29 +93,31 @@ export default function FAQ() {
 
   return (
     <div className="faq-page">
-      {/* FAQ Section */}
-      <section className="faq-section">
-        <div className="faq-background">
-          <div className="faq-decorative-dots"></div>
-          <div className="faq-curved-shape"></div>
-        </div>
+      <section className="curve-top-section orange-curve faq1">
         <div className="container">
-          <h1 className="faq-title">Frequently Asked Questions</h1>
+          <h1 className="page-title">Frequently Asked Questions</h1>
+        </div>
+        <img className="vector-wave" src={vectorWave} alt="Vector Wave" />
+      </section>
+
+      <section className="faq2">
+        <div className="container">
           <div className="faq-card">
             <div className="faq-list">
               {faqs.map((faq, index) => (
                 <div key={index} className={`faq-item ${openIndex === index ? "faq-item--open" : ""}`}>
                   <div className="faq-question" onClick={() => toggleFAQ(index)}>
-                    <div className="faq-icon">{openIndex === index ? <span className="faq-minus">−</span> : <span className="faq-plus">+</span>}</div>
-                    <div className="faq-question-text">
-                      {openIndex === index && <span className="faq-question-line"></span>}
-                      <span className="faq-question-content">{faq.question}</span>
+                    <div className="faq-icon">
+                      {openIndex === index ? <img src={iconFaqMinus} alt="Minus Icon" /> : <img src={iconFaqPlus} alt="Plus Icon" />}
                     </div>
+                    <div className="faq-question-text">{faq.question}</div>
                   </div>
                   {openIndex === index && <div className="faq-answer">{faq.answer}</div>}
                 </div>
               ))}
             </div>
+            <img className="form-vector1" src={formVector1} alt="Dots Vector" />
+            <img className="form-vector2" src={formVector2} alt="Circle Vector" />
           </div>
         </div>
       </section>

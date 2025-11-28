@@ -1,62 +1,11 @@
-.pricing-page {
-  min-height: 100vh;
+.pricing1 {
+  padding: 80px 0 540px;
+}
+.pricing2 {
+  margin-top: -400px;
 }
 
 .pricing-section {
-  position: relative;
-  padding: 5rem 0;
-  background: var(--brand-blue);
-  overflow: hidden;
-
-  @media (max-width: 768px) {
-    padding: 3rem 0;
-  }
-
-  .pricing-dots-left,
-  .pricing-dots-right {
-    position: absolute;
-    top: 0;
-    width: 100px;
-    height: 100%;
-    background-image: radial-gradient(circle, rgba(255, 122, 0, 0.3) 2px, transparent 2px);
-    background-size: 20px 20px;
-    z-index: 1;
-    pointer-events: none;
-
-    @media (max-width: 768px) {
-      width: 60px;
-      background-size: 15px 15px;
-    }
-  }
-
-  .pricing-dots-left {
-    left: 0;
-  }
-
-  .pricing-dots-right {
-    right: 0;
-  }
-
-  .pricing-title {
-    text-align: center;
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--brand-orange);
-    margin-bottom: 4rem;
-    position: relative;
-    z-index: 2;
-
-    @media (max-width: 768px) {
-      font-size: 2.25rem;
-      margin-bottom: 3rem;
-    }
-
-    @media (max-width: 480px) {
-      font-size: 1.875rem;
-      margin-bottom: 2rem;
-    }
-  }
-
   .pricing-cards {
     display: flex;
     align-items: stretch;

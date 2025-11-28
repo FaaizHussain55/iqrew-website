@@ -1,8 +1,8 @@
-import "../App.scss";
-import heroIllustration from "../assets/hero-illustration.svg";
+import "./old-auth.scss";
+import heroIllustration from "../../assets/hero-illustration.svg";
 import { Link } from "react-router-dom";
 
-export default function SignUp() {
+export default function OldSignUp() {
   return (
     <section className="hero" id="home">
       <div className="container">
@@ -89,3 +89,4 @@ export default function SignUp() {
     </section>
   );
 }
+

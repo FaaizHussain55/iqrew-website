@@ -90,7 +90,7 @@ export default function Home() {
               <p>Access structured courses, interactive modules, and earn certificates to advance your professional journey.</p>
               <div className="hero-cta">
                 <input type="text" placeholder="Search contents..." className="hero-search" />
-                <button className="btn btn--primary">Get Started</button>
+                <button className="btn btn--orange">Get Started</button>
               </div>
             </div>
             <div className="hero-image">
@@ -155,7 +155,14 @@ export default function Home() {
                           <div className="ezy-logo-card">
                             <div className="logo-hexagon-small">
                               <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 2L3 7L3 17L12 22L21 17L21 7L12 2Z" stroke="#ff7a00" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                                <path
+                                  d="M12 2L3 7L3 17L12 22L21 17L21 7L12 2Z"
+                                  stroke="#ff7a00"
+                                  strokeWidth="1.5"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  fill="none"
+                                />
                                 <path d="M12 22L12 12" stroke="#ff7a00" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                                 <path d="M3 7L12 12L21 7" stroke="#ff7a00" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                               </svg>
@@ -313,7 +320,7 @@ export default function Home() {
             ))}
           </div>
           <div className="text-center" style={{ marginTop: "3rem" }}>
-            <button className="btn btn--primary">View All Courses</button>
+            <button className="btn btn--orange">View All Courses</button>
           </div>
         </div>
       </section>
@@ -332,19 +339,34 @@ export default function Home() {
                   <div className="climber climber-1">
                     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <circle cx="12" cy="8" r="4" fill="#ff7a00" />
-                      <path d="M6 21V19C6 16.7909 7.79086 15 10 15H14C16.2091 15 18 16.7909 18 19V21" stroke="#072144" strokeWidth="2" strokeLinecap="round" />
+                      <path
+                        d="M6 21V19C6 16.7909 7.79086 15 10 15H14C16.2091 15 18 16.7909 18 19V21"
+                        stroke="#072144"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                      />
                     </svg>
                   </div>
                   <div className="climber climber-2">
                     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <circle cx="12" cy="8" r="4" fill="#ff7a00" />
-                      <path d="M6 21V19C6 16.7909 7.79086 15 10 15H14C16.2091 15 18 16.7909 18 19V21" stroke="#072144" strokeWidth="2" strokeLinecap="round" />
+                      <path
+                        d="M6 21V19C6 16.7909 7.79086 15 10 15H14C16.2091 15 18 16.7909 18 19V21"
+                        stroke="#072144"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                      />
                     </svg>
                   </div>
                   <div className="climber climber-3">
                     <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <circle cx="12" cy="8" r="4" fill="#fff" />
-                      <path d="M6 21V19C6 16.7909 7.79086 15 10 15H14C16.2091 15 18 16.7909 18 19V21" stroke="#fff" strokeWidth="2" strokeLinecap="round" />
+                      <path
+                        d="M6 21V19C6 16.7909 7.79086 15 10 15H14C16.2091 15 18 16.7909 18 19V21"
+                        stroke="#fff"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                      />
                       <path d="M12 2L14 6L12 10L10 6L12 2Z" fill="#072144" />
                       <line x1="12" y1="2" x2="12" y2="6" stroke="#072144" strokeWidth="2" />
                     </svg>
