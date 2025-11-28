@@ -3,12 +3,12 @@
   padding: 0 0 120px;
   z-index: 1;
   .faq-card {
-    background: #fff;
-    border-radius: 24px;
-    padding: 48px;
-    box-shadow: 0 20px 60px rgba(7, 33, 68, 0.2);
     position: relative;
     width: 95%;
+    background: #fff;
+    padding: 48px;
+    box-shadow: 0 20px 60px rgba(7, 33, 68, 0.2);
+    border-radius: 24px;
     margin: -300px auto 0;
     .faq-list {
       display: flex;
@@ -114,9 +114,9 @@
   .faq2 {
     padding: 0 0 60px;
     .faq-card {
-      border-radius: 16px;
-      padding: 20px 16px;
       width: 100%;
+      padding: 20px 16px;
+      border-radius: 16px;
       margin: -250px auto 0;
       .faq-list {
         .faq-item {
