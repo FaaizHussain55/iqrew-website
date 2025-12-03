@@ -84,7 +84,7 @@ export default function Pricing() {
       </section>
 
       {/* Course Management Features */}
-      <section className="feature-comparison-section">
+      <section className="feature-comparison-section first-feature">
         <div className="container">
           <h2 className="comparison-title">Course Management Features</h2>
           <div className="comparison-table-wrapper">

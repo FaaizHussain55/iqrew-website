@@ -5,8 +5,6 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import SignUp from "./pages/auth/SignUp";
 import Login from "./pages/auth/Login";
-import OldSignUp from "./pages/auth/old-SignUp";
-import OldLogin from "./pages/auth/old-Login";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
 import Pricing from "./pages/Pricing";
@@ -35,8 +33,6 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/old-signup" element={<OldSignUp />} />
-          <Route path="/old-login" element={<OldLogin />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/pricing" element={<Pricing />} />

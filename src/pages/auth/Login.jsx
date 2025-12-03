@@ -1,5 +1,5 @@
 import "./auth.scss";
-import authVector from "../../assets/images/auth-vector.svg";
+import authVector from "../../assets/images/auth-vector2.png";
 import { Link } from "react-router-dom";
 import authGoogleIcon from "../../assets/icons/icon-auth-google.svg";
 import authFacebookIcon from "../../assets/icons/icon-auth-fb.svg";

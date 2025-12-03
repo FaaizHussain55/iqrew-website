@@ -45,8 +45,10 @@ export default function About() {
             {/* Left Side */}
             <div className="about-hero-left">
               <div className="about-label">ABOUT US</div>
-              <h1 className="about-title">The Platform For The Next Billion Learners</h1>
-              <p className="about-subtitle">Transforming tech education for the next generation of students & employees</p>
+              <h1 className="about-title">Empowering Learning Through Advanced LMS Technology</h1>
+              <p className="about-subtitle">
+                A comprehensive Learning Management System designed to transform how organizations train learners, manage courses, and track progress across departments
+              </p>
               <div className="about-dots-pattern"></div>
             </div>
 
@@ -62,7 +64,7 @@ export default function About() {
                         <circle cx="8.5" cy="8.5" r="1.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                         <path d="M21 15L16 10L5 21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
-                      <span>Student Reading</span>
+                      <span>Learners Studying</span>
                     </div>
                   </div>
                 </div>
@@ -77,7 +79,7 @@ export default function About() {
                         <circle cx="8.5" cy="8.5" r="1.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                         <path d="M21 15L16 10L5 21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
-                      <span>Team Collaboration</span>
+                      <span>Course Management</span>
                     </div>
                   </div>
                 </div>
@@ -92,7 +94,7 @@ export default function About() {
                         <circle cx="8.5" cy="8.5" r="1.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                         <path d="M21 15L16 10L5 21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
-                      <span>Students Learning</span>
+                      <span>Interactive Learning</span>
                     </div>
                   </div>
                 </div>
@@ -118,7 +120,7 @@ export default function About() {
                         <circle cx="8.5" cy="8.5" r="1.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                         <path d="M21 15L16 10L5 21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
-                      <span>Students Collaborating</span>
+                      <span>Learning Path</span>
                     </div>
                   </div>
                 </div>
@@ -162,15 +164,15 @@ export default function About() {
             <div className="our-story-right">
               <div className="story-label">OUR STORY</div>
               <h2 className="story-title">
-                <span className="story-title-line">Innovating new ways</span>
-                <span className="story-title-line">to train students</span>
+                <span className="story-title-line">Revolutionizing corporate</span>
+                <span className="story-title-line">and educational learning</span>
               </h2>
               <div className="story-text">
                 <p className="story-paragraph">
-                  We see no limits to what we can achieve by harnessing our individual and collective strengths. We are changing the world with our ideas, insights, and unique perspectives.
+                  Founded with a vision to bridge the gap between traditional learning and modern workforce needs, our LMS platform empowers organizations to deliver comprehensive training programs. We've built a system that seamlessly manages courses, modules, and content while tracking learner progress across departments.
                 </p>
                 <p className="story-paragraph">
-                  Our innovation is led by data, curiosity and the occasional happy accident. We create an uplifting environment where we learn from our failures and celebrate our success.
+                  Our platform supports learners, department heads, and administrators with intuitive course management, interactive quizzes, comprehensive assessments, and automated certificate generation. We believe in creating an environment where learning is accessible, measurable, and rewarding for everyone.
                 </p>
               </div>
             </div>
@@ -202,8 +204,7 @@ export default function About() {
                 <span className="mv-title-prefix">Our</span> <span className="mv-title-main">Mission</span>
               </h2>
               <p className="mv-description">
-                Provide practice based skill trainings using an unique teaching methodologies & skill platform to enhance right skills required in an industry for working professionals, Non-Tech
-                professionals, College students & Start-ups through new skilling, up skilling & re-skilling.
+                To provide a comprehensive Learning Management System that enables organizations to create, manage, and deliver effective training programs. We empower learners through structured courses, interactive modules, comprehensive assessments, and achievement tracking, ensuring continuous skill development and knowledge retention across all departments and roles.
               </p>
             </div>
 
@@ -228,7 +229,9 @@ export default function About() {
               <h2 className="mv-title">
                 <span className="mv-title-prefix">Our</span> <span className="mv-title-main">Vision</span>
               </h2>
-              <p className="mv-description">To transform into a right employee by imparting industry suited IT skills in a corporate office working environment with Holistic approach.</p>
+              <p className="mv-description">
+                To become the leading Learning Management System platform that transforms how organizations approach employee development and training. We envision a future where every learner has access to personalized learning paths, real-time progress tracking, and recognized certifications that drive career growth and organizational success.
+              </p>
             </div>
           </div>
         </div>

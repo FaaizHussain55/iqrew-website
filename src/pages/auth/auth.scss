@@ -7,9 +7,10 @@
     display: flex;
     align-items: center;
     column-gap: 100px;
+    justify-content: space-between;
   }
   .auth-card {
-    width: calc(40% - 50px);
+    width: 460px;
     background: var(--bg-brilliance);
     border-radius: 32px;
     padding: 32px 36px;
@@ -161,11 +162,81 @@
     }
   }
   .vector-container {
-    width: calc(60% - 50px);
+    width: 680px;
     .vector {
       display: block;
       width: 100%;
       height: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 1199.98px) and (min-width: 992px) {
+  .auth-page {
+    min-height: calc(100dvh - 431px);
+    padding: 48px 0;
+    .auth-flex {
+      column-gap: 56px;
+    }
+    .auth-card {
+      width: 380px;
+      border-radius: 24px;
+      padding: 32px 28px 24px;
+      .card-title {
+        font-size: 26px;
+        margin-bottom: 36px;
+      }
+      .auth-form {
+        .input-field {
+          font-size: 14px;
+          margin-top: 18px;
+        }
+        .remember {
+          font-size: 14px;
+          margin-top: 18px;
+          input[type="checkbox"] {
+            width: 14px;
+            height: 14px;
+          }
+        }
+        .btn-submit {
+          min-width: 120px;
+          margin: 24px auto 0;
+        }
+      }
+      .separator {
+        left: calc(50% - 6px);
+        margin: 16px 0;
+        font-size: 13px;
+        &::before,
+        &::after {
+          width: 70px;
+        }
+        &::before {
+          left: -80px;
+        }
+        &::after {
+          right: -80px;
+        }
+      }
+      .social-actions {
+        width: 240px;
+        row-gap: 10px;
+        .social-btn {
+          font-size: 13px;
+          .social-icon {
+            width: 15px;
+          }
+        }
+      }
+      .terms {
+        width: 200px;
+        font-size: 10px;
+        margin: 16px auto 0;
+      }
+    }
+    .vector-container {
+      width: 490px;
     }
   }
 }

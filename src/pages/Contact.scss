@@ -95,6 +95,65 @@
   }
 }
 
+@media screen and (max-width: 1399.98px) and (min-width: 1200px) {
+  .contact2 {
+    .form-card {
+      width: 80%;
+      padding: 60px;
+      margin: -240px auto 0;
+      .contact-form {
+        .fields-flex {
+          row-gap: 28px;
+        }
+        .form-row {
+          column-gap: 28px;
+        }
+        .form-disclaimer {
+          font-size: 15px;
+          margin-top: 18px;
+        }
+        .btn--send {
+          margin-top: 24px;
+          min-width: 140px;
+        }
+      }
+      .form-vector1 {
+        bottom: 64px;
+        left: -42px;
+        height: 220px;
+      }
+      .form-vector2 {
+        bottom: -48px;
+        right: -64px;
+        width: 100px;
+      }
+    }
+
+    .contact-info-cards {
+      column-gap: 120px;
+      margin: 120px 0;
+      .info-card {
+        width: 335px;
+        .info-icon {
+          height: 72px;
+        }
+        .info-title {
+          font-size: 20px;
+        }
+        .info-description {
+          font-size: 15px;
+        }
+        .info-link {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1199.98px) and (min-width: 992px) {
+}
+
 @media (max-width: 768px) {
   .contact2 {
     .form-card {

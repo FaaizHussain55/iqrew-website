@@ -286,19 +286,22 @@
 
 // Feature Comparison Section
 .feature-comparison-section {
-  padding: 5rem 0;
-  background: #f7fbff;
-
+  padding: 3rem 0;
+  &.first-feature {
+    padding-top: 8rem;
+  }
+  &:last-of-type {
+    padding-bottom: 6rem;
+  }
   @media (max-width: 768px) {
     padding: 3rem 0;
   }
 
   .comparison-title {
-    text-align: center;
     font-size: 2.5rem;
     font-weight: 700;
     color: var(--brand-blue);
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 
     @media (max-width: 768px) {
       font-size: 2rem;
@@ -311,8 +314,6 @@
   }
 
   .comparison-table-wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
     overflow-x: auto;
   }
 

@@ -76,24 +76,71 @@ export default function Checkout() {
 
               {/* Payment Form */}
               <form className="payment-form" onSubmit={handleSubmit}>
-                <div className="form-field">
-                  <label htmlFor="nameOnCard">Name on Card</label>
-                  <input type="text" id="nameOnCard" name="nameOnCard" value={formData.nameOnCard} onChange={handleChange} placeholder="Enter name on Card" required />
+                <div className="form-item">
+                  <label className="form-label" htmlFor="nameOnCard">
+                    Name on Card
+                  </label>
+                  <input
+                    className="form-field"
+                    type="text"
+                    id="nameOnCard"
+                    name="nameOnCard"
+                    value={formData.nameOnCard}
+                    onChange={handleChange}
+                    placeholder="Enter name on Card"
+                    required
+                  />
                 </div>
 
-                <div className="form-field">
-                  <label htmlFor="cardNumber">Card Number</label>
-                  <input type="text" id="cardNumber" name="cardNumber" value={formData.cardNumber} onChange={handleChange} placeholder="Enter Card Number" maxLength="19" required />
+                <div className="form-item">
+                  <label className="form-label" htmlFor="cardNumber">
+                    Card Number
+                  </label>
+                  <input
+                    className="form-field"
+                    type="text"
+                    id="cardNumber"
+                    name="cardNumber"
+                    value={formData.cardNumber}
+                    onChange={handleChange}
+                    placeholder="Enter Card Number"
+                    maxLength="19"
+                    required
+                  />
                 </div>
 
                 <div className="form-row">
-                  <div className="form-field">
-                    <label htmlFor="expirationDate">Expiration Date (MM/YY)</label>
-                    <input type="text" id="expirationDate" name="expirationDate" value={formData.expirationDate} onChange={handleChange} placeholder="Enter Expiration Date" maxLength="5" required />
+                  <div className="form-item">
+                    <label className="form-label" htmlFor="expirationDate">
+                      Expiration Date (MM/YY)
+                    </label>
+                    <input
+                      className="form-field"
+                      type="text"
+                      id="expirationDate"
+                      name="expirationDate"
+                      value={formData.expirationDate}
+                      onChange={handleChange}
+                      placeholder="Enter Expiration Date"
+                      maxLength="5"
+                      required
+                    />
                   </div>
-                  <div className="form-field">
-                    <label htmlFor="cvc">CVC</label>
-                    <input type="text" id="cvc" name="cvc" value={formData.cvc} onChange={handleChange} placeholder="Enter CVC" maxLength="4" required />
+                  <div className="form-item">
+                    <label className="form-label" htmlFor="cvc">
+                      CVC
+                    </label>
+                    <input
+                      className="form-field"
+                      type="text"
+                      id="cvc"
+                      name="cvc"
+                      value={formData.cvc}
+                      onChange={handleChange}
+                      placeholder="Enter CVC"
+                      maxLength="4"
+                      required
+                    />
                   </div>
                 </div>
 
@@ -102,7 +149,7 @@ export default function Checkout() {
                   <label htmlFor="saveInfo">Save my information for faster checkout</label>
                 </div>
 
-                <button type="submit" className="btn btn--checkout">
+                <button type="submit" className="btn btn--md btn--orange">
                   Confirm Payment
                 </button>
               </form>
@@ -117,7 +164,17 @@ export default function Checkout() {
                     <div className="item-image">
                       <div className="image-placeholder-summary">
                         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                          <rect
+                            x="3"
+                            y="3"
+                            width="18"
+                            height="18"
+                            rx="2"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
                           <circle cx="8.5" cy="8.5" r="1.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                           <path d="M21 15L16 10L5 21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
