@@ -88,8 +88,8 @@ export default function Footer() {
         </div>
         <div className="footer-lower">
           <div className="footer-legal">
-            <a href="#terms">Terms &amp; Conditions</a>
-            <a href="#privacy">Privacy Policy</a>
+            <Link to="/terms">Terms &amp; Conditions</Link>
+            <Link to="/privacy">Privacy Policy</Link>
           </div>
           <div className="footer-socials">
             {socials.map((social) => (

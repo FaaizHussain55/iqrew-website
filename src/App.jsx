@@ -13,6 +13,8 @@ import CourseDetails from "./pages/CourseDetails";
 import About from "./pages/About";
 import Checkout from "./pages/Checkout";
 import CheckoutNew from "./pages/CheckoutNew";
+import Terms from "./pages/Terms";
+import Privacy from "./pages/Privacy";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -42,6 +44,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/checkout-new" element={<CheckoutNew />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/privacy" element={<Privacy />} />
         </Routes>
       </main>
       <Footer />
