@@ -1,6 +1,7 @@
 import "./Footer.scss";
 import logoWhite from "../assets/images/iqrew-logo-white.png";
 import { Link } from "react-router-dom";
+import { useIsMobile } from "../hooks/useIsMobile";
 import iconFacebook from "../assets/icons/icon-facebook.svg";
 import iconTwitter from "../assets/icons/icon-twitter.svg";
 import iconInstagram from "../assets/icons/icon-instagram.svg";
@@ -11,7 +12,14 @@ import iconEmail from "../assets/icons/icon-email.svg";
 import iconPhone from "../assets/icons/icon-phone.svg";
 import iconChevronRight from "../assets/icons/icon-chevron-right.svg";
 
-const quickLinks = ["Home", "About", "Courses", "FAQ", "Pricing", "Contact US"];
+const quickLinks = [
+  { label: "Home", path: "/" },
+  { label: "About", path: "/about" },
+  { label: "Courses", path: "/courses" },
+  { label: "FAQ", path: "/faq" },
+  { label: "Pricing", path: "/pricing" },
+  { label: "Contact US", path: "/contact" },
+];
 
 // Icon mapping for dynamic icon loading
 const iconMap = {
@@ -31,6 +39,8 @@ const socials = [
 ];
 
 export default function Footer() {
+  const isMobile = useIsMobile();
+
   return (
     <footer className="site-footer" id="contact">
       <div className="container">
@@ -58,11 +68,22 @@ export default function Footer() {
               Quick <span className="text-orange">Links</span>
             </h4>
             <div className="quick-links">
-              {quickLinks.map((item) => (
-                <a key={item} href="#home">
-                  {item}
-                </a>
-              ))}
+              {quickLinks.map((link) => {
+                const LinkComponent = link.path.startsWith("#") ? "a" : Link;
+                const linkProps = link.path.startsWith("#") ? { href: link.path } : { to: link.path };
+
+                return (
+                  <LinkComponent key={link.label} {...linkProps}>
+                    {link.label}
+                  </LinkComponent>
+                );
+              })}
+              {isMobile && (
+                <>
+                  <Link to="/terms">Terms &amp; Conditions</Link>
+                  <Link to="/privacy">Privacy Policy</Link>
+                </>
+              )}
             </div>
           </div>
 
@@ -87,10 +108,12 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer-lower">
-          <div className="footer-legal">
-            <Link to="/terms">Terms &amp; Conditions</Link>
-            <Link to="/privacy">Privacy Policy</Link>
-          </div>
+          {!isMobile && (
+            <div className="footer-legal">
+              <Link to="/terms">Terms &amp; Conditions</Link>
+              <Link to="/privacy">Privacy Policy</Link>
+            </div>
+          )}
           <div className="footer-socials">
             {socials.map((social) => (
               <a key={social.icon} href={social.url} aria-label={social.label} className="social-link" target="_blank" rel="noopener noreferrer">

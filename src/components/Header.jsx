@@ -1,9 +1,10 @@
 import "./Header.scss";
 import logo from "../assets/images/iqrew-logo.png";
 import { Link, useLocation } from "react-router-dom";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import hamburgerIcon from "../assets/icons/icon-hamburger.svg";
 import { useIsMobile } from "../hooks/useIsMobile";
+import Sidebar from "./Sidebar";
 
 const navLinks = [
   { label: "Home", path: "/", isActive: false },
@@ -24,7 +25,6 @@ const topPageClasses = {
 export default function Header() {
   const location = useLocation();
   const [isMenuToggled, setIsMenuToggled] = useState(false);
-  const headerRef = useRef(null);
   const isMobile = useIsMobile();
 
   const handleToggleMenu = () => {
@@ -32,21 +32,8 @@ export default function Header() {
   };
 
   const handleCloseMenu = () => {
-    if (isMobile) {
-      setIsMenuToggled(false);
-    }
+    setIsMenuToggled(false);
   };
-
-  useEffect(() => {
-    const header = headerRef.current || document.querySelector(".site-header");
-    if (!header) return;
-
-    if (isMenuToggled) {
-      header.classList.add("toggled-menu");
-    } else {
-      header.classList.remove("toggled-menu");
-    }
-  }, [isMenuToggled]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -82,57 +69,53 @@ export default function Header() {
   }, [location]);
 
   return (
-    <header ref={headerRef} className="site-header temp-orange-backdrop">
-      <div className="container">
-        <div className="header-flex">
-          <Link to="/" className="brand-logo" aria-label="iQrew Home">
-            <img src={logo} alt="iQrew Logo" />
-          </Link>
-          <nav className="header-nav" aria-label="Primary navigation">
-            {navLinks.map((link) => {
-              const isActive = location.pathname === link.path;
-              const LinkComponent = link.path.startsWith("#") ? "a" : Link;
-              const linkProps = link.path.startsWith("#") ? { href: link.path } : { to: link.path };
+    <>
+      <header className="site-header temp-orange-backdrop">
+        <div className="container">
+          <div className="header-flex">
+            <Link to="/" className="brand-logo" aria-label="iQrew Home">
+              <img src={logo} alt="iQrew Logo" />
+            </Link>
+            {!isMobile && (
+              <>
+                <nav className="header-nav" aria-label="Primary navigation">
+                  {navLinks.map((link) => {
+                    const isActive = location.pathname === link.path;
+                    const LinkComponent = link.path.startsWith("#") ? "a" : Link;
+                    const linkProps = link.path.startsWith("#") ? { href: link.path } : { to: link.path };
 
-              return (
-                <LinkComponent
-                  key={link.label}
-                  {...linkProps}
-                  className={`nav__link${isActive || link.isActive ? " nav__link--active" : ""}`}
-                  onClick={handleCloseMenu}
-                >
-                  {link.label}
-                </LinkComponent>
-              );
-            })}
-            {isMobile && (
-              <div className="header-actions">
-                <Link to="/login" className="btn btn--md btn-outline-orange" onClick={handleCloseMenu}>
-                  Log In
-                </Link>
-                <Link to="/signup" className="btn btn--md btn--orange" onClick={handleCloseMenu}>
-                  Create Account
-                </Link>
-              </div>
+                    return (
+                      <LinkComponent key={link.label} {...linkProps} className={`nav__link${isActive || link.isActive ? " nav__link--active" : ""}`}>
+                        {link.label}
+                      </LinkComponent>
+                    );
+                  })}
+                </nav>
+                <div className="header-actions">
+                  <Link to="/login" className="btn btn--md btn-outline-orange">
+                    Log In
+                  </Link>
+                  <Link to="/signup" className="btn btn--md btn--orange">
+                    Create Account
+                  </Link>
+                </div>
+              </>
             )}
-          </nav>
-          {!isMobile && (
-            <div className="header-actions">
-              <Link to="/login" className="btn btn--md btn-outline-orange">
-                Log In
-              </Link>
-              <Link to="/signup" className="btn btn--md btn--orange">
-                Create Account
-              </Link>
-            </div>
-          )}
-          {isMobile && (
-            <button className="btn-hamburger" onClick={handleToggleMenu}>
-              <img src={hamburgerIcon} alt="Menu" />
-            </button>
-          )}
+            {isMobile && (
+              <button
+                className="btn-hamburger"
+                onClick={handleToggleMenu}
+                aria-label={isMenuToggled ? "Close menu" : "Open menu"}
+                aria-expanded={isMenuToggled}
+                type="button"
+              >
+                <img src={hamburgerIcon} alt="" aria-hidden="true" />
+              </button>
+            )}
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
+      {isMobile && <Sidebar isOpen={isMenuToggled} onClose={handleCloseMenu} />}
+    </>
   );
 }

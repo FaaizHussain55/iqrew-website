@@ -55,42 +55,6 @@
     background-color: var(--white);
     border-bottom-color: rgba(7, 33, 68, 0.08);
   }
-  &.temp-blue-backdrop,
-  &.temp-orange-backdrop {
-    .header-flex {
-      .brand-logo {
-        img {
-          filter: brightness(0) invert(1);
-        }
-      }
-      .header-nav {
-        .nav__link {
-          color: rgb(255 255 255 / 90%);
-          &--active {
-            color: var(--white);
-          }
-          &:hover {
-            color: var(--white);
-          }
-        }
-      }
-      .header-actions {
-        .btn-outline-orange {
-          color: var(--white);
-          border-color: var(--white);
-        }
-        .btn--orange {
-          background: var(--white);
-          color: #303030;
-          border-color: var(--white);
-          &:hover {
-            background: var(--white);
-            color: #303030;
-          }
-        }
-      }
-    }
-  }
 }
 
 @media screen and (max-width: 1399.98px) and (min-width: 1200px) {
@@ -142,17 +106,61 @@
   }
 }
 
+@media (min-width: 992px) {
+  .site-header {
+    &.temp-blue-backdrop,
+    &.temp-orange-backdrop {
+      .header-flex {
+        .brand-logo {
+          img {
+            filter: brightness(0) invert(1);
+          }
+        }
+        .header-nav {
+          .nav__link {
+            color: rgb(255 255 255 / 90%);
+            &--active {
+              color: var(--white);
+            }
+            &:hover {
+              color: var(--white);
+            }
+          }
+        }
+        .header-actions {
+          .btn-outline-orange {
+            color: var(--white);
+            border-color: var(--white);
+          }
+          .btn--orange {
+            background: var(--white);
+            color: #303030;
+            border-color: var(--white);
+            &:hover {
+              background: var(--white);
+              color: #303030;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .site-header {
+    background-color: var(--white);
     padding: 12px 0;
     .header-flex {
       .brand-logo {
         img {
-          width: 120px;
+          width: 110px;
         }
       }
       .header-nav {
         max-height: 0;
+        width: 100%;
+        column-gap: 24px;
         position: absolute;
         left: 0;
         top: 100%;

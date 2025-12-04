@@ -139,8 +139,27 @@ img {
 .text-blue {
   color: var(--brand-blue);
 }
+.link-inline {
+  color: var(--brand-orange);
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
 
 // Form & Fields
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
 .form-label {
   display: inline-block;
   font-size: 16px;
@@ -326,10 +345,9 @@ img {
   }
 
   .curve-top-section {
-    padding: 32px 0 300px;
+    padding: 36px 0 260px;
     &::before {
-      top: -66px;
-      height: 67px;
+      display: none;
     }
     .page-title {
       font-size: 28px;
