@@ -3,7 +3,7 @@ import vectorWave from "../assets/images/vector-wave.svg";
 
 const pricingPlans = [
   {
-    label: "Learner Plan",
+    label: "Basic Plan",
     price: "20,000",
     features: [
       { icon: "✓", text: "Access to All Courses" },
@@ -12,7 +12,7 @@ const pricingPlans = [
     ],
   },
   {
-    label: "Department Head Plan",
+    label: "Premium Plan",
     price: "50,000",
     features: [
       { icon: "✓", text: "Manage Department Courses" },

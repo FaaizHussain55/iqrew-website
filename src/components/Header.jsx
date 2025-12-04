@@ -20,6 +20,8 @@ const topPageClasses = {
   "/pricing": "temp-blue-backdrop",
   "/faq": "temp-orange-backdrop",
   "/contact": "temp-orange-backdrop",
+  "/terms": "temp-blue-backdrop",
+  "/privacy": "temp-blue-backdrop",
 };
 
 export default function Header() {
