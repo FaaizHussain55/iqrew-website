@@ -354,12 +354,7 @@
       display: block;
       .footer-column {
         &:nth-of-type(1) {
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          justify-content: flex-start;
           width: 100%;
-          margin-right: auto;
         }
         &:nth-of-type(2) {
           width: 100%;
@@ -371,7 +366,7 @@
       .brand-logo {
         margin-bottom: 20px;
         img {
-          width: 120px;
+          width: 110px;
         }
       }
       .intro-text {
@@ -381,7 +376,6 @@
       }
       .newsletter {
         width: 100%;
-        margin-top: auto;
         label {
           font-size: 14px;
           margin-bottom: 12px;
@@ -391,30 +385,13 @@
           height: 44px;
           input {
             font-size: 14px;
-            padding: 8px 14px;
-            border-radius: 8px 0 0 8px;
+            padding: 8px 12px;
+            border-radius: 6px 0 0 6px;
           }
           .btn-submit {
             width: 44px;
             min-width: 44px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: var(--brand-orange);
-            padding: 0;
-            border: none;
-            border-radius: 0 8px 8px 0;
-            box-shadow: none;
-            outline: none;
-            cursor: pointer;
-            transition: background 0.2s ease;
-            &:hover {
-              background: #e66a00;
-            }
-            img {
-              width: 24px;
-              height: auto;
-            }
+            border-radius: 0 6px 6px 0;
           }
         }
       }
@@ -437,9 +414,6 @@
           }
           .text {
             font-size: 14px;
-            font-weight: 400;
-            color: var(--white);
-            line-height: 1.5;
           }
         }
       }
