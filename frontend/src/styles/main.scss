@@ -1,12 +1,12 @@
-// @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
 
 :root {
   color-scheme: light only;
   --white: #ffffff;
-  --brand-blue: #003f7d;
-  --brand-orange: #ff7a00;
+  --brand-blue: #1771b8;
+  --brand-orange: #ef7600;
+  // --brand-orange: #ff7a00;
   --text-muted: rgba(7, 33, 68, 0.65);
   --bg-light: #f7fbff;
   --bg-brilliance: #fdfdfd;
@@ -21,19 +21,14 @@
 body {
   max-width: 1920px;
   font-family: "Inter", sans-serif;
-  background: var(--brand-brilliance);
-  color: var(--brand-blue);
+  background: var(--white);
+  color: #79808a;
   margin: 0 auto;
 }
 
-// .font-bricolage {
-//   font-family: "Bricolage Grotesque", sans-serif;
-//   font-style: normal;
-// }
-
-button,
-input {
+button{
   font-family: "Outfit", sans-serif;
+  cursor: pointer;
 }
 
 h1,
@@ -69,8 +64,9 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  font-family: "Outfit", sans-serif;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1;
   padding: 8px 16px;
   text-decoration: none;
@@ -78,7 +74,11 @@ img {
   transition: all 0.2s ease;
   white-space: nowrap;
   border: none;
-  border-radius: 8px;
+  border-radius: 30px;
+  &--block {
+    width: 100%;
+    text-align: center;
+  }
   &--orange {
     background: var(--brand-orange);
     color: #fff;
@@ -86,20 +86,20 @@ img {
       background: #e66a00;
     }
   }
-
-  &--block {
-    width: 100%;
-    text-align: center;
-  }
-
   &--blue {
     background: var(--brand-blue);
     color: #fff;
     &:hover {
-      background: #051a35;
+      box-shadow: 0px 10px 25px rgba(78, 107, 255, 0.2);
     }
   }
-
+  &--white {
+    background: #fff;
+    color: #181c31;
+    &:hover {
+      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    }
+  }
   &-outline-orange {
     background: transparent;
     color: var(--brand-orange);
@@ -122,10 +122,13 @@ img {
     height: 40px;
   }
   &--md {
-    height: 48px;
+    height: 46px;
+    padding: 8px 20px;
   }
   &--lg {
-    height: 56px;
+    height: 52px;
+    font-size: 18px;
+    padding: 10px 24px;
   }
 }
 
@@ -307,10 +310,10 @@ img {
     font-size: 15px;
     padding: 8px 16px;
     &--md {
-      height: 44px;
+      height: 42px;
     }
     &--lg {
-      height: 52px;
+      height: 48px;
     }
   }
 

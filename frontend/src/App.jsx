@@ -1,7 +1,7 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import LandingHeader from "./components/LandingHeader";
+// import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import SignUp from "./pages/auth/SignUp";
 import Login from "./pages/auth/Login";
@@ -30,7 +30,7 @@ function App() {
   return (
     <>
       <ScrollToTop />
-      <Header />
+      <LandingHeader />
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -48,7 +48,7 @@ function App() {
           <Route path="/privacy" element={<Privacy />} />
         </Routes>
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

@@ -1,30 +1,40 @@
 import { useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/images/iqrew-logo.png";
 import closeIcon from "../assets/icons/icon-close.svg";
 import { useIsMobile } from "../hooks/useIsMobile";
 import "./Sidebar.scss";
 
 const navLinks = [
-  { label: "Home", path: "/", isActive: false },
-  { label: "Course Selector", path: "#courses", isActive: false },
-  { label: "Courses", path: "/courses", isActive: false },
-  { label: "Pricing", path: "/pricing", isActive: false },
-  { label: "FAQ", path: "/faq", isActive: false },
-  { label: "Contact US", path: "/contact", isActive: false },
+  { label: "Why IQrew", path: "#why-iqrew" },
+  { label: "How It Works", path: "#how-it-works" },
+  { label: "Features", path: "#features" },
+  { label: "Pricing", path: "#pricing" },
+  { label: "Use Cases", path: "#use-cases" },
+  { label: "FAQ", path: "#faq" },
 ];
 
 export default function Sidebar({ isOpen, onClose }) {
-  const location = useLocation();
   const isMobile = useIsMobile();
 
-  // Close sidebar when route changes
-  useEffect(() => {
-    if (isOpen) {
-      onClose();
+  const handleNavClick = (e, path) => {
+    e.preventDefault();
+    const targetId = path.replace("#", "");
+    const targetElement = document.getElementById(targetId);
+    
+    if (targetElement) {
+      const headerOffset = 80; // Adjust based on header height
+      const elementPosition = targetElement.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [location.pathname]);
+
+    // Close sidebar
+    onClose();
+  };
 
   // Prevent body scroll when sidebar is open
   useEffect(() => {
@@ -54,29 +64,37 @@ export default function Sidebar({ isOpen, onClose }) {
 
       {/* Sidebar */}
       <aside className={`sidebar ${isOpen ? "sidebar--open" : ""}`} aria-label="Mobile navigation menu" role="navigation">
-        <Link to="/" className="sidebar-logo" onClick={onClose}>
+        <a
+          href="#"
+          className="sidebar-logo"
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+            onClose();
+          }}
+        >
           <img className="icon" src={logo} alt="iQrew Logo" />
-        </Link>
+        </a>
         <nav className="sidebar-links" aria-label="Primary navigation">
-          {navLinks.map((link) => {
-            const isActive = location.pathname === link.path;
-            const LinkComponent = link.path.startsWith("#") ? "a" : Link;
-            const linkProps = link.path.startsWith("#") ? { href: link.path } : { to: link.path };
-
-            return (
-              <LinkComponent key={link.label} {...linkProps} className={`link${isActive || link.isActive ? " active" : ""}`} onClick={onClose}>
-                {link.label}
-              </LinkComponent>
-            );
-          })}
+          {navLinks.map((link) => (
+            <a
+              key={link.label}
+              href={link.path}
+              onClick={(e) => handleNavClick(e, link.path)}
+              className="link"
+            >
+              {link.label}
+            </a>
+          ))}
         </nav>
         <div className="sidebar-actions">
-          <Link to="/login" className="btn btn--md btn-outline-orange" onClick={onClose}>
-            Log In
-          </Link>
-          <Link to="/signup" className="btn btn--md btn--orange" onClick={onClose}>
-            Create Account
-          </Link>
+          <a
+            href="#contact"
+            onClick={(e) => handleNavClick(e, "#contact")}
+            className="btn btn--md btn--orange"
+          >
+            Contact Us
+          </a>
         </div>
       </aside>
     </>
