@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useMemo, useState } from "react";
 // import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+// import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import ShapeSvgComponent from "../components/ShapeSvgComponent";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -11,17 +12,21 @@ import shapeTwo from "../assets/images/line-vector-2.svg";
 import shapeThree from "../assets/images/line-vector-3.svg";
 import shapeFour from "../assets/images/line-vector-4.svg";
 // import shapeFive from "../assets/images/line-vector-5.svg";
-import shapeVertical from "../assets/images/shape-yellow-vertical.svg";
-import shapeHorizontal from "../assets/images/shape-blue-horizontal.svg";
 import contentTypeImg1 from "../assets/images/img-content-sec-type1.jpg";
 import contentTypeImg2 from "../assets/images/img-content-sec-type2.jpg";
 import contentTypeImg3 from "../assets/images/img-content-sec-type3.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
+import {
+  faFacebookF,
+  faTwitter,
+  faLinkedinIn,
+  faInstagram,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import HomeForm from "../components/HomeForm";
-// import { faFacebook, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import {
   faUsers,
   faClipboardCheck,
@@ -51,6 +56,8 @@ import {
   faCubes,
   faCheckCircle,
   faChartLine,
+  faPlus,
+  faMinus,
 } from "@fortawesome/free-solid-svg-icons";
 // Regular icons are available but not all icons have regular equivalents
 // If you want to use regular style, uncomment and use the available ones below:
@@ -206,62 +213,109 @@ export default function Home() {
     },
   ];
 
-  const faqs = [
-    {
-      question: "Can a module be used in multiple courses?",
-      answer: "Yes. Exactly that is a core principle: Modules are reusable and can be part of multiple courses.",
-      icon: faLayerGroup,
-    },
-    {
-      question: "Can contents also be used multiple times?",
-      answer: "Yes. A content (e.g., a PDF or video) can appear in multiple modules, ideal for precise training of central company guidelines and department-internal know-how.",
-      icon: faSync,
-    },
-    {
-      question: "What does IQrew cost?",
-      answer: "In our launch phase, we offer discounted plans. These start from 2€ per user. For enterprise customers from ~500 employees, separate tariffs apply, which can be individually negotiated and adjusted. Contact us to learn more.",
-      icon: faDollarSign,
-    },
-    {
-      question: "Which content types does IQrew support?",
-      answer: "Videos, audios, PDFs, and images.",
-      icon: faFileAlt,
-    },
-    {
-      question: "Which quiz types are there?",
-      answer: "Multiple Choice, Single Choice, True/False, and Ordering Questions.",
-      icon: faCheckSquare,
-    },
-    {
-      question: "Can I prevent videos from being skipped?",
-      answer: "Yes. For videos, skipping can be deactivated.",
-      icon: faVideo,
-    },
-    {
-      question: "When is a certificate created?",
-      answer: "Automatically, as soon as all quizzes have been successfully completed according to the specifications.",
-      icon: faTrophy,
-    },
-    {
-      question: "Can external certificates with proof be managed?",
-      answer: "Yes. You can maintain external qualifications incl. PDF proofs and track expiration dates.",
-      icon: faFilePdf,
-    },
-    {
-      question: "For which industries is IQrew best suitable?",
-      answer: "IQrew is not fixed to any special industry, as our solution was designed universally.",
-      icon: faIndustry,
-    },
-    {
-      question: "Is there English-speaking support?",
-      answer: "Yes, we have Englisch-speaking support to facilitate communication.",
-      icon: faHeadset,
-    },
-    {
-      question: "Does IQrew offer courses?",
-      answer: "No, IQrew does not offer pre-made courses \"off the shelf\" at the current time, as standardized courses represent no great added value. For our customers, however, we offer course creation service at a discounted rate. Contact us to learn more about this.",
-      icon: faBookOpen,
-    },
+  //FAQ Section Script
+  const [openIndex, setOpenIndex] = useState(0);
+
+  const faqs = useMemo(
+    () => [
+      {
+        question: "Can a module be used in multiple courses?",
+        answer: "Yes. Exactly that is a core principle: Modules are reusable and can be part of multiple courses.",
+        icon: faLayerGroup,
+      },
+      {
+        question: "Can contents also be used multiple times?",
+        answer: "Yes. A content (e.g., a PDF or video) can appear in multiple modules, ideal for precise training of central company guidelines and department-internal know-how.",
+        icon: faSync,
+      },
+      {
+        question: "What does IQrew cost?",
+        answer: "In our launch phase, we offer discounted plans. These start from 2€ per user. For enterprise customers from ~500 employees, separate tariffs apply, which can be individually negotiated and adjusted. Contact us to learn more.",
+        icon: faDollarSign,
+      },
+      {
+        question: "Which content types does IQrew support?",
+        answer: "Videos, audios, PDFs, and images.",
+        icon: faFileAlt,
+      },
+      {
+        question: "Which quiz types are there?",
+        answer: "Multiple Choice, Single Choice, True/False, and Ordering Questions.",
+        icon: faCheckSquare,
+      },
+      {
+        question: "Can I prevent videos from being skipped?",
+        answer: "Yes. For videos, skipping can be deactivated.",
+        icon: faVideo,
+      },
+      {
+        question: "When is a certificate created?",
+        answer: "Automatically, as soon as all quizzes have been successfully completed according to the specifications.",
+        icon: faTrophy,
+      },
+      {
+        question: "Can external certificates with proof be managed?",
+        answer: "Yes. You can maintain external qualifications incl. PDF proofs and track expiration dates.",
+        icon: faFilePdf,
+      },
+      {
+        question: "For which industries is IQrew best suitable?",
+        answer: "IQrew is not fixed to any special industry, as our solution was designed universally.",
+        icon: faIndustry,
+      },
+      {
+        question: "Is there English-speaking support?",
+        answer: "Yes, we have Englisch-speaking support to facilitate communication.",
+        icon: faHeadset,
+      },
+      {
+        question: "Does IQrew offer courses?",
+        answer: "No, IQrew does not offer pre-made courses \"off the shelf\" at the current time, as standardized courses represent no great added value. For our customers, however, we offer course creation service at a discounted rate. Contact us to learn more about this.",
+        icon: faBookOpen,
+      },
+    ], 
+    []
+  );
+
+  const toggleFAQ = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  // Generate JSON-LD structured data for SEO
+  useEffect(() => {
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.answer,
+        },
+      })),
+    };
+
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.text = JSON.stringify(faqSchema);
+    script.id = "faq-structured-data";
+    document.head.appendChild(script);
+
+    return () => {
+      const existingScript = document.getElementById("faq-structured-data");
+      if (existingScript) {
+        document.head.removeChild(existingScript);
+      }
+    };
+  }, [faqs]);
+
+  const socials = [
+    { icon: faFacebookF, label: "Facebook", url: "https://www.facebook.com/iqrew" },
+    { icon: faTwitter, label: "Twitter", url: "https://www.twitter.com/iqrew" },
+    { icon: faInstagram, label: "Instagram", url: "https://www.instagram.com/iqrew" },
+    { icon: faLinkedinIn, label: "LinkedIn", url: "https://www.linkedin.com/company/iqrew" },
+    { icon: faYoutube, label: "YouTube", url: "https://www.youtube.com/@iqrew" },
   ];
 
   return (
@@ -342,6 +396,16 @@ export default function Home() {
       {/* Stats Section */}
       <section className="home-sec-stats">
         <img className="vector" src={shapeOne} alt="Vector" />
+        <ShapeSvgComponent className="shape1" fillColor="orange">
+          <svg width="80" height="69" viewBox="0 0 80 69" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M40 0L79.8372 69H0.16283L40 0Z" fill="#fff"/>
+          </svg>
+        </ShapeSvgComponent>
+        <ShapeSvgComponent className="shape2" fillColor="#1771b8">
+          <svg width="43" height="86" viewBox="0 0 43 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 86C5.64684 86 11.2384 84.8878 16.4554 82.7268C21.6724 80.5659 26.4127 77.3985 30.4056 73.4056C34.3985 69.4127 37.5659 64.6724 39.7268 59.4554C41.8878 54.2384 43 48.6468 43 43C43 37.3532 41.8878 31.7616 39.7268 26.5446C37.5659 21.3276 34.3985 16.5873 30.4056 12.5944C26.4127 8.60149 21.6724 5.43413 16.4554 3.27318C11.2384 1.11223 5.64684 -2.46831e-07 0 0V86Z" fill="#fff"/>
+          </svg>
+        </ShapeSvgComponent>
         <div className="container">
           <div className="stats-flex">
             <div className="stat-item" data-aos="fade-up">
@@ -789,6 +853,16 @@ export default function Home() {
         <img className="vector-top" src={shapeTwo} alt="Vector" />
         <img className="vector-bottom" src={shapeThree} alt="Vector" />
         <div className="container">
+          <ShapeSvgComponent className="shape1" fillColor="orange">
+            <svg width="43" height="86" viewBox="0 0 43 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 86C5.64684 86 11.2384 84.8878 16.4554 82.7268C21.6724 80.5659 26.4127 77.3985 30.4056 73.4056C34.3985 69.4127 37.5659 64.6724 39.7268 59.4554C41.8878 54.2384 43 48.6468 43 43C43 37.3532 41.8878 31.7616 39.7268 26.5446C37.5659 21.3276 34.3985 16.5873 30.4056 12.5944C26.4127 8.60149 21.6724 5.43413 16.4554 3.27318C11.2384 1.11223 5.64684 -2.46831e-07 0 0V86Z" fill="#fff"/>
+            </svg>
+          </ShapeSvgComponent>
+          <ShapeSvgComponent className="shape2" fillColor="#1771b8">
+            <svg width="198" height="99" viewBox="0 0 198 99" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M198 98.9998C198 85.9989 195.439 73.1253 190.464 61.1141C185.489 49.1029 178.197 38.1892 169.004 28.9962C159.811 19.8032 148.897 12.5109 136.886 7.53568C124.874 2.56047 112.001 -0.000244709 99 -0.000244141C85.9991 -0.000243572 73.1256 2.56047 61.1143 7.53568C49.1031 12.5109 38.1894 19.8032 28.9964 28.9962C19.8034 38.1892 12.5111 49.1029 7.53592 61.1141C2.56071 73.1253 -1.13657e-06 85.9989 0 98.9998L198 98.9998Z" fill="#fff"/>
+            </svg>
+          </ShapeSvgComponent>
           <div className="section-header">
             <h4 className="sec-label">TARGET AUDIENCE</h4>
             <h2 className="sec-title-lg">Who Is IQrew Made For?</h2>
@@ -824,7 +898,54 @@ export default function Home() {
             <p className="sec-desc">
               Find answers to common questions about IQrew, our training platform, and how it can help your organization. Explore our comprehensive FAQ section to learn more about features, pricing, implementation, and support options.
             </p>
+          </div>
+          <dl className="faq-list" data-aos="fade-up">
+            {faqs.map((faq, index) => {
+              const isOpen = openIndex === index;
+              const faqId = `faq-${index}`;
+              const answerId = `faq-answer-${index}`;
+
+              return (
+                <div key={index} className={`faq-item ${isOpen ? "faq-item--open" : ""}`}>
+                  <dt className="faq-question-wrapper">
+                    <button
+                      className="faq-question"
+                      onClick={() => toggleFAQ(index)}
+                      aria-expanded={isOpen}
+                      aria-controls={answerId}
+                      id={faqId}
+                      type="button"
+                    >
+                      <span className="faq-icon" aria-hidden="true">
+                        <FontAwesomeIcon icon={faq.icon} />
+                      </span>
+                      <h4 className="faq-question-text">{faq.question}</h4>
+                      <span className="toggle-icon" aria-hidden="true">
+                        <FontAwesomeIcon icon={isOpen ? faMinus : faPlus} />
+                      </span>
+                    </button>
+                  </dt>
+                  {isOpen && (
+                    <dd className="faq-answer" id={answerId} role="region" aria-labelledby={faqId}>
+                      {faq.answer}
+                    </dd>
+                  )}
                 </div>
+              );
+            })}
+          </dl>
+        </div>
+      </section>
+
+      {/* FAQ Cards Style */}
+      {/* <section id="faq" className="home-faq-sec">
+        <div className="container">
+          <div className="section-header">
+            <h2 className="sec-title-lg">Frequently Asked Questions</h2>
+            <p className="sec-desc">
+              Find answers to common questions about IQrew, our training platform, and how it can help your organization. Explore our comprehensive FAQ section to learn more about features, pricing, implementation, and support options.
+            </p>
+          </div>
           <div className="faq-cards-flex">
             {faqs.map((faq, index) => (
               <div key={index} className="faq-card" data-aos="fade-up">
@@ -837,7 +958,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Onboarding Section */}
       <section className="blue-banner-sec home-sec-onboarding">
@@ -887,8 +1008,16 @@ export default function Home() {
         <img className="vector-top" src={shapeTwo} alt="Vector" />
         <img className="vector-bottom" src={shapeThree} alt="Vector" />
         <div className="container">
-          <img className="shape1" src={shapeVertical} alt="Vector" />
-          <img className="shape2" src={shapeHorizontal} alt="Vector" />
+          <ShapeSvgComponent className="shape1" fillColor="orange">
+            <svg width="43" height="86" viewBox="0 0 43 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 86C5.64684 86 11.2384 84.8878 16.4554 82.7268C21.6724 80.5659 26.4127 77.3985 30.4056 73.4056C34.3985 69.4127 37.5659 64.6724 39.7268 59.4554C41.8878 54.2384 43 48.6468 43 43C43 37.3532 41.8878 31.7616 39.7268 26.5446C37.5659 21.3276 34.3985 16.5873 30.4056 12.5944C26.4127 8.60149 21.6724 5.43413 16.4554 3.27318C11.2384 1.11223 5.64684 -2.46831e-07 0 0V86Z" fill="#fff"/>
+            </svg>
+          </ShapeSvgComponent>
+          <ShapeSvgComponent className="shape2" fillColor="#1771b8">
+            <svg width="198" height="99" viewBox="0 0 198 99" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M198 98.9998C198 85.9989 195.439 73.1253 190.464 61.1141C185.489 49.1029 178.197 38.1892 169.004 28.9962C159.811 19.8032 148.897 12.5109 136.886 7.53568C124.874 2.56047 112.001 -0.000244709 99 -0.000244141C85.9991 -0.000243572 73.1256 2.56047 61.1143 7.53568C49.1031 12.5109 38.1894 19.8032 28.9964 28.9962C19.8034 38.1892 12.5111 49.1029 7.53592 61.1141C2.56071 73.1253 -1.13657e-06 85.9989 0 98.9998L198 98.9998Z" fill="#fff"/>
+            </svg>
+          </ShapeSvgComponent>
           <div className="section-header">
             <h2 className="sec-title-lg">Let’s Stay Connected</h2>
             <p className="sec-desc">
@@ -897,6 +1026,14 @@ export default function Home() {
             </p>
           </div>
           <div className="footer-flex">
+            <ShapeSvgComponent className="shape3" fillColor="#1771b8">
+              <svg width="85" height="46" viewBox="0 0 85 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M72.3816 2.39296C69.6701 2.06242 67.0688 3.16277 64.3819 5.46577C59.9602 9.25571 52.2878 11.1411 45.3723 5.48293C42.4097 3.059 39.8275 2.67579 37.694 3.03136C35.4851 3.39951 33.6272 4.57716 32.1668 5.55074C29.8539 7.09272 27.3067 8.71308 24.3732 9.09333C21.3452 9.48585 18.1119 8.54561 14.4286 5.47623C11.3446 2.90625 8.70571 2.41192 6.67863 2.72379C4.60456 3.04288 2.98853 4.23443 2.05857 5.33348C1.64211 5.82566 0.905519 5.88704 0.413345 5.47058C-0.0788304 5.05413 -0.140213 4.31754 0.276243 3.82536C1.48647 2.39509 3.5772 0.838716 6.3236 0.416181C9.11699 -0.0135824 12.4122 0.756749 15.9233 3.68262C19.2443 6.4501 21.8479 7.06639 24.0731 6.77795C26.3928 6.47725 28.5152 5.17916 30.8717 3.60811L31.5193 4.57942L30.8717 3.60811C32.3298 2.63605 34.5577 1.1871 37.3102 0.728369C40.1381 0.257061 43.3927 0.84667 46.8507 3.67592C52.7127 8.47206 59.1125 6.90726 62.8625 3.69307C65.8163 1.16131 69.0519 -0.364991 72.6641 0.0753546C76.2403 0.5113 79.8876 2.84169 83.7662 7.31693C84.1884 7.80414 84.1357 8.54141 83.6485 8.96366C83.1613 9.38591 82.424 9.33325 82.0018 8.84603C78.2924 4.56591 75.1292 2.72789 72.3816 2.39296Z" fill="#fff"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M72.3816 14.6417C69.6701 14.3112 67.0688 15.4116 64.3819 17.7145C59.9602 21.5045 52.2878 23.3899 45.3723 17.7317C42.4097 15.3078 39.8275 14.9246 37.694 15.2801C35.4851 15.6483 33.6272 16.8259 32.1668 17.7995C29.8539 19.3415 27.3067 20.9619 24.3732 21.3421C21.3452 21.7346 18.1119 20.7944 14.4286 17.725C11.3446 15.155 8.70571 14.6607 6.67863 14.9726C4.60456 15.2917 2.98853 16.4832 2.05857 17.5823C1.64211 18.0744 0.905519 18.1358 0.413345 17.7194C-0.0788304 17.3029 -0.140213 16.5663 0.276243 16.0741C1.48647 14.6439 3.5772 13.0875 6.3236 12.665C9.11699 12.2352 12.4122 13.0055 15.9233 15.9314C19.2443 18.6989 21.8479 19.3152 24.0731 19.0267C26.3928 18.726 28.5152 17.4279 30.8717 15.8569L31.5193 16.8282L30.8717 15.8569C32.3298 14.8848 34.5577 13.4359 37.3102 12.9771C40.1381 12.5058 43.3927 13.0954 46.8507 15.9247C52.7127 20.7208 59.1125 19.156 62.8625 15.9419C65.8163 13.4101 69.0519 11.8838 72.6641 12.3241C76.2403 12.7601 79.8876 15.0905 83.7662 19.5657C84.1884 20.0529 84.1357 20.7902 83.6485 21.2124C83.1613 21.6347 82.424 21.582 82.0018 21.0948C78.2924 16.8147 75.1292 14.9767 72.3816 14.6417Z" fill="#fff"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M72.3816 26.8905C69.6701 26.56 67.0688 27.6603 64.3819 29.9633C59.9602 33.7533 52.2878 35.6386 45.3723 29.9805C42.4097 27.5566 39.8275 27.1733 37.694 27.5289C35.4851 27.8971 33.6272 29.0747 32.1668 30.0483C29.8539 31.5903 27.3067 33.2106 24.3732 33.5909C21.3452 33.9834 18.1119 33.0432 14.4286 29.9738C11.3446 27.4038 8.70571 26.9095 6.67863 27.2213C4.60456 27.5404 2.98853 28.732 2.05857 29.831C1.64211 30.3232 0.905519 30.3846 0.413345 29.9681C-0.0788304 29.5517 -0.140213 28.8151 0.276243 28.3229C1.48647 26.8927 3.5772 25.3363 6.3236 24.9137C9.11699 24.484 12.4122 25.2543 15.9233 28.1802C19.2443 30.9477 21.8479 31.5639 24.0731 31.2755C26.3928 30.9748 28.5152 29.6767 30.8717 28.1057L31.5193 29.077L30.8717 28.1057C32.3298 27.1336 34.5577 25.6847 37.3102 25.2259C40.1381 24.7546 43.3927 25.3442 46.8507 28.1735C52.7127 32.9696 59.1125 31.4048 62.8625 28.1906C65.8163 25.6589 69.0519 24.1326 72.6641 24.5729C76.2403 25.0089 79.8876 27.3393 83.7662 31.8145C84.1884 32.3017 84.1357 33.039 83.6485 33.4612C83.1613 33.8835 82.424 33.8308 82.0018 33.3436C78.2924 29.0635 75.1292 27.2255 72.3816 26.8905Z" fill="#fff"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M72.3816 39.1393C69.6701 38.8088 67.0688 39.9091 64.3819 42.2121C59.9602 46.0021 52.2878 47.8874 45.3723 42.2293C42.4097 39.8053 39.8275 39.4221 37.694 39.7777C35.4851 40.1458 33.6272 41.3235 32.1668 42.2971C29.8539 43.8391 27.3067 45.4594 24.3732 45.8397C21.3452 46.2322 18.1119 45.292 14.4286 42.2226C11.3446 39.6526 8.70571 39.1583 6.67863 39.4701C4.60456 39.7892 2.98853 40.9808 2.05857 42.0798C1.64211 42.572 0.905519 42.6334 0.413345 42.2169C-0.0788304 41.8005 -0.140213 41.0639 0.276243 40.5717C1.48647 39.1414 3.5772 37.5851 6.3236 37.1625C9.11699 36.7328 12.4122 37.5031 15.9233 40.429C19.2443 43.1964 21.8479 43.8127 24.0731 43.5243C26.3928 43.2236 28.5152 41.9255 30.8717 40.3544L31.5193 41.3258L30.8717 40.3544C32.3298 39.3824 34.5577 37.9334 37.3102 37.4747C40.1381 37.0034 43.3927 37.593 46.8507 40.4223C52.7127 45.2184 59.1125 43.6536 62.8625 40.4394C65.8163 37.9076 69.0519 36.3813 72.6641 36.8217C76.2403 37.2576 79.8876 39.588 83.7662 44.0633C84.1884 44.5505 84.1357 45.2877 83.6485 45.71C83.1613 46.1322 82.424 46.0796 82.0018 45.5924C78.2924 41.3123 75.1292 39.4742 72.3816 39.1393Z" fill="#fff"/>
+              </svg>
+            </ShapeSvgComponent>
             <div className="footer-left footer-card" data-aos="fade-up">
               <div className="contact-info-items">
                 <div className="item">
@@ -920,16 +1057,27 @@ export default function Home() {
                 </div>
                 <div className="item">
                   <h4 className="title">Social Media</h4>
-                  <div className="social-media-links">
-                    <a href="https://www.facebook.com/iqrew" target="_blank" rel="noopener noreferrer">
-                      {/* <FontAwesomeIcon icon={faFacebook} /> */}
-                    </a>
-                    <a href="https://www.twitter.com/iqrew" target="_blank" rel="noopener noreferrer">
-                      {/* <FontAwesomeIcon icon={faTwitter} /> */}
-                    </a>
+                  <div className="social-links">
+                    {socials.map((social, index) => (
+                      <a 
+                        key={index} 
+                        href={social.url} 
+                        aria-label={social.label} 
+                        className="link" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
+                        <FontAwesomeIcon className="icon" icon={social.icon} />
+                      </a>
+                    ))}
                   </div>
                 </div>
               </div>
+              <ShapeSvgComponent className="shape4" fillColor="orange">
+                <svg width="43" height="86" viewBox="0 0 43 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 86C5.64684 86 11.2384 84.8878 16.4554 82.7268C21.6724 80.5659 26.4127 77.3985 30.4056 73.4056C34.3985 69.4127 37.5659 64.6724 39.7268 59.4554C41.8878 54.2384 43 48.6468 43 43C43 37.3532 41.8878 31.7616 39.7268 26.5446C37.5659 21.3276 34.3985 16.5873 30.4056 12.5944C26.4127 8.60149 21.6724 5.43413 16.4554 3.27318C11.2384 1.11223 5.64684 -2.46831e-07 0 0V86Z" fill="#fff"/>
+                </svg>
+              </ShapeSvgComponent>
             </div>
             <div className="footer-right footer-card" data-aos="fade-up">
               <HomeForm />

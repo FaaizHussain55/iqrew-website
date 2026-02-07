@@ -138,7 +138,7 @@ export default function HomeForm() {
         </div>
         <div className="form-actions">
           <button type="submit" className="btn btn--blue btn--md btn--send" aria-label="Submit contact form">
-            Send
+            Send Message
           </button>
         </div>
       </div>
