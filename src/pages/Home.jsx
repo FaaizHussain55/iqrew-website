@@ -15,6 +15,10 @@ import shapeFour from "../assets/images/line-vector-4.svg";
 import contentTypeImg1 from "../assets/images/img-content-sec-type1.jpg";
 import contentTypeImg2 from "../assets/images/img-content-sec-type2.jpg";
 import contentTypeImg3 from "../assets/images/img-content-sec-type3.jpg";
+import quizTypeIcon1 from "../assets/icons/icon-quiz-type1.gif";
+import quizTypeIcon2 from "../assets/icons/icon-quiz-type2.gif";
+import quizTypeIcon3 from "../assets/icons/icon-quiz-type3.gif";
+import quizTypeIcon4 from "../assets/icons/icon-quiz-type4.gif";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -128,10 +132,10 @@ export default function Home() {
   ];
 
   const quizTypes = [
-    { name: "Multiple Choice", icon: "☑️" },
-    { name: "Single Choice", icon: "🔘" },
-    { name: "True/False", icon: "✓" },
-    { name: "Sequencing", icon: "🔢", description: "e.g., ordering process steps correctly" },
+    { name: "Multiple Choice", iconImg: quizTypeIcon1 },
+    { name: "Single Choice", iconImg: quizTypeIcon2 },
+    { name: "True/False", iconImg: quizTypeIcon3 },
+    { name: "Sequencing", iconImg: quizTypeIcon4, description: "e.g., ordering process steps correctly" },
   ];
 
   const contentTypes = [
@@ -429,7 +433,7 @@ export default function Home() {
       </section>
 
       {/* Why IQrew Section */}
-      <section id="why-iqrew" className="home-why-iqrew-sec why-iqrew-section">
+      <section id="why-iqrew" className="home-why-iqrew-sec">
         <div className="container">
           <div className="section-header">
             <h4 className="sec-label">WHY IQREW</h4>
@@ -440,7 +444,7 @@ export default function Home() {
                   </div>
           <div className="features-flex">
             {coreFeatures.map((feature, index) => (
-              <div key={index} className="item">
+              <div key={index} className="item" data-aos="fade-up">
                 <div className="icon-container">
                   <FontAwesomeIcon className="icon" icon={feature.icon} />
                 </div>
@@ -537,14 +541,14 @@ export default function Home() {
       </section>
 
       {/* Quizzes & Certificates Section */}
-      <section id="features" className="quizzes-section">
+      <section id="features" className="home-quizzes-sec">
         <div className="container">
           <div className="section-header">
             <h4 className="sec-label">QUIZZES & CERTIFICATES</h4>
             <h2 className="sec-title-lg">How Does Knowledge Become Verifiable in the Company?</h2>
           </div>
           <div className="quizzes-layout">
-            <div className="quizzes-left">
+            {/* <div className="quizzes-left">
               <div className="quiz-feature-card">
                 <div className="quiz-card-icon">📝</div>
                 <h3>Quiz Creation for Contents and Complete Courses</h3>
@@ -553,7 +557,7 @@ export default function Home() {
                   <li>For individual contents (e.g., after a video or PDF).</li>
                   <li>As well as for complete courses (final tests).</li>
                 </ul>
-                </div>
+              </div>
               <div className="quiz-feature-card">
                 <div className="quiz-card-icon">🎬</div>
                 <h3>Video Contents: Prevent Skipping</h3>
@@ -563,30 +567,55 @@ export default function Home() {
               </div>
             </div>
             <div className="quizzes-right">
-              <div className="quiz-types-card">
-                <h3>These Quiz Types Are Available for Selection</h3>
-                <p>Depending on the learning objective, you can choose the appropriate question type:</p>
-                <div className="quiz-types-list">
-                  {quizTypes.map((type, index) => (
-                    <div key={index} className="quiz-type-item">
-                      <div className="quiz-type-icon">{type.icon}</div>
-                      <div className="quiz-type-text">
-                        <span className="quiz-type-name">{type.name}</span>
-                        {type.description && <span className="quiz-type-desc">{type.description}</span>}
+              
+            </div> */}
+
+            <div className="quiz-card" data-aos="fade-up">
+              <div className="icon-container">
+                <FontAwesomeIcon className="icon" icon={faFileAlt} />
+              </div>
+              <h4 className="title">Quiz Creation for Contents and Complete Courses</h4>
+              <p className="desc">With IQrew, you create quizzes both:</p>
+              <ul className="point-list">
+                <li>For individual contents (e.g., after a video or PDF).</li>
+                <li>As well as for complete courses (final tests).</li>
+              </ul>
+            </div>
+            <div className="quiz-card" data-aos="fade-up">
+              <div className="icon-container">
+                <FontAwesomeIcon className="icon" icon={faVideo} />
+              </div>
+              <h4 className="title">Video Contents: Prevent Skipping</h4>
+              <p className="desc">
+                For videos, you can determine whether skipping should be prevented. Ideal for mandatory contents such as safety instructions, data privacy, or compliance training.
+              </p>
+            </div>
+            <div className="quiz-card" data-aos="fade-up">
+              <div className="icon-container">
+                <FontAwesomeIcon className="icon" icon={faTrophy} />
+              </div>
+              <h4 className="title">Automatic Certificates, As Soon As Everything Is Passed</h4>
+              <p className="desc">
+                When all quizzes have been successfully completed according to the creator's specifications, IQrew automatically generates and saves a certificate.
+              </p>
+              <p className="desc">Reliable proofs are created without manual checking or additional tools.</p>
+            </div>
+            <div className="quiz-card quiz-types-card" data-aos="fade-up">
+              <h3 className="title">These Quiz Types Are Available for Selection</h3>
+              <p className="desc">Depending on the learning objective, you can choose the appropriate question type:</p>
+              <div className="quiz-types-list">
+                {quizTypes.map((type, index) => (
+                  <div key={index} className="quiz-type">
+                    <img className="type-icon" src={type.iconImg} alt={type.name} />
+                    <div>
+                      <h4 className="type-name">{type.name}</h4>
+                      {type.description && <p className="type-desc">{type.description}</p>}
+                    </div>
                   </div>
-                </div>
-              ))}
-            </div>
-              </div>
-              <div className="certificate-highlight">
-                <div className="certificate-icon">🏆</div>
-                <h3>Automatic Certificates, As Soon As Everything Is Passed</h3>
-                <p>
-                  When all quizzes have been successfully completed according to the creator's specifications, IQrew automatically generates and saves a certificate.
-                </p>
-                <p>Reliable proofs are created without manual checking or additional tools.</p>
+                ))}
               </div>
             </div>
+            
           </div>
         </div>
       </section>
