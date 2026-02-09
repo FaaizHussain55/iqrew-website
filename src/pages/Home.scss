@@ -1167,7 +1167,7 @@
       svg {
         display: block;
         font-size: 36px;
-        color: #1771b8;
+        color: var(--brand-blue);;
         line-height: 1;
       }
     }
@@ -1212,7 +1212,7 @@
         svg {
           display: block;
           font-size: 32px;
-          color: #1771b8;
+          color: var(--brand-blue);;
           line-height: 1;
         }
       }
@@ -1236,7 +1236,7 @@
     }
     .quiz-types-card{
       width: 100%;
-      background: #1771b8;
+      background: var(--brand-blue);
       .title {
         color: #ffffff;
       }
@@ -1261,6 +1261,7 @@
           .type-icon{
             width: 100px;
             margin-bottom: 20px;
+            filter: hue-rotate(-145deg);
           }
           .type-name{
             font-size: 20px;
@@ -1308,7 +1309,7 @@
       svg {
         display: block;
         font-size: 36px;
-        color: #1771b8;
+        color: var(--brand-blue);;
         line-height: 1;
       }
     }
@@ -1402,7 +1403,7 @@
             margin-bottom: 10px;
             .icon{
               display: inline-block;
-              color: #1771b8;
+              color: var(--brand-blue);;
               margin-top: 4px;
             }
             &:last-of-type{
@@ -1476,7 +1477,7 @@
       svg {
         display: block;
         font-size: 24px;
-        color: #1771b8;
+        color: var(--brand-blue);;
         line-height: 1;
       }
     }
@@ -1558,11 +1559,11 @@
         &:hover{
           .faq-icon {
             svg {
-              color: #1771b8;
+              color: var(--brand-blue);;
             }
           }
           .faq-question-text {
-            color: #1771b8;
+            color: var(--brand-blue);;
           }
         }
         &:focus {
@@ -1582,11 +1583,11 @@
         .faq-question {
           .faq-icon {
             svg {
-              color: #1771b8;
+              color: var(--brand-blue);;
             }
           }
           .faq-question-text {
-            color: #1771b8;
+            color: var(--brand-blue);;
           }
         }
       }
@@ -1647,7 +1648,7 @@
   //       .icon-container{
   //         box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.07);
   //         .icon{
-  //           color: #1771b8;
+  //           color: var(--brand-blue);;
   //         }
   //       }
   //     }
@@ -1759,7 +1760,7 @@
           transition: all 0.3s ease;
         }
         &:hover {
-          background-color: #1771b8;
+          background-color: var(--brand-blue);;
           .icon {
             color: #ffffff;
           }
@@ -1821,7 +1822,7 @@
 .blue-banner-sec{
   position: relative;
   padding: 80px 0;
-  background: #1771b8;
+  background: var(--brand-blue);;
   overflow: hidden;
   .vector{
     position: absolute;
@@ -1862,7 +1863,7 @@
 .sec-label{
   font-size: 16px;
   font-weight: 600;
-  color: #1771b8;
+  color: var(--brand-blue);;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 20px;

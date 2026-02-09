@@ -8,7 +8,7 @@ const navLinks = [
   { label: "Why IQrew", path: "#why-iqrew" },
   { label: "How It Works", path: "#how-it-works" },
   { label: "Features", path: "#features" },
-  { label: "Pricing", path: "#pricing" },
+  { label: "Content Creation", path: "#content-creation" },
   { label: "Use Cases", path: "#use-cases" },
   { label: "FAQ", path: "#faq" },
 ];

@@ -253,8 +253,8 @@ export default function Home() {
         icon: faVideo,
       },
       {
-        question: "When is a certificate created?",
-        answer: "Automatically, as soon as all quizzes have been successfully completed according to the specifications.",
+        question: "Are the certificates created automatically?",
+        answer: "Yes, the certificates are created automatically, as soon as all quizzes have been successfully completed according to the predefined requirements. Learners and admins can access issued certificates anytime.",
         icon: faTrophy,
       },
       {
@@ -400,7 +400,7 @@ export default function Home() {
       {/* Stats Section */}
       <section className="home-sec-stats">
         <img className="vector" src={shapeOne} alt="Vector" />
-        <ShapeSvgComponent className="shape1" fillColor="orange">
+        <ShapeSvgComponent className="shape1" fillColor="#ef7600">
           <svg width="80" height="69" viewBox="0 0 80 69" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M40 0L79.8372 69H0.16283L40 0Z" fill="#fff"/>
           </svg>
@@ -733,7 +733,7 @@ export default function Home() {
       </section>
 
       {/* Content Creation Section */}
-      <section className="home-content-sec">
+      <section id="content-creation" className="home-content-sec">
         <div className="container">
           <div className="section-header">
             <h4 className="sec-label">CONTENT CREATION</h4>
@@ -813,7 +813,7 @@ export default function Home() {
       </section> */}
 
       {/* Pricing Section */}
-      <section id="pricing" className="blue-banner-sec home-pricing-sec">
+      <section className="blue-banner-sec home-pricing-sec">
         <img className="vector" src={shapeFour} alt="Vector" />
         <div className="container">
           <div className="banner-flex">
@@ -832,7 +832,7 @@ export default function Home() {
               data-aos="fade-left" 
               onClick={handleScrollToContact}
             >
-              Get Started Now
+              Request Content creation
             </a>
           </div>
         </div>
@@ -882,7 +882,7 @@ export default function Home() {
         <img className="vector-top" src={shapeTwo} alt="Vector" />
         <img className="vector-bottom" src={shapeThree} alt="Vector" />
         <div className="container">
-          <ShapeSvgComponent className="shape1" fillColor="orange">
+          <ShapeSvgComponent className="shape1" fillColor="#ef7600">
             <svg width="43" height="86" viewBox="0 0 43 86" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M0 86C5.64684 86 11.2384 84.8878 16.4554 82.7268C21.6724 80.5659 26.4127 77.3985 30.4056 73.4056C34.3985 69.4127 37.5659 64.6724 39.7268 59.4554C41.8878 54.2384 43 48.6468 43 43C43 37.3532 41.8878 31.7616 39.7268 26.5446C37.5659 21.3276 34.3985 16.5873 30.4056 12.5944C26.4127 8.60149 21.6724 5.43413 16.4554 3.27318C11.2384 1.11223 5.64684 -2.46831e-07 0 0V86Z" fill="#fff"/>
             </svg>
@@ -1037,7 +1037,7 @@ export default function Home() {
         <img className="vector-top" src={shapeTwo} alt="Vector" />
         <img className="vector-bottom" src={shapeThree} alt="Vector" />
         <div className="container">
-          <ShapeSvgComponent className="shape1" fillColor="orange">
+          <ShapeSvgComponent className="shape1" fillColor="#ef7600">
             <svg width="43" height="86" viewBox="0 0 43 86" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M0 86C5.64684 86 11.2384 84.8878 16.4554 82.7268C21.6724 80.5659 26.4127 77.3985 30.4056 73.4056C34.3985 69.4127 37.5659 64.6724 39.7268 59.4554C41.8878 54.2384 43 48.6468 43 43C43 37.3532 41.8878 31.7616 39.7268 26.5446C37.5659 21.3276 34.3985 16.5873 30.4056 12.5944C26.4127 8.60149 21.6724 5.43413 16.4554 3.27318C11.2384 1.11223 5.64684 -2.46831e-07 0 0V86Z" fill="#fff"/>
             </svg>
@@ -1102,7 +1102,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <ShapeSvgComponent className="shape4" fillColor="orange">
+              <ShapeSvgComponent className="shape4" fillColor="#ef7600">
                 <svg width="43" height="86" viewBox="0 0 43 86" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M0 86C5.64684 86 11.2384 84.8878 16.4554 82.7268C21.6724 80.5659 26.4127 77.3985 30.4056 73.4056C34.3985 69.4127 37.5659 64.6724 39.7268 59.4554C41.8878 54.2384 43 48.6468 43 43C43 37.3532 41.8878 31.7616 39.7268 26.5446C37.5659 21.3276 34.3985 16.5873 30.4056 12.5944C26.4127 8.60149 21.6724 5.43413 16.4554 3.27318C11.2384 1.11223 5.64684 -2.46831e-07 0 0V86Z" fill="#fff"/>
                 </svg>
