@@ -1108,7 +1108,7 @@ export default function Home() {
       </section> */}
 
       {/* Onboarding Section */}
-      <section className="blue-banner-sec home-sec-onboarding">
+      <section className="blue-banner-sec home-onboarding-sec">
         <img className="vector" src={shapeFour} alt="Vector" />
         <div className="container">
           <div className="banner-flex">
