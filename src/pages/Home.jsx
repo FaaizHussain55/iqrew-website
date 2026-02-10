@@ -947,7 +947,7 @@ export default function Home() {
                   Typical Training That Becomes Particularly Easy with IQrew:
                 </h3>
                 <p className="content-desc">
-                  asdasd
+                  IQrew simplifies the creation and management of various training types, making it easy to deliver effective, trackable training across your organization.
                 </p>
                 <ul className="checks-list orange-checks">
                   {trainingTypes.map((type, index) => (
