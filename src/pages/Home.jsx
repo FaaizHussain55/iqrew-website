@@ -15,6 +15,8 @@ import shapeFour from "../assets/images/line-vector-4.svg";
 import contentTypeImg1 from "../assets/images/img-content-sec-type1.jpg";
 import contentTypeImg2 from "../assets/images/img-content-sec-type2.jpg";
 import contentTypeImg3 from "../assets/images/img-content-sec-type3.jpg";
+import useCaseVector1 from "../assets/images/home-use-case-vector1.jpg";
+import useCaseVector2 from "../assets/images/home-use-case-vector2.jpg";
 import quizTypeIcon1 from "../assets/icons/icon-quiz-type1.gif";
 import quizTypeIcon2 from "../assets/icons/icon-quiz-type2.gif";
 import quizTypeIcon3 from "../assets/icons/icon-quiz-type3.gif";
@@ -329,7 +331,7 @@ export default function Home() {
         <div className="container">
           <div className="hero-content">
             <div className="hero-left">
-              <div className="sec-label">CORPORATE TRAINING TOOL</div>
+              {/* <div className="sec-label">CORPORATE TRAINING TOOL</div> */}
               <h1 className="sec-title-lg">IQrew – Corporate Training Tool</h1>
               <h2 className="sec-subtitle">Accelerate Onboarding, Make Qualifications Verifiable</h2>
               <p className="sec-desc">
@@ -353,7 +355,7 @@ export default function Home() {
               <div className="hero-dots-pattern"></div>
             </div>
             <div className="hero-right">
-              <div className="hero-images-grid">
+              {/* <div className="hero-images-grid">
                 <div className="hero-image hero-image--top-left">
                   <div className="image-placeholder">
                     <div className="placeholder-content">
@@ -363,9 +365,9 @@ export default function Home() {
                         <path d="M2 7L12 12L22 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       <span>Modular Courses</span>
-              </div>
-            </div>
-          </div>
+                    </div>
+                  </div>
+                </div>
                 <div className="hero-image hero-image--top-right">
                   <div className="orange-ring orange-ring--top"></div>
                   <div className="image-placeholder">
@@ -375,9 +377,9 @@ export default function Home() {
                         <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" strokeWidth="2" />
                       </svg>
                       <span>Auto Certificates</span>
-        </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
                 <div className="hero-image hero-image--bottom-right">
                   <div className="orange-ring orange-ring--bottom"></div>
                   <div className="image-placeholder">
@@ -386,47 +388,12 @@ export default function Home() {
                         <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                         <path d="M3 9H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
                         <path d="M9 21V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                              </svg>
+                      </svg>
                       <span>Track Progress</span>
-                            </div>
-                            </div>
-                          </div>
-                        </div>
-                        </div>
-                        </div>
-                      </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="home-sec-stats">
-        <img className="vector" src={shapeOne} alt="Vector" />
-        <ShapeSvgComponent className="shape1" fillColor="#ef7600">
-          <svg width="80" height="69" viewBox="0 0 80 69" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M40 0L79.8372 69H0.16283L40 0Z" fill="#fff"/>
-          </svg>
-        </ShapeSvgComponent>
-        <ShapeSvgComponent className="shape2" fillColor="#1771b8">
-          <svg width="43" height="86" viewBox="0 0 43 86" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 86C5.64684 86 11.2384 84.8878 16.4554 82.7268C21.6724 80.5659 26.4127 77.3985 30.4056 73.4056C34.3985 69.4127 37.5659 64.6724 39.7268 59.4554C41.8878 54.2384 43 48.6468 43 43C43 37.3532 41.8878 31.7616 39.7268 26.5446C37.5659 21.3276 34.3985 16.5873 30.4056 12.5944C26.4127 8.60149 21.6724 5.43413 16.4554 3.27318C11.2384 1.11223 5.64684 -2.46831e-07 0 0V86Z" fill="#fff"/>
-          </svg>
-        </ShapeSvgComponent>
-        <div className="container">
-          <div className="stats-flex">
-            <div className="stat-item" data-aos="fade-up">
-              <h2 className="stat-number">33%</h2>
-              <h5 className="stat-label">Reduction in Onboarding Time</h5>
-            </div>
-            <div className="stat-item" data-aos="fade-up">
-              <h2 className="stat-number">100%</h2>
-              <h5 className="stat-label">Automated Certificates</h5>
-            </div>
-            <div className="stat-item" data-aos="fade-up">
-              <h2 className="stat-number">∞</h2>
-              <h5 className="stat-label">Reusable Modules</h5>
-              </div>
-            <div className="stat-item" data-aos="fade-up">
-              <h2 className="stat-number">24/7</h2>
-              <h5 className="stat-label">Access & Support</h5>
+                    </div>
+                  </div>
+                </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -519,12 +486,27 @@ export default function Home() {
               <div className="works-content-item">
                 <h3>Courses, Modules, Contents – A Construction Kit for Modern Employee Training</h3>
                 <p>In IQrew, training is structured logically:</p>
-                <ul className="works-list">
-                  <li>Courses consist of multiple modules.</li>
-                  <li>Modules consist of various content types: videos, audios, PDFs, and images.</li>
-                  <li>Modularity saves time and enables precise course creation.</li>
-                  <li>A module can be used in multiple courses.</li>
-                  <li>A content can be part of multiple modules.</li>
+                <ul className="checks-list orange-checks">
+                  <li>
+                    <FontAwesomeIcon className="icon" icon={faCircleCheck} />
+                    <span>Courses consist of multiple modules.</span>
+                  </li>
+                  <li>
+                    <FontAwesomeIcon className="icon" icon={faCircleCheck} />
+                    <span>Modules consist of various content types: videos, audios, PDFs, and images.</span>
+                  </li>
+                  <li>
+                    <FontAwesomeIcon className="icon" icon={faCircleCheck} />
+                    <span>Modularity saves time and enables precise course creation.</span>
+                  </li>
+                  <li>
+                    <FontAwesomeIcon className="icon" icon={faCircleCheck} />
+                    <span>A module can be used in multiple courses.</span>
+                  </li>
+                  <li>
+                    <FontAwesomeIcon className="icon" icon={faCircleCheck} />
+                    <span>A content can be part of multiple modules.</span>
+                  </li>
                 </ul>
                 <p>This creates a central and efficient knowledge management system that you can continuously expand.</p>
               </div>
@@ -535,6 +517,41 @@ export default function Home() {
                 </p>
                 <p>IQrew enables transparent expectation management for admins and learners.</p>
             </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="home-sec-stats">
+        <img className="vector" src={shapeOne} alt="Vector" />
+        <ShapeSvgComponent className="shape1" fillColor="#ef7600">
+          <svg width="80" height="69" viewBox="0 0 80 69" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M40 0L79.8372 69H0.16283L40 0Z" fill="#fff"/>
+          </svg>
+        </ShapeSvgComponent>
+        <ShapeSvgComponent className="shape2" fillColor="#1771b8">
+          <svg width="43" height="86" viewBox="0 0 43 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 86C5.64684 86 11.2384 84.8878 16.4554 82.7268C21.6724 80.5659 26.4127 77.3985 30.4056 73.4056C34.3985 69.4127 37.5659 64.6724 39.7268 59.4554C41.8878 54.2384 43 48.6468 43 43C43 37.3532 41.8878 31.7616 39.7268 26.5446C37.5659 21.3276 34.3985 16.5873 30.4056 12.5944C26.4127 8.60149 21.6724 5.43413 16.4554 3.27318C11.2384 1.11223 5.64684 -2.46831e-07 0 0V86Z" fill="#fff"/>
+          </svg>
+        </ShapeSvgComponent>
+        <div className="container">
+          <div className="stats-flex">
+            <div className="stat-item" data-aos="fade-up">
+              <h2 className="stat-number">33%</h2>
+              <h5 className="stat-label">Reduction in Onboarding Time</h5>
+            </div>
+            <div className="stat-item" data-aos="fade-up">
+              <h2 className="stat-number">100%</h2>
+              <h5 className="stat-label">Automated Certificates</h5>
+            </div>
+            <div className="stat-item" data-aos="fade-up">
+              <h2 className="stat-number">∞</h2>
+              <h5 className="stat-label">Reusable Modules</h5>
+              </div>
+            <div className="stat-item" data-aos="fade-up">
+              <h2 className="stat-number">24/7</h2>
+              <h5 className="stat-label">Access & Support</h5>
             </div>
           </div>
         </div>
@@ -576,9 +593,15 @@ export default function Home() {
               </div>
               <h4 className="title">Quiz Creation for Contents and Complete Courses</h4>
               <p className="desc">With IQrew, you create quizzes both:</p>
-              <ul className="point-list">
-                <li>For individual contents (e.g., after a video or PDF).</li>
-                <li>As well as for complete courses (final tests).</li>
+              <ul className="checks-list blue-checks">
+                <li>
+                  <FontAwesomeIcon className="icon" icon={faCircleCheck} />
+                  <span>For individual contents (e.g., after a video or PDF).</span>
+                </li>
+                <li>
+                  <FontAwesomeIcon className="icon" icon={faCircleCheck} />
+                  <span>As well as for complete courses (final tests).</span>
+                </li>
               </ul>
             </div>
             <div className="quiz-card" data-aos="fade-up">
@@ -633,11 +656,23 @@ export default function Home() {
                 <div className="dashboard-card-icon">📊</div>
                 <h3>Extensive Dashboard for Clarity</h3>
                 <p>Administrators receive a dashboard that makes learning successes and qualifications visible company-wide. This allows you to:</p>
-                <ul className="dashboard-list">
-                  <li>Trace progress and completion rates.</li>
-                  <li>Compare qualification statuses.</li>
-                  <li>Check onboarding status per team/department.</li>
-                  <li>Organize cross-departmental knowledge competitions.</li>
+                <ul className="checks-list blue-checks">
+                  <li>
+                    <FontAwesomeIcon className="icon" icon={faCircleCheck} />
+                    <span>Trace progress and completion rates.</span>
+                  </li>
+                  <li>
+                    <FontAwesomeIcon className="icon" icon={faCircleCheck} />
+                    <span>Compare qualification statuses.</span>
+                  </li>
+                  <li>
+                    <FontAwesomeIcon className="icon" icon={faCircleCheck} />
+                    <span>Check onboarding status per team/department.</span>
+                  </li>
+                  <li>
+                    <FontAwesomeIcon className="icon" icon={faCircleCheck} />
+                    <span>Organize cross-departmental knowledge competitions.</span>
+                  </li>
                 </ul>
               </div>
               <div className="dashboard-feature-card">
@@ -651,10 +686,19 @@ export default function Home() {
                 <div className="dashboard-card-icon">🏷️</div>
                 <h3>Tagging by Qualifications</h3>
                 <p>With the tagging feature, you can tag users according to their qualifications and filter specifically later. This supports, for example:</p>
-                <ul className="dashboard-list">
-                  <li>Role-based training assignments.</li>
-                  <li>Employee lists for qualification proofs within the scope of audit preparations.</li>
-                  <li>Skill overviews in the company.</li>
+                <ul className="checks-list blue-checks">
+                  <li>
+                    <FontAwesomeIcon className="icon" icon={faCircleCheck} />
+                    <span>Role-based training assignments.</span>
+                  </li>
+                  <li>
+                    <FontAwesomeIcon className="icon" icon={faCircleCheck} />
+                    <span>Employee lists for qualification proofs within the scope of audit preparations.</span>
+                  </li>
+                  <li>
+                    <FontAwesomeIcon className="icon" icon={faCircleCheck} />
+                    <span>Skill overviews in the company.</span>
+                  </li>
                 </ul>
                 </div>
               </div>
@@ -662,10 +706,19 @@ export default function Home() {
               <div className="dashboard-highlight-icon">📋</div>
               <h3>Manage External Qualifications & Certificate Expiry Dates (Incl. PDF Proofs)</h3>
               <p>Not every qualification is created internally. IQrew also allows you to:</p>
-              <ul className="dashboard-list">
-                <li>Capture and maintain external qualifications.</li>
-                <li>Deposit PDF proofs.</li>
-                <li>Track expiration dates of certificates & Certificate Lifecycle Management.</li>
+              <ul className="checks-list white-checks">
+                <li>
+                  <FontAwesomeIcon className="icon" icon={faCircleCheck} />
+                  <span>Capture and maintain external qualifications.</span>
+                </li>
+                <li>
+                  <FontAwesomeIcon className="icon" icon={faCircleCheck} />
+                  <span>Deposit PDF proofs.</span>
+                </li>
+                <li>
+                  <FontAwesomeIcon className="icon" icon={faCircleCheck} />
+                  <span>Track expiration dates of certificates & Certificate Lifecycle Management.</span>
+                </li>
               </ul>
               <p>This makes IQrew the central point for documenting internal and external qualifications in a structured manner.</p>
           </div>
@@ -738,10 +791,13 @@ export default function Home() {
           <div className="section-header">
             <h4 className="sec-label">CONTENT CREATION</h4>
             <h2 className="sec-title-lg">Have Training Content Created</h2>
-            <h3 className="sec-title-sm">You Want to Offer Your Team High-Quality Training Content, But You Lack Time, Resources, or an Established Content Team?</h3>
+            {/* <h3 className="sec-title-sm">You Want to Offer Your Team High-Quality Training Content, But You Lack Time, Resources, or an Established Content Team?</h3> */}
             <p className="sec-desc">
-              We take over the creation of contents for your IQrew training. AI-supported, target-group-oriented, and based on your documents and data.
-              We create videos, audios, and PDFs exactly so that they fit your roles, language, and internal specifications.
+              <span>You Want to Offer Your Team High-Quality Training Content, But You Lack Time, 
+              Resources, or an Established Content Team?</span> We take over the creation of 
+              contents for your IQrew training. AI-supported, target-group-oriented, and based on 
+              your documents and data. We create videos, audios, and PDFs exactly so that they fit 
+              your roles, language, and internal specifications.
             </p>
           </div>
           <div  className="content-rows-flex">
@@ -752,7 +808,7 @@ export default function Home() {
                 </div>
                 <div className="content-container">
                   <h3 className="content-title">{type.title}</h3>
-                  <ul className="content-list">
+                  <ul className="checks-list blue-checks">
                     {type.items.map((item, itemIndex) => (
                       <li key={itemIndex}>
                         <FontAwesomeIcon className="icon" icon={faCircleCheck} />
@@ -838,14 +894,76 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Use Cases Section */}
-      <section id="use-cases" className="use-cases-section">
+      {/* Use Cases Section use-cases-section */} 
+      <section id="use-cases" className="home-use-cases-sec">
         <div className="container">
           <div className="section-header">
             <h4 className="sec-label">USE CASES</h4>
-            <h2 className="sec-title-lg">Onboarding for Companies of Every Size (Fast, Precise, Reusable)</h2>
+            <h2 className="sec-title-lg">Streamlined Company Onboarding</h2>
+            <p className="sec-desc">
+              Create fast, precise, and reusable onboarding training for companies of every size. Build comprehensive training programs in just a few clicks.
+            </p>
+          </div>
+          <div className="rows-flex">
+            <div className="row-item">
+              <div className="content-container" data-aos="fade-right">
+                <h3 className="content-title">Create Onboarding Training<br/>in Few Clicks</h3>
+                <p className="content-desc">
+                  Team leads and admins can build precise onboarding training by combining relevant modules from different company areas, e.g.:
+                </p>
+                <ul className="checks-list orange-checks">
+                  <li>
+                    <FontAwesomeIcon className="icon" icon={faCircleCheck} />
+                    <span>IT & Security</span>
+                  </li>
+                  <li>
+                    <FontAwesomeIcon className="icon" icon={faCircleCheck} />
+                    <span>HR & Processes</span>
+                  </li>
+                  <li>
+                    <FontAwesomeIcon className="icon" icon={faCircleCheck} />
+                    <span>Data Privacy & Compliance</span>
+                  </li>
+                  <li>
+                    <FontAwesomeIcon className="icon" icon={faCircleCheck} />
+                    <span>Team-specific workflows</span>
+                  </li>
+                  <li>
+                    <FontAwesomeIcon className="icon" icon={faCircleCheck} />
+                    <span>AI basics in everyday work</span>
+                  </li>
+                </ul>
+                <p className="content-desc">
+                  The result: New employees receive comprehensive, consistent onboarding without every team creating training completely from scratch.
+                </p>
               </div>
-          <div className="use-cases-layout">
+              <div className="img-container" data-aos="fade-left">
+                <img src={useCaseVector1} alt="Use Case" />
+              </div>
+            </div>
+            <div className="row-item">
+            <div className="content-container" data-aos="fade-left">
+                <h3 className="content-title">
+                  Typical Training That Becomes Particularly Easy with IQrew:
+                </h3>
+                <p className="content-desc">
+                  asdasd
+                </p>
+                <ul className="checks-list orange-checks">
+                  {trainingTypes.map((type, index) => (
+                    <li key={index}>
+                      <FontAwesomeIcon className="icon" icon={faCircleCheck} />
+                      <span>{type}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="img-container" data-aos="fade-right">
+                <img src={useCaseVector2} alt="Use Case" />
+              </div>
+            </div>
+          </div>
+          {/* <div className="use-cases-layout">
             <div className="use-case-card">
               <div className="use-case-icon">🚀</div>
               <h3>Create Onboarding Training in Few Clicks</h3>
@@ -873,7 +991,7 @@ export default function Home() {
                 ))}
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
