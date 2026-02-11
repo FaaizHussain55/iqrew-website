@@ -12,6 +12,7 @@ import shapeTwo from "../assets/images/line-vector-2.svg";
 import shapeThree from "../assets/images/line-vector-3.svg";
 import shapeFour from "../assets/images/line-vector-4.svg";
 // import shapeFive from "../assets/images/line-vector-5.svg";
+import adminDashboardImg from "../assets/images/ss-dashboard.png";
 import contentTypeImg1 from "../assets/images/img-content-sec-type1.jpg";
 import contentTypeImg2 from "../assets/images/img-content-sec-type2.jpg";
 import contentTypeImg3 from "../assets/images/img-content-sec-type3.jpg";
@@ -453,39 +454,19 @@ export default function Home() {
       </section>
 
       {/* How IQrew Works Section */}
-      <section id="how-it-works" className="how-it-works-section">
+      <section id="how-it-works" className="home-hiw-sec how-it-works-section">
         <div className="container">
           <div className="section-header">
             <h4 className="sec-label">HOW IT WORKS</h4>
             <h2 className="sec-title-lg">Modular, Flexible, Efficient</h2>
-                  </div>
-          <div className="works-layout">
-            <div className="works-left">
-              <div className="works-visual">
-                <div className="works-circle">
-                  <div className="circle-content">
-                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 2L2 7L2 17L12 22L22 17L22 7L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      <path d="M12 22L12 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      <path d="M2 7L12 12L22 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                    <span>Modular System</span>
-                  </div>
-                </div>
-                <div className="works-orange-ring"></div>
-                <div className="works-chevrons">
-                  {[1, 2, 3, 4].map((i) => (
-                    <svg key={i} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M7 13L12 8L17 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  ))}
-                  </div>
-                </div>
-              </div>
-            <div className="works-right">
-              <div className="works-content-item">
-                <h3>Courses, Modules, Contents – A Construction Kit for Modern Employee Training</h3>
-                <p>In IQrew, training is structured logically:</p>
+          </div>
+          <div className="rows-flex">
+            <div className="row-item">
+              <div className="content-container" data-aos="fade-right">
+                <h3 className="content-title">
+                  Courses, Modules, Contents – A Construction Kit for Modern Employee Training
+                </h3>
+                <p className="content-desc">In IQrew, training is structured logically:</p>
                 <ul className="checks-list orange-checks">
                   <li>
                     <FontAwesomeIcon className="icon" icon={faCircleCheck} />
@@ -508,8 +489,30 @@ export default function Home() {
                     <span>A content can be part of multiple modules.</span>
                   </li>
                 </ul>
-                <p>This creates a central and efficient knowledge management system that you can continuously expand.</p>
+                <p className="content-desc">
+                  This creates a central and efficient knowledge management system that you can continuously expand.
+                </p>
               </div>
+              <div className="img-container" data-aos="fade-left">
+                <img src={useCaseVector1} alt="Use Case" />
+              </div>
+            </div>
+            <div className="row-item">
+              <div className="content-container" data-aos="fade-left">
+                <h3 className="content-title">Set Deadlines and Steer Progress Cleanly</h3>
+                <p className="content-desc">
+                  When creating courses, you can define deadlines for your employees. This ensures that onboardings, training sessions, or mandatory training are completed on time and simply do not get lost.
+                </p>
+                <p>IQrew enables transparent expectation management for admins and learners.</p>
+              </div>
+              <div className="img-container" data-aos="fade-right">
+                <img src={useCaseVector2} alt="Use Case" />
+              </div>
+            </div>
+          </div>
+
+          {/* <div className="works-layout">
+            <div className="works-right">
               <div className="works-content-item">
                 <h3>Set Deadlines and Steer Progress Cleanly</h3>
                 <p>
@@ -518,7 +521,8 @@ export default function Home() {
                 <p>IQrew enables transparent expectation management for admins and learners.</p>
             </div>
             </div>
-          </div>
+          </div> */}
+          
         </div>
       </section>
 
@@ -644,18 +648,26 @@ export default function Home() {
       </section>
 
       {/* Admin Dashboard Section */}
-      <section className="admin-dashboard-section">
+      <section className="home-admin-sec">
         <div className="container">
           <div className="section-header">
             <h4 className="sec-label">ADMIN DASHBOARD</h4>
-            <h2 className="sec-title-lg">Learning Progress and Qualifications in View</h2>
+            <h2 className="sec-title-lg">Learning Progress Overview</h2>
+            <p className="sec-desc">
+              Administrators get comprehensive visibility into learning progress, 
+              qualifications, and certifications across the organization. Track completion 
+              rates, manage user access, and maintain detailed records of internal and 
+              external qualifications.
+            </p>
           </div>
-          <div className="dashboard-layout">
-            <div className="dashboard-features">
-              <div className="dashboard-feature-card">
-                <div className="dashboard-card-icon">📊</div>
-                <h3>Extensive Dashboard for Clarity</h3>
-                <p>Administrators receive a dashboard that makes learning successes and qualifications visible company-wide. This allows you to:</p>
+          <div className="rows-flex">
+            <div className="row-item">
+              <div className="content-container" data-aos="fade-right">
+                <h3 className="content-title">Detailed Dashboard for Clarity</h3>
+                <p className="content-desc">
+                  Administrators receive a dashboard that makes learning successes and 
+                  qualifications visible company-wide. This allows you to:
+                </p>
                 <ul className="checks-list blue-checks">
                   <li>
                     <FontAwesomeIcon className="icon" icon={faCircleCheck} />
@@ -675,17 +687,49 @@ export default function Home() {
                   </li>
                 </ul>
               </div>
-              <div className="dashboard-feature-card">
-                <div className="dashboard-card-icon">🔍</div>
-                <h3>User Management with Extensive Search and Filter Options</h3>
-                <p>
-                  In user management, you quickly filter user lists according to relevant criteria. Especially valuable for growing teams, multiple locations, or different role profiles.
+              <div className="img-container" data-aos="fade-left">
+                <img src={adminDashboardImg} alt="Admin Dashboard" />
+              </div>
+            </div>
+            <div className="row-item">
+              <div className="content-container" data-aos="fade-left">
+                <h3 className="content-title">
+                  User Management with Extensive Search and Filter Options
+                </h3>
+                <p className="content-desc">
+                  In user management, you quickly filter user lists according to relevant 
+                  criteria. Especially valuable for: 
                 </p>
-                </div>
-              <div className="dashboard-feature-card">
-                <div className="dashboard-card-icon">🏷️</div>
-                <h3>Tagging by Qualifications</h3>
-                <p>With the tagging feature, you can tag users according to their qualifications and filter specifically later. This supports, for example:</p>
+                <ul className="checks-list blue-checks">
+                  <li>
+                    <FontAwesomeIcon className="icon" icon={faCircleCheck} />
+                    <span>Growing teams.</span>
+                  </li>
+                  <li>
+                    <FontAwesomeIcon className="icon" icon={faCircleCheck} />
+                    <span>Multiple locations.</span>
+                  </li>
+                  <li>
+                    <FontAwesomeIcon className="icon" icon={faCircleCheck} />
+                    <span>Different role profiles.</span>
+                  </li>
+                  <li>
+                    <FontAwesomeIcon className="icon" icon={faCircleCheck} />
+                    <span>user lists for reporting or licensed activities</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="img-container" data-aos="fade-right">
+                <img src={adminDashboardImg} alt="Admin Dashboard" />
+              </div>
+            </div>
+            <div className="row-item">
+              <div className="content-container" data-aos="fade-right">
+                <h3 className="content-title">User-Tags</h3>
+                <p className="content-desc">
+                  With the tagging feature, you can tag users according to their qualifications 
+                  and filter specifically later. This supports, for example: 
+                </p>
                 <ul className="checks-list blue-checks">
                   <li>
                     <FontAwesomeIcon className="icon" icon={faCircleCheck} />
@@ -700,28 +744,42 @@ export default function Home() {
                     <span>Skill overviews in the company.</span>
                   </li>
                 </ul>
-                </div>
               </div>
-            <div className="dashboard-highlight">
-              <div className="dashboard-highlight-icon">📋</div>
-              <h3>Manage External Qualifications & Certificate Expiry Dates (Incl. PDF Proofs)</h3>
-              <p>Not every qualification is created internally. IQrew also allows you to:</p>
-              <ul className="checks-list white-checks">
-                <li>
-                  <FontAwesomeIcon className="icon" icon={faCircleCheck} />
-                  <span>Capture and maintain external qualifications.</span>
-                </li>
-                <li>
-                  <FontAwesomeIcon className="icon" icon={faCircleCheck} />
-                  <span>Deposit PDF proofs.</span>
-                </li>
-                <li>
-                  <FontAwesomeIcon className="icon" icon={faCircleCheck} />
-                  <span>Track expiration dates of certificates & Certificate Lifecycle Management.</span>
-                </li>
-              </ul>
-              <p>This makes IQrew the central point for documenting internal and external qualifications in a structured manner.</p>
-          </div>
+              <div className="img-container" data-aos="fade-left">
+                <img src={adminDashboardImg} alt="Admin Dashboard" />
+              </div>
+            </div>
+            <div className="row-item">
+              <div className="content-container" data-aos="fade-left">
+                <h3 className="content-title">
+                  Manage External Qualifications & Certificate Expiry Dates
+                </h3>
+                <p className="content-desc">
+                  Not every qualification is created internally. IQrew also allows you to: 
+                </p>
+                <ul className="checks-list blue-checks">
+                  <li>
+                    <FontAwesomeIcon className="icon" icon={faCircleCheck} />
+                    <span>Capture and maintain external qualifications.</span>
+                  </li>
+                  <li>
+                    <FontAwesomeIcon className="icon" icon={faCircleCheck} />
+                    <span>Deposit PDF proofs and certificates.</span>
+                  </li>
+                  <li>
+                    <FontAwesomeIcon className="icon" icon={faCircleCheck} />
+                    <span>Track expiration dates of certificates & Certificate Lifecycle Management.</span>
+                  </li>
+                </ul>
+                <p className="content-desc">
+                  This makes IQrew the central point for documenting internal and external 
+                  qualifications in a structured manner.
+                </p>
+              </div>
+              <div className="img-container" data-aos="fade-right">
+                <img src={adminDashboardImg} alt="Admin Dashboard" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -942,7 +1000,7 @@ export default function Home() {
               </div>
             </div>
             <div className="row-item">
-            <div className="content-container" data-aos="fade-left">
+              <div className="content-container" data-aos="fade-left">
                 <h3 className="content-title">
                   Typical Training That Becomes Particularly Easy with IQrew:
                 </h3>
