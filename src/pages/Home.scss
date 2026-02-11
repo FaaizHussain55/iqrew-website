@@ -1023,10 +1023,7 @@
   padding: 100px 0 80px;
   background: #fff;
   .section-header{
-    .sec-desc{
       max-width: 780px;
-      margin: 0 auto;
-    }
   }
   .bulk-items-flex {
     display: flex;
@@ -1670,7 +1667,7 @@
   font-weight: 600;
   color: #181c31;
   margin-bottom: 0;
-  line-height: 1.1;
+  line-height: 1.25;
 }
 .sec-desc{
   font-size: 16px;
@@ -1715,7 +1712,7 @@
   }
   .sec-title-lg{
     font-size: 32px;
-    line-height: 1.25;
+    line-height: 1.2;
   }
   .sec-desc{
     font-size: 14px;
@@ -1878,10 +1875,7 @@
   .home-bulk-import-sec{
     padding: 48px 0 48px;
     .section-header{
-      .sec-desc{
-        max-width: 100%;
-        margin: 0 auto;
-      }
+      max-width: 100%;
     }
     .bulk-items-flex {
       gap: 16px;

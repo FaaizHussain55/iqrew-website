@@ -33,7 +33,9 @@ export default function LandingHeader() {
     const targetElement = document.getElementById(targetId);
     
     if (targetElement) {
-      const headerOffset = 80; // Adjust based on header height
+      // Check viewport width directly at click time for accurate mobile detection
+      const isMobileView = window.innerWidth < 768;
+      const headerOffset = isMobileView ? 61 : 80;
       const elementPosition = targetElement.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
