@@ -652,6 +652,7 @@
     margin-bottom: 10px;
     .icon{
       display: inline-block;
+      width: 16px;
       margin-top: 4px;
     }
     &:last-of-type{
@@ -1753,6 +1754,9 @@
     li{
       font-size: 14px;
       margin-bottom: 8px;
+      .icon{
+        width: 14px;
+      }
     }
   }
 
