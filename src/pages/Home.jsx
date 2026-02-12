@@ -12,7 +12,10 @@ import shapeTwo from "../assets/images/line-vector-2.svg";
 import shapeThree from "../assets/images/line-vector-3.svg";
 import shapeFour from "../assets/images/line-vector-4.svg";
 // import shapeFive from "../assets/images/line-vector-5.svg";
-import adminDashboardImg from "../assets/images/ss-dashboard.png";
+import adminDashboardImg from "../assets/images/eng-dashboard-ss.png";
+import adminUsersImg from "../assets/images/eng-users-ss.png";
+import adminTagsImg from "../assets/images/eng-tags-ss.png";
+import adminCertificatesImg from "../assets/images/eng-certificates-ss.png";
 import contentTypeImg1 from "../assets/images/img-content-sec-type1.jpg";
 import contentTypeImg2 from "../assets/images/img-content-sec-type2.jpg";
 import contentTypeImg3 from "../assets/images/img-content-sec-type3.jpg";
@@ -454,7 +457,7 @@ export default function Home() {
       </section>
 
       {/* How IQrew Works Section */}
-      <section id="how-it-works" className="home-hiw-sec how-it-works-section">
+      <section id="how-it-works" className="home-hiw-sec">
         <div className="container">
           <div className="section-header">
             <h4 className="sec-label">HOW IT WORKS</h4>
@@ -720,7 +723,7 @@ export default function Home() {
                 </ul>
               </div>
               <div className="img-container" data-aos="fade-right">
-                <img src={adminDashboardImg} alt="Admin Dashboard" />
+                <img src={adminUsersImg} alt="Admin Dashboard" />
               </div>
             </div>
             <div className="row-item">
@@ -746,7 +749,7 @@ export default function Home() {
                 </ul>
               </div>
               <div className="img-container" data-aos="fade-left">
-                <img src={adminDashboardImg} alt="Admin Dashboard" />
+                <img src={adminTagsImg} alt="Admin Dashboard" />
               </div>
             </div>
             <div className="row-item">
@@ -777,7 +780,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="img-container" data-aos="fade-right">
-                <img src={adminDashboardImg} alt="Admin Dashboard" />
+                <img src={adminCertificatesImg} alt="Admin Dashboard" />
               </div>
             </div>
           </div>
