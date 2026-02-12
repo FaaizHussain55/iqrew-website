@@ -1,5 +1,6 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { LanguageProvider } from "./contexts/LanguageContext";
 import LandingHeader from "./components/LandingHeader";
 // import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -28,7 +29,7 @@ function ScrollToTop() {
 
 function App() {
   return (
-    <>
+    <LanguageProvider>
       <ScrollToTop />
       <LandingHeader />
       <main>
@@ -49,7 +50,7 @@ function App() {
         </Routes>
       </main>
       {/* <Footer /> */}
-    </>
+    </LanguageProvider>
   );
 }
 

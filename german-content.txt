@@ -1,0 +1,258 @@
+﻿H1: IQrew – Schulungsportal für Unternehmen 
+
+Onboarding beschleunigen, Qualifikationen nachweisbar machen
+Mit IQrew erstellst du Schulungen für Mitarbeitende in wenigen Klicks. Modular, effizient, übersichtlich. Erstelle Kurse aus wiederverwendbaren Modulen und Inhalten, setze Deadlines, prüfe Wissen mit Quizzen und dokumentiere Lernerfolge mit automatisch erstellten Zertifikaten. 
+Für Admins liefert das Dashboard alle Infos für ein abteilungsübergreifendes Tracking der Lernerfortschritte, Qualifikationen und Zertifikatsdatenbanken, inklusive Usermanagement mit starken Tagging- und Filter- und Exportoptionen. Ideal für Reporting, Controlling und Qualifikationsmanagement!
+________________
+
+
+H2: Warum IQrew? Weil Schulungen in der Praxis schnell, konsistent und nachweisbar sein müssen
+Ob Onboarding, Compliance, Datenschutz, IT-Security, KI-Grundlagen oder interne Prozessschulungen: Unternehmen brauchen Trainings, die nicht bei Null starten, sondern wiederverwendbar sind und Lernergebnisse liefern, die man im Alltag konkret umsetzen kann.
+IQrew bietet:
+* Modularen Kursaufbau (skalierbarkeit für viele Rollen und Teams)
+
+* Wissenschecks (Quiz je Inhalt und Kurs)
+
+* Automatisierte Zertifikatserstellung (ohne manuellen Aufwand)
+
+* Qualifikationsmanagement (inkl. externe Nachweise)
+* Tracking der Zertifikate und Ablaufdaten 
+
+________________
+
+
+H2: IQrew bringt Struktur in Unternehmensschulungen und Tempo ins Onboarding
+IQrew ist eine Plattform für Unternehmen, die Schulungen nicht nur erstellen, sondern skalieren wollen: modularer Aufbau, Deadlines, Quizze, Zertifikate und ein Admin-Bereich, der Qualifikationen wirklich sichtbar macht. Unsere Kunden berichten von bis zur 33% Reduktion der Einarbeitungszeit neuer Kollegen.
+________________
+
+
+H2: So funktioniert IQrew: modular, flexibel, effizient
+H3: Kurse, Module, Inhalte – ein Baukasten für moderne Mitarbeiterschulungen
+In IQrew sind Schulungen logisch aufgebaut:
+   * Kurse bestehen aus mehreren Modulen
+
+   * Module bestehen aus verschiedenen Content-Typen: Videos, Audios, PDFs und Bildern
+
+   * Modularität spart Zeit und ermöglicht passgenaue Kurserstellung
+
+      * Ein Modul kann in mehreren Kursen verwendet werden
+
+      * Ein Content kann Bestandteil mehrerer Module sein
+
+Damit entsteht ein zentrales und effizientes Wissensmanagementsystem, das du kontinuierlich erweitern kannst.
+H3: Deadlines für Schulungen setzen und Fortschritt sauber steuern
+Bei der Kurserstellung kannst du Deadlines für deine Mitarbeiter definieren. So stellst du sicher, dass Onboardings, Trainings oder Pflichtschulungen termingerecht abgeschlossen werden und nicht einfach untergehen. IQrew ermöglicht transparentes Erwartungsmanagement für Admins und Lernende. 
+________________
+
+
+H2: Quizze, Lernkontrolle und Zertifikate. Wie wird Wissen im Unternehmen nachweisbar?
+H3: Quizerstellung für Inhalte und komplette Kurse
+Mit IQrew erstellst du Quizze sowohl:
+         * für einzelne Inhalte (z. B. nach einem Video oder PDF)
+
+         * als auch für komplette Kurse (Abschlusstests)
+
+H3: Diese Quizarten stehen zur Auswahl
+Du kannst je nach Lernziel den passenden Fragetyp wählen:
+            * Multiple Choice
+
+            * Single Choice
+
+            * True/False
+
+            * Reihenfolgen (z. B. Prozessschritte korrekt ordnen)
+
+H3: Video-Contents: Überspringen verhindern
+Für Videos kannst du festlegen, ob das Überspringen verhindert werden soll. Ideal für Pflichtinhalte wie Sicherheitsunterweisungen, Datenschutz- oder Compliance-Schulungen.
+H3: Automatische Zertifikate, sobald alles bestanden ist
+Wenn alle Quizze gemäß den Vorgaben der Ersteller erfolgreich abgeschlossen wurden, generiert und speichert IQrew automatisch ein Zertifikat.
+Es entstehen belastbare Nachweise, ohne manuelle Prüfung oder Zusatztools.
+________________
+
+
+H2: Admin-Dashboard & Usermanagement – Lernfortschritt und Qualifikationen im Blick
+H3: Umfangreiches Dashboard für Übersichtlichkeit
+Administratoren erhalten ein Dashboard, das Lernerfolge und Qualifikationen unternehmensweit und standortübergreifend sichtbar macht. So kannst du:
+               * Fortschritte und Abschlussquoten nachvollziehen
+
+               * Qualifikationsstände vergleichen
+
+               * Onboarding-Status pro Team/Abteilung überprüfen oder
+               * Abteilungsübergreifende Wissenswettbewerbe veranstalten
+
+H3: Usermanagement mit umfangreichen Such- und Filteroptionen
+Im Usermanagement filterst du Nutzerlisten schnell nach relevanten Kriterien. Besonders wertvoll bei wachsenden Teams, mehreren Standorten oder unterschiedlichen Rollenprofilen.
+H3: Tagging nach Qualifikationen
+Mit dem Tagging-Feature kannst du User nach ihren Qualifikationen taggen und später gezielt filtern. Das unterstützt z. B.:
+                  * Rollenbasierte Schulungszuweisungen
+
+                  * Mitarbeiterlisten für Qualifikationsnachweise im Rahmen von Audit-Vorbereitungen
+
+                  * Skill-Übersichten im Unternehmen 
+
+________________
+
+
+H2: Externe Qualifikationen & Zertifikatslaufzeiten verwalten (inkl. PDF-Nachweise)
+Nicht jede Qualifikation entsteht intern. IQrew ermöglicht dir auch:
+                     * Externe Qualifikationen zu erfassen und zu pflegen
+
+                     * PDF-Nachweise zu hinterlegen
+
+                     * Ablaufdaten von Zertifikaten zu tracken
+
+Damit wird IQrew zur zentralen Stelle, um interne wie externe Qualifikationen strukturiert zu dokumentieren.
+________________
+
+
+H2: Massenimport: viele User in Minuten einladen
+Mit unserem Massenimport lädst du eine Vielzahl von Usern mit wenigen Klicks ein. Das spart Zeit besonders bei:
+                        * neuen Standorten
+
+                        * großem Hiring
+
+                        * saisonalen Teams
+
+                        * Rollouts von Pflichtschulungen
+                        * hoher Mitarbeiterfluktuation oder kurzfristigen Bedarf 
+
+________________
+
+
+H2: Schulungsinhalte erstellen lassen 
+H3: Du willst deinem Team hochwertige Schulungsinhalte anbieten, aber dir fehlen Zeit, Ressourcen oder ein eingespieltes Content-Team? 
+
+Wir übernehmen die Erstellung von Inhalten für deine IQrew-Schulungen. KI-gestützt, zielgruppengerecht und auf Basis deiner Dokumente und Daten. 
+
+Wir erstellen Videos, Audios und PDFs exakt so, dass sie zu euren Rollen, der Sprache und den internen Vorgaben passen. 
+H3: Schulungsvideos
+                           * Erklärvideos und Schulungsfilme (flexible Länge, klar, praxisnah)
+
+                           * Optional mit Sprecherstimme, Untertiteln und Kapitelstruktur
+
+                           * Auf Wunsch im Stil eurer Brand (Tonalität, Look & Feel) 
+                           * KI-Sprecher sorgen für langfristige Verwendbarkeit und leichte Anpassbarkeit 
+                           * Volle Kontrolle der Inhalte durch dich oder einen Fachexperten deiner Wahl
+
+H3: Audios & Lern-Podcasts
+                              * Audio-Schulungen für mobiles Lernen in Podcaststil
+
+                              * Wissensimpulse für wiederkehrende Updates (z. B. Richtlinien, Prozesse)
+
+                              * Ideal als Ergänzung oder Aktualisierung zu Videos und PDFs in unseren Modulen
+
+H3: PDFs & Lernmaterialien
+                                 * Handouts, Leitfäden, Checklisten, One-Pager
+
+                                 * Schulungsunterlagen mit klarer Struktur und visueller Aufbereitung inkl. Grafiken
+
+                                 * Relevante Zusammenfassungen von Lernmaterialien für Prüfungsvorbereitungen und Pflichtschulungen
+H2: Preise für IQrew Schulungscontenterstellung
+Die Kosten variieren je nach Art, Umfang und Komplexität des Contents (z. B. Videolänge, Anzahl der Videos, gewünschte Tiefe, Design-/Brand-Anpassungen, Anzahl der Iterationen).
+Deshalb erstellen wir gerne ein individuelles Angebot auf Anfrage, passend zu deinen Zielen und Zeitplan.
+________________
+
+
+H2: Typische Schulungen
+                                    * Rollenbasierte Onboarding-Schulungen für neue Mitarbeitende
+
+                                    * Datenschutz- und Compliance-Content inkl. anschaulicher Praxisbeispiele
+
+                                    * IT-Security Awareness (Phishing, Passwörter, Geräte, Remote Work)
+
+                                    * Prozessschulungen (z. B. CRM, Ticketing, interne Abläufe)
+
+                                    * KI-Grundlagen für Teams (verständliche Einordnung + sichere Anwendung) 
+                                    * Sicherheitsunterweisungen und Arbeitsschutz
+
+________________
+
+
+H2: Call-to-Action
+Content für eure Schulungen erstellen lassen?
+Schick uns kurz Thema, Zielgruppe und vorhandene Unterlagen – wir melden uns mit einem Vorschlag und einem individuellen Angebot.
+________________
+
+
+H2: Use Case – Onboarding für Unternehmen jeder Größe (schnell, passgenau, wiederverwendbar)
+H3: Onboarding-Schulung in wenigen Klicks erstellen
+Team-Leads und Admins können eine passgenaue Onboarding-Schulung bauen, indem sie relevante Module aus verschiedenen Unternehmensbereichen kombinieren, z. B.:
+                                       * IT & Security
+
+                                       * HR & Prozesse
+
+                                       * Datenschutz & Compliance
+
+                                       * Team-spezifische Workflows
+
+                                       * KI-Grundlagen im Arbeitsalltag
+                                       * Arbeitssicherheit und Sicherheitsunterweisungen 
+
+Das Ergebnis: Neue Mitarbeitende bekommen ein umfassendes, konsistentes Onboarding, ohne dass jedes Team Trainings komplett neu erstellen muss.
+H3: Typische Schulungen, die mit IQrew besonders einfach entstehen können:
+                                          * KI-Grundlagenschulungen
+
+                                          * Datenschutzschulungen
+
+                                          * Sicherheitsunterweisungen
+
+                                          * Prozess- und Tool-Schulungen
+
+                                          * Rollen- oder abteilungsspezifische Einarbeitung 
+                                          * Kundenschulungen 
+
+________________
+
+
+H2: Für wen ist IQrew gemacht?
+IQrew eignet sich besonders gut für:
+                                             * Unternehmen, die Onboarding standardisieren und systematisieren wollen
+                                             * Unternehmen, die ihre Mitarbeiter schulen und weiterentwickeln wollen
+
+                                             * Teams, die Schulungsinhalte modular wiederverwenden und Zeit sparen möchten
+
+                                             * Organisationen mit Bedarf an Zertifizierungen und Wissensnachweisen 
+
+                                             * Admins, die Wissenstracking, Qualifikationen und Ablaufdaten zentral managen müssen
+                                             * Unternehmen mit unterschiedlichen Mitarbeiterrollen oder Standorten 
+                                             * Unternehmen aus Branchen mit hoher Fluktuation und wiederkehrenden Personalbedarf  
+                                             * Unternehmen mit Produkten und Dienstleistungen, die Vorkenntnisse bei den Anwendern und Kunden erfordern
+                                             * Manager, die Ihre Unternehmen für Audits vorbereiten 
+
+… und viele weitere Anwendungen!
+________________
+
+H2: Häufige Fragen zu IQrew (FAQ)
+H3: Kann ein Modul in mehreren Kursen verwendet werden?
+Ja. Genau das ist ein Kernprinzip: Module sind wiederverwendbar und können Bestandteil mehrerer Kurse sein.
+H3: Können Inhalte ebenfalls mehrfach genutzt werden?
+Ja. Ein Content (z. B. ein PDF oder Video) kann in mehreren Modulen vorkommen, ideal für passgenaue Schulungen zentraler Unternehmensrichtlinien und abteilungsinternes Know-Hows.
+H3: Was kostet IQrew?
+In unserer Launch-Phase bieten wir vergünstigte Pläne an. Diese Fangen ab 2€ pro User an. Für Enterprise-Kunden ab 500 Mitarbeitenden gelten gesonderte Tarife, die individuell verhandelt und angepasst werden können. Kontaktiere uns, um mehr zu erfahren. 
+H3: Welche Content-Typen unterstützt IQrew?
+Videos, Audios, PDFs und Bilder.
+H3: Welche Quiztypen gibt es?
+Multiple Choice, Single Choice, True/False und Reihenfolgen.
+H3: Kann ich verhindern, dass Videos übersprungen werden?
+Ja. Für Videos kann das Überspringen deaktiviert werden.
+H3: Wann wird ein Zertifikat erstellt?
+Automatisch, sobald alle Quizze gemäß den Vorgaben erfolgreich abgeschlossen wurden.
+H3: Lassen sich externe Zertifikate mit Nachweis verwalten?
+Ja. Du kannst externe Qualifikationen inkl. PDF-Nachweisen pflegen und Ablaufdaten tracken.
+H3: Für welche Branchen eignet sich IQrew am besten?
+IQrew ist auf keine spezielle Branche festgelegt, da unsere Lösung universell konzipiert wurde. 
+H3: Gibt es einen deutschsprachigen Support?
+Ja, wir haben einen deutschsprachigen Level 1 E-Mail Support, um die Kommunikation zu erleichtern.
+H3: Bietet IQrew Kurse an?
+IQrew bietet zum aktuellen Zeitpunkt keine vorgefertigten Kurse an, da Kurse “von der Stange” keinen großen Mehrwert darstellen. Für unsere Kunden bieten wir jedoch umfassende Unterstützung bei der Kurserstellung vergünstigt an. Kontaktiere uns, um mehr darüber zu erfahren. 
+________________
+
+
+H2: IQrew bringt Struktur in Schulungen und Tempo ins Onboarding
+IQrew ist eine Plattform für Unternehmen, die Schulungen nicht nur erstellen, sondern skalieren wollen: modularer Aufbau, Deadlines, Quizze, Zertifikate und ein Admin-Bereich, der Qualifikationen wirklich sichtbar macht. Unsere Kunden berichten von bis zur 33% Reduktion der Einarbeitungszeit neuer Kollegen.
+________________
+
+
+H2: Call-to-Action
+Starte mit IQrew und erstelle Schulungen, die dein Team wirklich weiterbringen.
+Onboarding, Compliance oder KI-Grundlagen: modular erstellen, Wissen prüfen, Zertifikate automatisch ausgeben und alles im Dashboard nachverfolgen.

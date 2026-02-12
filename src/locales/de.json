@@ -1,0 +1,355 @@
+{
+  "navigation": {
+    "whyIqrew": "Warum IQrew?",
+    "howItWorks": "So funktioniert IQrew",
+    "features": "Quizze, Lernkontrolle und Zertifikate",
+    "contentCreation": "Schulungsinhalte erstellen lassen",
+    "useCases": "Use Case – Onboarding",
+    "faq": "Häufige Fragen zu IQrew (FAQ)",
+    "contactUs": "Kontakt"
+  },
+  "hero": {
+    "title": "IQrew – Schulungsportal für Unternehmen",
+    "subtitle": "Onboarding beschleunigen, Qualifikationen nachweisbar machen",
+    "description1": "Mit IQrew erstellst du Schulungen für Mitarbeitende in wenigen Klicks. Modular, effizient, übersichtlich. Erstelle Kurse aus wiederverwendbaren Modulen und Inhalten, setze Deadlines, prüfe Wissen mit Quizzen und dokumentiere Lernerfolge mit automatisch erstellten Zertifikaten.",
+    "description2": "Für Admins liefert das Dashboard alle Infos für ein abteilungsübergreifendes Tracking der Lernerfortschritte, Qualifikationen und Zertifikatsdatenbanken, inklusive Usermanagement mit starken Tagging- und Filter- und Exportoptionen.",
+    "tagline": "Ideal für Reporting, Controlling und Qualifikationsmanagement!",
+    "cta": "Starte mit IQrew"
+  },
+  "whyIqrew": {
+    "label": "WARUM IQREW",
+    "title": "Weil Schulungen in der Praxis schnell, konsistent und nachweisbar sein müssen",
+    "description": "Ob Onboarding, Compliance, Datenschutz, IT-Security, KI-Grundlagen oder interne Prozessschulungen: Unternehmen brauchen Trainings, die nicht bei Null starten, sondern wiederverwendbar sind und Lernergebnisse liefern, die man im Alltag konkret umsetzen kann.",
+    "features": {
+      "modularStructure": {
+        "title": "Modularer Kursaufbau",
+        "description": "Modularer Kursaufbau (skalierbarkeit für viele Rollen und Teams)"
+      },
+      "knowledgeChecks": {
+        "title": "Wissenschecks",
+        "description": "Wissenschecks (Quiz je Inhalt und Kurs)"
+      },
+      "autoCertificates": {
+        "title": "Automatisierte Zertifikatserstellung",
+        "description": "Automatisierte Zertifikatserstellung (ohne manuellen Aufwand)"
+      },
+      "trackProgress": {
+        "title": "Qualifikationsmanagement",
+        "description": "Qualifikationsmanagement (inkl. externe Nachweise) und Tracking der Zertifikate und Ablaufdaten"
+      }
+    }
+  },
+  "successStory": {
+    "title": "IQrew bringt Struktur in Unternehmensschulungen und Tempo ins Onboarding",
+    "description": "IQrew ist eine Plattform für Unternehmen, die Schulungen nicht nur erstellen, sondern skalieren wollen: modularer Aufbau, Deadlines, Quizze, Zertifikate und ein Admin-Bereich, der Qualifikationen wirklich sichtbar macht. Unsere Kunden berichten von bis zur 33% Reduktion der Einarbeitungszeit neuer Kollegen.",
+    "cta": "Jetzt starten"
+  },
+  "howItWorks": {
+    "label": "SO FUNKTIONIERT IQREW",
+    "title": "modular, flexibel, effizient",
+    "coursesModules": {
+      "title": "Kurse, Module, Inhalte – ein Baukasten für moderne Mitarbeiterschulungen",
+      "description": "In IQrew sind Schulungen logisch aufgebaut:",
+      "points": {
+        "courses": "Kurse bestehen aus mehreren Modulen",
+        "modules": "Module bestehen aus verschiedenen Content-Typen: Videos, Audios, PDFs und Bildern",
+        "modularity": "Modularität spart Zeit und ermöglicht passgenaue Kurserstellung",
+        "moduleReuse": "Ein Modul kann in mehreren Kursen verwendet werden",
+        "contentReuse": "Ein Content kann Bestandteil mehrerer Module sein"
+      },
+      "conclusion": "Damit entsteht ein zentrales und effizientes Wissensmanagementsystem, das du kontinuierlich erweitern kannst."
+    },
+    "deadlines": {
+      "title": "Deadlines für Schulungen setzen und Fortschritt sauber steuern",
+      "description1": "Bei der Kurserstellung kannst du Deadlines für deine Mitarbeiter definieren. So stellst du sicher, dass Onboardings, Trainings oder Pflichtschulungen termingerecht abgeschlossen werden und nicht einfach untergehen.",
+      "description2": "IQrew ermöglicht transparentes Erwartungsmanagement für Admins und Lernende."
+    }
+  },
+  "stats": {
+    "reduction": {
+      "number": "33%",
+      "label": "Reduktion der Einarbeitungszeit"
+    },
+    "automated": {
+      "number": "100%",
+      "label": "Automatisierte Zertifikate"
+    },
+    "reusable": {
+      "number": "∞",
+      "label": "Wiederverwendbare Module"
+    },
+    "access": {
+      "number": "24/7",
+      "label": "Zugang & Support"
+    }
+  },
+  "quizzes": {
+    "label": "QUIZZE, LERNKONTROLLE UND ZERTIFIKATE",
+    "title": "Wie wird Wissen im Unternehmen nachweisbar?",
+    "quizCreation": {
+      "title": "Quizerstellung für Inhalte und komplette Kurse",
+      "description": "Mit IQrew erstellst du Quizze sowohl:",
+      "points": {
+        "individual": "für einzelne Inhalte (z. B. nach einem Video oder PDF)",
+        "complete": "als auch für komplette Kurse (Abschlusstests)"
+      }
+    },
+    "videoSkipping": {
+      "title": "Video-Contents: Überspringen verhindern",
+      "description": "Für Videos kannst du festlegen, ob das Überspringen verhindert werden soll. Ideal für Pflichtinhalte wie Sicherheitsunterweisungen, Datenschutz- oder Compliance-Schulungen."
+    },
+    "autoCertificates": {
+      "title": "Automatische Zertifikate, sobald alles bestanden ist",
+      "description1": "Wenn alle Quizze gemäß den Vorgaben der Ersteller erfolgreich abgeschlossen wurden, generiert und speichert IQrew automatisch ein Zertifikat.",
+      "description2": "Es entstehen belastbare Nachweise, ohne manuelle Prüfung oder Zusatztools."
+    },
+    "quizTypes": {
+      "title": "Diese Quizarten stehen zur Auswahl",
+      "description": "Du kannst je nach Lernziel den passenden Fragetyp wählen:",
+      "types": {
+        "multipleChoice": "Multiple Choice",
+        "singleChoice": "Single Choice",
+        "trueFalse": "True/False",
+        "sequencing": "Reihenfolgen",
+        "sequencingDesc": "z. B. Prozessschritte korrekt ordnen"
+      }
+    }
+  },
+  "adminDashboard": {
+    "label": "ADMIN-DASHBOARD & USERMANAGEMENT",
+    "title": "Lernfortschritt und Qualifikationen im Blick",
+    "description": "Administratoren erhalten ein Dashboard, das Lernerfolge und Qualifikationen unternehmensweit und standortübergreifend sichtbar macht.",
+    "detailedDashboard": {
+      "title": "Umfangreiches Dashboard für Übersichtlichkeit",
+      "description": "Administratoren erhalten ein Dashboard, das Lernerfolge und Qualifikationen unternehmensweit und standortübergreifend sichtbar macht. So kannst du:",
+      "points": {
+        "trace": "Fortschritte und Abschlussquoten nachvollziehen",
+        "compare": "Qualifikationsstände vergleichen",
+        "check": "Onboarding-Status pro Team/Abteilung überprüfen oder",
+        "organize": "Abteilungsübergreifende Wissenswettbewerbe veranstalten"
+      }
+    },
+    "userManagement": {
+      "title": "Usermanagement mit umfangreichen Such- und Filteroptionen",
+      "description": "Im Usermanagement filterst du Nutzerlisten schnell nach relevanten Kriterien. Besonders wertvoll bei wachsenden Teams, mehreren Standorten oder unterschiedlichen Rollenprofilen.",
+      "points": {
+        "growing": "wachsenden Teams",
+        "locations": "mehreren Standorten",
+        "roles": "unterschiedlichen Rollenprofilen",
+        "reporting": "Nutzerlisten für Reporting oder lizenzierte Aktivitäten"
+      }
+    },
+    "userTags": {
+      "title": "Tagging nach Qualifikationen",
+      "description": "Mit dem Tagging-Feature kannst du User nach ihren Qualifikationen taggen und später gezielt filtern. Das unterstützt z. B.:",
+      "points": {
+        "roleBased": "Rollenbasierte Schulungszuweisungen",
+        "employeeLists": "Mitarbeiterlisten für Qualifikationsnachweise im Rahmen von Audit-Vorbereitungen",
+        "skillOverviews": "Skill-Übersichten im Unternehmen"
+      }
+    },
+    "externalQualifications": {
+      "title": "Externe Qualifikationen & Zertifikatslaufzeiten verwalten (inkl. PDF-Nachweise)",
+      "description": "Nicht jede Qualifikation entsteht intern. IQrew ermöglicht dir auch:",
+      "points": {
+        "capture": "Externe Qualifikationen zu erfassen und zu pflegen",
+        "deposit": "PDF-Nachweise zu hinterlegen",
+        "track": "Ablaufdaten von Zertifikaten zu tracken"
+      },
+      "conclusion": "Damit wird IQrew zur zentralen Stelle, um interne wie externe Qualifikationen strukturiert zu dokumentieren."
+    }
+  },
+  "bulkImport": {
+    "label": "MASSENIMPORT",
+    "title": "viele User in Minuten einladen",
+    "description": "Mit unserem Massenimport lädst du eine Vielzahl von Usern mit wenigen Klicks ein. Das spart Zeit besonders bei:",
+    "items": {
+      "newLocations": {
+        "title": "neuen Standorten",
+        "description": "Einfaches Onboarding von Mitarbeitern an neuen Bürostandorten oder Filialen."
+      },
+      "largeHiring": {
+        "title": "großem Hiring",
+        "description": "Gleichzeitige Einladung mehrerer neuer Mitarbeiter während Einstellungsphasen."
+      },
+      "seasonalTeams": {
+        "title": "saisonalen Teams",
+        "description": "Schnelle Einrichtung von Schulungen für temporäre oder saisonale Arbeitskräfte."
+      },
+      "mandatoryTraining": {
+        "title": "Rollouts von Pflichtschulungen",
+        "description": "Einführung von Pflichtschulungsprogrammen in der gesamten Organisation."
+      },
+      "highTurnover": {
+        "title": "hoher Mitarbeiterfluktuation oder kurzfristigen Bedarf",
+        "description": "Effizientes Management häufiger Mitarbeiterwechsel und kurzfristiger Arbeitskräftebedarfe."
+      },
+      "mergers": {
+        "title": "Fusionen & Übernahmen",
+        "description": "Nahtlose Integration von Teams aus fusionierten oder übernommenen Unternehmen."
+      }
+    }
+  },
+  "contentCreation": {
+    "label": "SCHULUNGSINHALTE ERSTELLEN LASSEN",
+    "title": "Schulungsinhalte erstellen lassen",
+    "description": "Du willst deinem Team hochwertige Schulungsinhalte anbieten, aber dir fehlen Zeit, Ressourcen oder ein eingespieltes Content-Team? Wir übernehmen die Erstellung von Inhalten für deine IQrew-Schulungen. KI-gestützt, zielgruppengerecht und auf Basis deiner Dokumente und Daten. Wir erstellen Videos, Audios und PDFs exakt so, dass sie zu euren Rollen, der Sprache und den internen Vorgaben passen.",
+    "types": {
+      "trainingVideos": {
+        "title": "Schulungsvideos",
+        "items": [
+          "Erklärvideos und Schulungsfilme (flexible Länge, klar, praxisnah)",
+          "Optional mit Sprecherstimme, Untertiteln und Kapitelstruktur",
+          "Auf Wunsch im Stil eurer Brand (Tonalität, Look & Feel)",
+          "KI-Sprecher sorgen für langfristige Verwendbarkeit und leichte Anpassbarkeit",
+          "Volle Kontrolle der Inhalte durch dich oder einen Fachexperten deiner Wahl"
+        ]
+      },
+      "audios": {
+        "title": "Audios & Lern-Podcasts",
+        "items": [
+          "Audio-Schulungen für mobiles Lernen in Podcaststil",
+          "Wissensimpulse für wiederkehrende Updates (z. B. Richtlinien, Prozesse)",
+          "Ideal als Ergänzung oder Aktualisierung zu Videos und PDFs in unseren Modulen"
+        ]
+      },
+      "pdfs": {
+        "title": "PDFs & Lernmaterialien",
+        "items": [
+          "Handouts, Leitfäden, Checklisten, One-Pager",
+          "Schulungsunterlagen mit klarer Struktur und visueller Aufbereitung inkl. Grafiken",
+          "Relevante Zusammenfassungen von Lernmaterialien für Prüfungsvorbereitungen und Pflichtschulungen"
+        ]
+      }
+    }
+  },
+  "pricing": {
+    "title": "Preise für IQrew Schulungscontenterstellung",
+    "description": "Die Kosten variieren je nach Art, Umfang und Komplexität des Contents (z. B. Videolänge, Anzahl der Videos, gewünschte Tiefe, Design-/Brand-Anpassungen, Anzahl der Iterationen). Deshalb erstellen wir gerne ein individuelles Angebot auf Anfrage, passend zu deinen Zielen und Zeitplan.",
+    "cta": "Content-Erstellung anfragen"
+  },
+  "useCases": {
+    "label": "USE CASE – ONBOARDING",
+    "title": "Onboarding für Unternehmen jeder Größe (schnell, passgenau, wiederverwendbar)",
+    "description": "Erstelle schnelle, präzise und wiederverwendbare Onboarding-Schulungen für Unternehmen jeder Größe. Erstelle umfassende Schulungsprogramme in wenigen Klicks.",
+    "onboardingTraining": {
+      "title": "Onboarding-Schulung in wenigen Klicks erstellen",
+      "description": "Team-Leads und Admins können eine passgenaue Onboarding-Schulung bauen, indem sie relevante Module aus verschiedenen Unternehmensbereichen kombinieren, z. B.:",
+      "points": {
+        "itSecurity": "IT & Security",
+        "hrProcesses": "HR & Prozesse",
+        "dataPrivacy": "Datenschutz & Compliance",
+        "teamWorkflows": "Team-spezifische Workflows",
+        "aiBasics": "KI-Grundlagen im Arbeitsalltag"
+      },
+      "conclusion": "Das Ergebnis: Neue Mitarbeitende bekommen ein umfassendes, konsistentes Onboarding, ohne dass jedes Team Trainings komplett neu erstellen muss."
+    },
+    "typicalTraining": {
+      "title": "Typische Schulungen, die mit IQrew besonders einfach entstehen können:",
+      "description": "IQrew vereinfacht die Erstellung und Verwaltung verschiedener Schulungstypen und macht es einfach, effektive, nachverfolgbare Schulungen in Ihrer Organisation durchzuführen.",
+      "types": [
+        "KI-Grundlagenschulungen",
+        "Datenschutzschulungen",
+        "Sicherheitsunterweisungen",
+        "Prozess- und Tool-Schulungen",
+        "Rollen- oder abteilungsspezifische Einarbeitung"
+      ]
+    }
+  },
+  "targetAudience": {
+    "label": "FÜR WEN IST IQREW GEMACHT?",
+    "title": "Für wen ist IQrew gemacht?",
+    "description": "IQrew eignet sich besonders gut für:",
+    "items": [
+      "Unternehmen, die Onboarding standardisieren und systematisieren wollen",
+      "Unternehmen, die ihre Mitarbeiter schulen und weiterentwickeln wollen",
+      "Teams, die Schulungsinhalte modular wiederverwenden und Zeit sparen möchten",
+      "Organisationen mit Bedarf an Zertifizierungen und Wissensnachweisen",
+      "Admins, die Wissenstracking, Qualifikationen und Ablaufdaten zentral managen müssen",
+      "Unternehmen mit unterschiedlichen Mitarbeiterrollen oder Standorten",
+      "Unternehmen aus Branchen mit hoher Fluktuation und wiederkehrenden Personalbedarf",
+      "Manager, die Ihre Unternehmen für Audits vorbereiten",
+      "Unternehmen mit Produkten und Dienstleistungen, die Vorkenntnisse bei den Anwendern und Kunden erfordern"
+    ]
+  },
+  "faq": {
+    "title": "Häufige Fragen zu IQrew (FAQ)",
+    "description": "Finde Antworten auf häufige Fragen zu IQrew, unserer Schulungsplattform und wie sie Ihrer Organisation helfen kann. Erkunde unseren umfassenden FAQ-Bereich, um mehr über Funktionen, Preise, Implementierung und Support-Optionen zu erfahren.",
+    "questions": {
+      "moduleMultipleCourses": {
+        "question": "Kann ein Modul in mehreren Kursen verwendet werden?",
+        "answer": "Ja. Genau das ist ein Kernprinzip: Module sind wiederverwendbar und können Bestandteil mehrerer Kurse sein."
+      },
+      "contentMultipleTimes": {
+        "question": "Können Inhalte ebenfalls mehrfach genutzt werden?",
+        "answer": "Ja. Ein Content (z. B. ein PDF oder Video) kann in mehreren Modulen vorkommen, ideal für passgenaue Schulungen zentraler Unternehmensrichtlinien und abteilungsinternes Know-Hows."
+      },
+      "cost": {
+        "question": "Was kostet IQrew?",
+        "answer": "In unserer Launch-Phase bieten wir vergünstigte Pläne an. Diese Fangen ab 2€ pro User an. Für Enterprise-Kunden ab 500 Mitarbeitenden gelten gesonderte Tarife, die individuell verhandelt und angepasst werden können. Kontaktiere uns, um mehr zu erfahren."
+      },
+      "contentTypes": {
+        "question": "Welche Content-Typen unterstützt IQrew?",
+        "answer": "Videos, Audios, PDFs und Bilder."
+      },
+      "quizTypes": {
+        "question": "Welche Quiztypen gibt es?",
+        "answer": "Multiple Choice, Single Choice, True/False und Reihenfolgen."
+      },
+      "preventSkipping": {
+        "question": "Kann ich verhindern, dass Videos übersprungen werden?",
+        "answer": "Ja. Für Videos kann das Überspringen deaktiviert werden."
+      },
+      "autoCertificates": {
+        "question": "Wann wird ein Zertifikat erstellt?",
+        "answer": "Automatisch, sobald alle Quizze gemäß den Vorgaben erfolgreich abgeschlossen wurden."
+      },
+      "externalCertificates": {
+        "question": "Lassen sich externe Zertifikate mit Nachweis verwalten?",
+        "answer": "Ja. Du kannst externe Qualifikationen inkl. PDF-Nachweisen pflegen und Ablaufdaten tracken."
+      },
+      "industries": {
+        "question": "Für welche Branchen eignet sich IQrew am besten?",
+        "answer": "IQrew ist auf keine spezielle Branche festgelegt, da unsere Lösung universell konzipiert wurde."
+      },
+      "support": {
+        "question": "Gibt es einen deutschsprachigen Support?",
+        "answer": "Ja, wir haben einen deutschsprachigen Level 1 E-Mail Support, um die Kommunikation zu erleichtern."
+      },
+      "courses": {
+        "question": "Bietet IQrew Kurse an?",
+        "answer": "IQrew bietet zum aktuellen Zeitpunkt keine vorgefertigten Kurse an, da Kurse \"von der Stange\" keinen großen Mehrwert darstellen. Für unsere Kunden bieten wir jedoch umfassende Unterstützung bei der Kurserstellung vergünstigt an. Kontaktiere uns, um mehr darüber zu erfahren."
+      }
+    }
+  },
+  "finalCta": {
+    "title": "IQrew bringt Struktur in Schulungen und Tempo ins Onboarding",
+    "description": "IQrew ist eine Plattform für Unternehmen, die Schulungen nicht nur erstellen, sondern skalieren wollen: modularer Aufbau, Deadlines, Quizze, Zertifikate und ein Admin-Bereich, der Qualifikationen wirklich sichtbar macht. Unsere Kunden berichten von bis zur 33% Reduktion der Einarbeitungszeit neuer Kollegen.",
+    "cta": "Jetzt starten"
+  },
+  "contact": {
+    "title": "Lass uns in Verbindung bleiben",
+    "description": "Bereit, den Schulungsprozess Ihres Unternehmens zu transformieren? Kontaktieren Sie uns, um zu erfahren, wie IQrew die Mitarbeiterschulung optimieren und Zertifikate automatisieren kann.",
+    "email": {
+      "title": "E-Mail-Adresse",
+      "value": "info@iqrew.com"
+    },
+    "office": {
+      "title": "Bürostandort",
+      "value": "Navakethan Complex, 6th Floor, 605, 606 A&P opp, CLock Tower, SD Road, Secunderabad, Telangana 500003"
+    },
+    "phone": {
+      "title": "Telefonnummer",
+      "value": "+47 88888 99999"
+    },
+    "social": {
+      "title": "Soziale Medien"
+    }
+  },
+  "aria": {
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen",
+    "iqrewHome": "iQrew Startseite"
+  }
+}
+

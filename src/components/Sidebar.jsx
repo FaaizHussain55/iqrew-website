@@ -2,19 +2,21 @@ import { useEffect } from "react";
 import logo from "../assets/images/iqrew-logo.png";
 import closeIcon from "../assets/icons/icon-close.svg";
 import { useIsMobile } from "../hooks/useIsMobile";
+import { useLanguage } from "../contexts/LanguageContext";
 import "./Sidebar.scss";
-
-const navLinks = [
-  { label: "Why IQrew", path: "#why-iqrew" },
-  { label: "How It Works", path: "#how-it-works" },
-  { label: "Features", path: "#features" },
-  { label: "Content Creation", path: "#content-creation" },
-  { label: "Use Cases", path: "#use-cases" },
-  { label: "FAQ", path: "#faq" },
-];
 
 export default function Sidebar({ isOpen, onClose }) {
   const isMobile = useIsMobile();
+  const { t, language, changeLanguage } = useLanguage();
+
+  const navLinks = [
+    { label: t("navigation.whyIqrew"), path: "#why-iqrew" },
+    { label: t("navigation.howItWorks"), path: "#how-it-works" },
+    { label: t("navigation.features"), path: "#features" },
+    { label: t("navigation.contentCreation"), path: "#content-creation" },
+    { label: t("navigation.useCases"), path: "#use-cases" },
+    { label: t("navigation.faq"), path: "#faq" },
+  ];
 
   const handleNavClick = (e, path) => {
     e.preventDefault();
@@ -90,12 +92,30 @@ export default function Sidebar({ isOpen, onClose }) {
           ))}
         </nav>
         <div className="sidebar-actions">
+          <div className="language-switcher">
+            <button
+              className={`lang-btn ${language === 'en' ? 'active' : ''}`}
+              onClick={() => changeLanguage('en')}
+              aria-label="Switch to English"
+              type="button"
+            >
+              EN
+            </button>
+            <button
+              className={`lang-btn ${language === 'de' ? 'active' : ''}`}
+              onClick={() => changeLanguage('de')}
+              aria-label="Switch to German"
+              type="button"
+            >
+              DE
+            </button>
+          </div>
           <a
             href="#contact"
             onClick={(e) => handleNavClick(e, "#contact")}
             className="btn btn--md btn--orange"
           >
-            Contact Us
+            {t("navigation.contactUs")}
           </a>
         </div>
       </aside>

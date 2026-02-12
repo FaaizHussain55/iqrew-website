@@ -12,6 +12,12 @@
   --bg-brilliance: #fdfdfd;
 }
 
+[lang="de"] {
+  * {
+    word-break: break-word;
+  }
+}
+
 *,
 *::before,
 *::after {

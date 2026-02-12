@@ -1,0 +1,355 @@
+{
+  "navigation": {
+    "whyIqrew": "Why IQrew",
+    "howItWorks": "How It Works",
+    "features": "Features",
+    "contentCreation": "Content Creation",
+    "useCases": "Use Cases",
+    "faq": "FAQ",
+    "contactUs": "Contact Us"
+  },
+  "hero": {
+    "title": "IQrew – Corporate Training Tool",
+    "subtitle": "Accelerate Onboarding, Make Qualifications Verifiable",
+    "description1": "With IQrew, you can create trainings for your employees in just a few clicks. Modular, efficient, clear. Create courses from reusable modules and contents, set deadlines, check knowledge with quizzes, and document learning success with automatically generated certificates.",
+    "description2": "For admins, the dashboard delivers all information for cross-departmental tracking of learning progress, qualifications, and certificate databases, including user management with powerful tagging and filtering options.",
+    "tagline": "Ideal tool for Reporting, Controlling, Qualifications and Knowledge Management!",
+    "cta": "Start with IQrew"
+  },
+  "whyIqrew": {
+    "label": "WHY IQREW",
+    "title": "Because In Practice, Training Must Be Fast, Consistent, and Verifiable",
+    "description": "Whether onboarding, compliance, data privacy, IT security, AI basics, or internal process training: Companies need training that doesn't start from scratch but is reusable and delivers learning results that can be concretely implemented in everyday work.",
+    "features": {
+      "modularStructure": {
+        "title": "Modular Structure",
+        "description": "Build scalable training programs that adapt to many roles and teams."
+      },
+      "knowledgeChecks": {
+        "title": "Knowledge Checks",
+        "description": "Implement comprehensive quizzes and assessments for content and complete courses."
+      },
+      "autoCertificates": {
+        "title": "Auto Certificates",
+        "description": "Automatically generate and issue certificates without any manual effort required."
+      },
+      "trackProgress": {
+        "title": "Track Progress",
+        "description": "Comprehensive tracking and qualification management for external and internal certificates."
+      }
+    }
+  },
+  "successStory": {
+    "title": "Our Customer Success Story with IQrew Platform",
+    "description": "IQrew helps companies scale training with modular structure, deadlines, quizzes, and certificates. Our customers report up to a 33% reduction in onboarding time. Create modular trainings, check knowledge, issue certificates automatically, and track everything in the dashboard.",
+    "cta": "Get Started Today"
+  },
+  "howItWorks": {
+    "label": "HOW IT WORKS",
+    "title": "Modular, Flexible, Efficient",
+    "coursesModules": {
+      "title": "Courses, Modules, Contents – A Construction Kit for Modern Employee Training",
+      "description": "In IQrew, training is structured logically:",
+      "points": {
+        "courses": "Courses consist of multiple modules.",
+        "modules": "Modules consist of various content types: videos, audios, PDFs, and images.",
+        "modularity": "Modularity saves time and enables precise course creation.",
+        "moduleReuse": "A module can be used in multiple courses.",
+        "contentReuse": "A content can be part of multiple modules."
+      },
+      "conclusion": "This creates a central and efficient knowledge management system that you can continuously expand."
+    },
+    "deadlines": {
+      "title": "Set Deadlines and Steer Progress Cleanly",
+      "description1": "When creating courses, you can define deadlines for your employees. This ensures that onboardings, training sessions, or mandatory training are completed on time and simply do not get lost.",
+      "description2": "IQrew enables transparent expectation management for admins and learners."
+    }
+  },
+  "stats": {
+    "reduction": {
+      "number": "33%",
+      "label": "Reduction in Onboarding Time"
+    },
+    "automated": {
+      "number": "100%",
+      "label": "Automated Certificates"
+    },
+    "reusable": {
+      "number": "∞",
+      "label": "Reusable Modules"
+    },
+    "access": {
+      "number": "24/7",
+      "label": "Access & Support"
+    }
+  },
+  "quizzes": {
+    "label": "QUIZZES & CERTIFICATES",
+    "title": "How Does Knowledge Become Verifiable in the Company?",
+    "quizCreation": {
+      "title": "Quiz Creation for Contents and Complete Courses",
+      "description": "With IQrew, you create quizzes both:",
+      "points": {
+        "individual": "For individual contents (e.g., after a video or PDF).",
+        "complete": "As well as for complete courses (final tests)."
+      }
+    },
+    "videoSkipping": {
+      "title": "Video Contents: Prevent Skipping",
+      "description": "For videos, you can determine whether skipping should be prevented. Ideal for mandatory contents such as safety instructions, data privacy, or compliance training."
+    },
+    "autoCertificates": {
+      "title": "Automatic Certificates, As Soon As Everything Is Passed",
+      "description1": "When all quizzes have been successfully completed according to the creator's specifications, IQrew automatically generates and saves a certificate.",
+      "description2": "Reliable proofs are created without manual checking or additional tools."
+    },
+    "quizTypes": {
+      "title": "These Quiz Types Are Available for Selection",
+      "description": "Depending on the learning objective, you can choose the appropriate question type:",
+      "types": {
+        "multipleChoice": "Multiple Choice",
+        "singleChoice": "Single Choice",
+        "trueFalse": "True/False",
+        "sequencing": "Sequencing",
+        "sequencingDesc": "e.g., ordering process steps correctly"
+      }
+    }
+  },
+  "adminDashboard": {
+    "label": "ADMIN DASHBOARD",
+    "title": "Learning Progress Overview",
+    "description": "Administrators get comprehensive visibility into learning progress, qualifications, and certifications across the organization. Track completion rates, manage user access, and maintain detailed records of internal and external qualifications.",
+    "detailedDashboard": {
+      "title": "Detailed Dashboard for Clarity",
+      "description": "Administrators receive a dashboard that makes learning successes and qualifications visible company-wide. This allows you to:",
+      "points": {
+        "trace": "Trace progress and completion rates.",
+        "compare": "Compare qualification statuses.",
+        "check": "Check onboarding status per team/department.",
+        "organize": "Organize cross-departmental knowledge competitions."
+      }
+    },
+    "userManagement": {
+      "title": "User Management with Extensive Search and Filter Options",
+      "description": "In user management, you quickly filter user lists according to relevant criteria. Especially valuable for:",
+      "points": {
+        "growing": "Growing teams.",
+        "locations": "Multiple locations.",
+        "roles": "Different role profiles.",
+        "reporting": "user lists for reporting or licensed activities"
+      }
+    },
+    "userTags": {
+      "title": "User-Tags",
+      "description": "With the tagging feature, you can tag users according to their qualifications and filter specifically later. This supports, for example:",
+      "points": {
+        "roleBased": "Role-based training assignments.",
+        "employeeLists": "Employee lists for qualification proofs within the scope of audit preparations.",
+        "skillOverviews": "Skill overviews in the company."
+      }
+    },
+    "externalQualifications": {
+      "title": "Manage External Qualifications & Certificate Expiry Dates",
+      "description": "Not every qualification is created internally. IQrew also allows you to:",
+      "points": {
+        "capture": "Capture and maintain external qualifications.",
+        "deposit": "Deposit PDF proofs and certificates.",
+        "track": "Track expiration dates of certificates & Certificate Lifecycle Management."
+      },
+      "conclusion": "This makes IQrew the central point for documenting internal and external qualifications in a structured manner."
+    }
+  },
+  "bulkImport": {
+    "label": "BULK IMPORT",
+    "title": "Invite Many Users in Minutes",
+    "description": "With our bulk import, you invite a multitude of users with just a few clicks. This saves time especially with large-scale operations and helps streamline your onboarding process efficiently.",
+    "items": {
+      "newLocations": {
+        "title": "New Locations",
+        "description": "Easily onboard employees at new office locations or branches."
+      },
+      "largeHiring": {
+        "title": "Large-Scale Hiring",
+        "description": "Invite multiple new employees simultaneously during recruitment drives."
+      },
+      "seasonalTeams": {
+        "title": "Seasonal Teams",
+        "description": "Quickly set up training for temporary or seasonal workforce."
+      },
+      "mandatoryTraining": {
+        "title": "Mandatory Training",
+        "description": "Roll out mandatory training programs across your entire organization."
+      },
+      "highTurnover": {
+        "title": "High Turnover",
+        "description": "Manage frequent employee changes and short-term working power demands efficiently."
+      },
+      "mergers": {
+        "title": "Mergers & Acquisitions",
+        "description": "Integrate teams from merged or acquired companies seamlessly."
+      }
+    }
+  },
+  "contentCreation": {
+    "label": "CONTENT CREATION",
+    "title": "Have Training Content Created",
+    "description": "You Want to Offer Your Team High-Quality Training Content, But You Lack Time, Resources, or an Established Content Team? We take over the creation of contents for your IQrew training. AI-supported, target-group-oriented, and based on your documents and data. We create videos, audios, and PDFs exactly so that they fit your roles, language, and internal specifications.",
+    "types": {
+      "trainingVideos": {
+        "title": "Training Videos",
+        "items": [
+          "Explainer videos and training films (flexible length, clear, practical).",
+          "Optionally with voiceover, subtitles, and chapter structure.",
+          "On request in the style of your brand (tonality, look & feel).",
+          "AI speakers ensure long-term usability and easy adaptability.",
+          "Full control of the contents by you or a subject matter expert of your choice."
+        ]
+      },
+      "audios": {
+        "title": "Audios & Learning Podcasts",
+        "items": [
+          "Audio training for mobile learning in podcast style.",
+          "Knowledge impulses for recurring updates (e.g., guidelines, processes).",
+          "Ideal as a supplement or update to videos and PDFs in our modules."
+        ]
+      },
+      "pdfs": {
+        "title": "PDFs & Learning Materials",
+        "items": [
+          "Handouts, guides, checklists, one-pagers.",
+          "Training documents with clear structure and visual preparation incl. graphics.",
+          "Relevant summaries of learning materials for exam preparations and mandatory training."
+        ]
+      }
+    }
+  },
+  "pricing": {
+    "title": "Prices for IQrew Training and Content Creation",
+    "description": "Costs vary depending on the type, scope, and complexity of the content (e.g., video length, number of videos, desired depth, design/brand adjustments, number of iterations). Therefore, we are happy to create an individual offer on request, fitting your goals and schedule.",
+    "cta": "Request Content creation"
+  },
+  "useCases": {
+    "label": "USE CASES",
+    "title": "Streamlined Company Onboarding",
+    "description": "Create fast, precise, and reusable onboarding training for companies of every size. Build comprehensive training programs in just a few clicks.",
+    "onboardingTraining": {
+      "title": "Create Onboarding Training in Few Clicks",
+      "description": "Team leads and admins can build precise onboarding training by combining relevant modules from different company areas, e.g.:",
+      "points": {
+        "itSecurity": "IT & Security",
+        "hrProcesses": "HR & Processes",
+        "dataPrivacy": "Data Privacy & Compliance",
+        "teamWorkflows": "Team-specific workflows",
+        "aiBasics": "AI basics in everyday work"
+      },
+      "conclusion": "The result: New employees receive comprehensive, consistent onboarding without every team creating training completely from scratch."
+    },
+    "typicalTraining": {
+      "title": "Typical Training That Becomes Particularly Easy with IQrew:",
+      "description": "IQrew simplifies the creation and management of various training types, making it easy to deliver effective, trackable training across your organization.",
+      "types": [
+        "AI basic training",
+        "Data privacy training",
+        "Safety instructions",
+        "Process and tool training",
+        "Role- or department-specific induction"
+      ]
+    }
+  },
+  "targetAudience": {
+    "label": "TARGET AUDIENCE",
+    "title": "Who Is IQrew Made For?",
+    "description": "IQrew is designed for companies and organizations that need efficient, scalable training solutions. Whether you're managing onboarding, compliance, or continuous learning, IQrew helps you standardize training processes and track qualifications effectively.",
+    "items": [
+      "Companies that want to standardize and systematize onboarding.",
+      "Companies who want to get audit-ready and develop their teams.",
+      "Teams that want to reuse training contents modularly and save time.",
+      "Organizations with a need for certifications and proofs of knowledge.",
+      "Admins who must centrally manage knowledge tracking, qualifications and expiration dates.",
+      "Companies with different employee roles or locations.",
+      "Companies from industries with high turnover and recurring personnel demand.",
+      "Managers who report the training progress to their chiefs.",
+      "Companies with products that require knowledge from the customers."
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "description": "Find answers to common questions about IQrew, our training platform, and how it can help your organization. Explore our comprehensive FAQ section to learn more about features, pricing, implementation, and support options.",
+    "questions": {
+      "moduleMultipleCourses": {
+        "question": "Can a module be used in multiple courses?",
+        "answer": "Yes. Exactly that is a core principle: Modules are reusable and can be part of multiple courses."
+      },
+      "contentMultipleTimes": {
+        "question": "Can contents also be used multiple times?",
+        "answer": "Yes. A content (e.g., a PDF or video) can appear in multiple modules, ideal for precise training of central company guidelines and department-internal know-how."
+      },
+      "cost": {
+        "question": "What does IQrew cost?",
+        "answer": "In our launch phase, we offer discounted plans. These start from 2€ per user. For enterprise customers from ~500 employees, separate tariffs apply, which can be individually negotiated and adjusted. Contact us to learn more."
+      },
+      "contentTypes": {
+        "question": "Which content types does IQrew support?",
+        "answer": "Videos, audios, PDFs, and images."
+      },
+      "quizTypes": {
+        "question": "Which quiz types are there?",
+        "answer": "Multiple Choice, Single Choice, True/False, and Ordering Questions."
+      },
+      "preventSkipping": {
+        "question": "Can I prevent videos from being skipped?",
+        "answer": "Yes. For videos, skipping can be deactivated."
+      },
+      "autoCertificates": {
+        "question": "Are the certificates created automatically?",
+        "answer": "Yes, the certificates are created automatically, as soon as all quizzes have been successfully completed according to the predefined requirements. Learners and admins can access issued certificates anytime."
+      },
+      "externalCertificates": {
+        "question": "Can external certificates with proof be managed?",
+        "answer": "Yes. You can maintain external qualifications incl. PDF proofs and track expiration dates."
+      },
+      "industries": {
+        "question": "For which industries is IQrew best suitable?",
+        "answer": "IQrew is not fixed to any special industry, as our solution was designed universally."
+      },
+      "support": {
+        "question": "Is there English-speaking support?",
+        "answer": "Yes, we have Englisch-speaking support to facilitate communication."
+      },
+      "courses": {
+        "question": "Does IQrew offer courses?",
+        "answer": "No, IQrew does not offer pre-made courses \"off the shelf\" at the current time, as standardized courses represent no great added value. For our customers, however, we offer course creation service at a discounted rate. Contact us to learn more about this."
+      }
+    }
+  },
+  "finalCta": {
+    "title": "IQrew Brings Structure to Training and Speed to Onboarding",
+    "description": "IQrew is a platform for companies that want to scale training with modular structure, deadlines, quizzes, and certificates. Our customers report up to a 33% reduction in onboarding time. Create modular trainings, check knowledge, issue certificates automatically, and track everything in the dashboard.",
+    "cta": "Get Started Now"
+  },
+  "contact": {
+    "title": "Let's Stay Connected",
+    "description": "Ready to transform your company's training process? Get in touch to learn how IQrew can streamline employee training and automate certifications.",
+    "email": {
+      "title": "Email Address",
+      "value": "info@iqrew.com"
+    },
+    "office": {
+      "title": "Office Location",
+      "value": "Navakethan Complex, 6th Floor, 605, 606 A&P opp, CLock Tower, SD Road, Secunderabad, Telangana 500003"
+    },
+    "phone": {
+      "title": "Phone Number",
+      "value": "+47 88888 99999"
+    },
+    "social": {
+      "title": "Social Media"
+    }
+  },
+  "aria": {
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "iqrewHome": "iQrew Home"
+  }
+}
+

@@ -3,6 +3,7 @@ import { useEffect, useRef, useMemo, useState } from "react";
 // import { Swiper, SwiperSlide } from "swiper/react";
 // import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import ShapeSvgComponent from "../components/ShapeSvgComponent";
+import { useLanguage } from "../contexts/LanguageContext";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -12,10 +13,14 @@ import shapeTwo from "../assets/images/line-vector-2.svg";
 import shapeThree from "../assets/images/line-vector-3.svg";
 import shapeFour from "../assets/images/line-vector-4.svg";
 // import shapeFive from "../assets/images/line-vector-5.svg";
-import adminDashboardImg from "../assets/images/eng-dashboard-ss.png";
-import adminUsersImg from "../assets/images/eng-users-ss.png";
-import adminTagsImg from "../assets/images/eng-tags-ss.png";
-import adminCertificatesImg from "../assets/images/eng-certificates-ss.png";
+import adminDashboardImgEng from "../assets/images/eng-dashboard-ss.png";
+import adminUsersImgEng from "../assets/images/eng-users-ss.png";
+import adminTagsImgEng from "../assets/images/eng-tags-ss.png";
+import adminCertificatesImgEng from "../assets/images/eng-certificates-ss.png";
+import adminDashboardImgDe from "../assets/images/german-dashboard-ss.png";
+import adminUsersImgDe from "../assets/images/german-users-ss.png";
+import adminTagsImgDe from "../assets/images/german-tags-ss.png";
+import adminCertificatesImgDe from "../assets/images/german-certificates-ss.png";
 import contentTypeImg1 from "../assets/images/img-content-sec-type1.jpg";
 import contentTypeImg2 from "../assets/images/img-content-sec-type2.jpg";
 import contentTypeImg3 from "../assets/images/img-content-sec-type3.jpg";
@@ -28,11 +33,8 @@ import quizTypeIcon4 from "../assets/icons/icon-quiz-type4.gif";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import {
-  faFacebookF,
-  faTwitter,
   faLinkedinIn,
   faInstagram,
-  faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -75,6 +77,7 @@ import {
 
 export default function Home() {
   const homeSecAudienceRef = useRef(null);
+  const { t, language } = useLanguage();
 
   const handleScrollToContact = (e) => {
     e.preventDefault();
@@ -114,114 +117,64 @@ export default function Home() {
     };
   }, []);
 
-  const coreFeatures = [
+  const coreFeatures = useMemo(() => [
     {
       icon: faCubes,
-      title: "Modular Structure",
-      description: "Build scalable training programs that adapt to many roles and teams.",
+      title: t("whyIqrew.features.modularStructure.title"),
+      description: t("whyIqrew.features.modularStructure.description"),
     },
     {
       icon: faCheckCircle,
-      title: "Knowledge Checks",
-      description: "Implement comprehensive quizzes and assessments for content and complete courses.",
+      title: t("whyIqrew.features.knowledgeChecks.title"),
+      description: t("whyIqrew.features.knowledgeChecks.description"),
     },
     {
       icon: faCertificate,
-      title: "Auto Certificates",
-      description: "Automatically generate and issue certificates without any manual effort required.",
+      title: t("whyIqrew.features.autoCertificates.title"),
+      description: t("whyIqrew.features.autoCertificates.description"),
     },
     {
       icon: faChartLine,
-      title: "Track Progress",
-      description: "Comprehensive tracking and qualification management for external and internal certificates.",
+      title: t("whyIqrew.features.trackProgress.title"),
+      description: t("whyIqrew.features.trackProgress.description"),
     },
-  ];
+  ], [t]);
 
-  const quizTypes = [
-    { name: "Multiple Choice", iconImg: quizTypeIcon1 },
-    { name: "Single Choice", iconImg: quizTypeIcon2 },
-    { name: "True/False", iconImg: quizTypeIcon3 },
-    { name: "Sequencing", iconImg: quizTypeIcon4, description: "e.g., ordering process steps correctly" },
-  ];
+  const quizTypes = useMemo(() => [
+    { name: t("quizzes.quizTypes.types.multipleChoice"), iconImg: quizTypeIcon1 },
+    { name: t("quizzes.quizTypes.types.singleChoice"), iconImg: quizTypeIcon2 },
+    { name: t("quizzes.quizTypes.types.trueFalse"), iconImg: quizTypeIcon3 },
+    { name: t("quizzes.quizTypes.types.sequencing"), iconImg: quizTypeIcon4, description: t("quizzes.quizTypes.types.sequencingDesc") },
+  ], [t]);
 
-  const contentTypes = [
+  const contentTypes = useMemo(() => [
     {
       img: contentTypeImg1,
-      title: "Training Videos",
-      items: [
-        "Explainer videos and training films (flexible length, clear, practical).",
-        "Optionally with voiceover, subtitles, and chapter structure.",
-        "On request in the style of your brand (tonality, look & feel).",
-        "AI speakers ensure long-term usability and easy adaptability.",
-        "Full control of the contents by you or a subject matter expert of your choice.",
-      ],
+      title: t("contentCreation.types.trainingVideos.title"),
+      items: t("contentCreation.types.trainingVideos.items"),
     },
     {
       img: contentTypeImg2,
-      title: "Audios & Learning Podcasts",
-      items: [
-        "Audio training for mobile learning in podcast style.",
-        "Knowledge impulses for recurring updates (e.g., guidelines, processes).",
-        "Ideal as a supplement or update to videos and PDFs in our modules.",
-      ],
+      title: t("contentCreation.types.audios.title"),
+      items: t("contentCreation.types.audios.items"),
     },
     {
       img: contentTypeImg3,
-      title: "PDFs & Learning Materials",
-      items: [
-        "Handouts, guides, checklists, one-pagers.",
-        "Training documents with clear structure and visual preparation incl. graphics.",
-        "Relevant summaries of learning materials for exam preparations and mandatory training.",
-      ],
+      title: t("contentCreation.types.pdfs.title"),
+      items: t("contentCreation.types.pdfs.items"),
     },
-  ];
+  ], [t]);
 
-  const trainingTypes = [
-    "AI basic training",
-    "Data privacy training",
-    "Safety instructions",
-    "Process and tool training",
-    "Role- or department-specific induction",
-  ];
+  const trainingTypes = useMemo(() => t("useCases.typicalTraining.types"), [t]);
 
-  const targetAudience = [
-    {
-      text: "Companies that want to standardize and systematize onboarding.",
-      icon: faUsers, // Solid style - use farUsers for Regular style (available)
-    },
-    {
-      text: "Companies who want to get audit-ready and develop their teams.",
-      icon: faClipboardCheck, // Solid only - no Regular equivalent
-    },
-    {
-      text: "Teams that want to reuse training contents modularly and save time.",
-      icon: faPuzzlePiece, // Solid only - no Regular equivalent
-    },
-    {
-      text: "Organizations with a need for certifications and proofs of knowledge.",
-      icon: faCertificate, // Solid only - no Regular equivalent
-    },
-    {
-      text: "Admins who must centrally manage knowledge tracking, qualifications and expiration dates.",
-      icon: faUserShield, // Solid only - no Regular equivalent
-    },
-    {
-      text: "Companies with different employee roles or locations.",
-      icon: faGlobe, // Solid style - use farGlobe for Regular style (available)
-    },
-    {
-      text: "Companies from industries with high turnover and recurring personnel demand.",
-      icon: faSync, // Solid only - no Regular equivalent
-    },
-    {
-      text: "Managers who report the training progress to their chiefs.",
-      icon: faChartBar, // Solid only - no Regular equivalent
-    },
-    {
-      text: "Companies with products that require knowledge from the customers.",
-      icon: faGraduationCap, // Solid style - use farGraduationCap for Regular style (available)
-    },
-  ];
+  const targetAudience = useMemo(() => {
+    const items = t("targetAudience.items");
+    const icons = [faUsers, faClipboardCheck, faPuzzlePiece, faCertificate, faUserShield, faGlobe, faSync, faChartBar, faGraduationCap];
+    return items.map((text, index) => ({
+      text,
+      icon: icons[index],
+    }));
+  }, [t]);
 
   //FAQ Section Script
   const [openIndex, setOpenIndex] = useState(0);
@@ -229,62 +182,62 @@ export default function Home() {
   const faqs = useMemo(
     () => [
       {
-        question: "Can a module be used in multiple courses?",
-        answer: "Yes. Exactly that is a core principle: Modules are reusable and can be part of multiple courses.",
+        question: t("faq.questions.moduleMultipleCourses.question"),
+        answer: t("faq.questions.moduleMultipleCourses.answer"),
         icon: faLayerGroup,
       },
       {
-        question: "Can contents also be used multiple times?",
-        answer: "Yes. A content (e.g., a PDF or video) can appear in multiple modules, ideal for precise training of central company guidelines and department-internal know-how.",
+        question: t("faq.questions.contentMultipleTimes.question"),
+        answer: t("faq.questions.contentMultipleTimes.answer"),
         icon: faSync,
       },
       {
-        question: "What does IQrew cost?",
-        answer: "In our launch phase, we offer discounted plans. These start from 2€ per user. For enterprise customers from ~500 employees, separate tariffs apply, which can be individually negotiated and adjusted. Contact us to learn more.",
+        question: t("faq.questions.cost.question"),
+        answer: t("faq.questions.cost.answer"),
         icon: faDollarSign,
       },
       {
-        question: "Which content types does IQrew support?",
-        answer: "Videos, audios, PDFs, and images.",
+        question: t("faq.questions.contentTypes.question"),
+        answer: t("faq.questions.contentTypes.answer"),
         icon: faFileAlt,
       },
       {
-        question: "Which quiz types are there?",
-        answer: "Multiple Choice, Single Choice, True/False, and Ordering Questions.",
+        question: t("faq.questions.quizTypes.question"),
+        answer: t("faq.questions.quizTypes.answer"),
         icon: faCheckSquare,
       },
       {
-        question: "Can I prevent videos from being skipped?",
-        answer: "Yes. For videos, skipping can be deactivated.",
+        question: t("faq.questions.preventSkipping.question"),
+        answer: t("faq.questions.preventSkipping.answer"),
         icon: faVideo,
       },
       {
-        question: "Are the certificates created automatically?",
-        answer: "Yes, the certificates are created automatically, as soon as all quizzes have been successfully completed according to the predefined requirements. Learners and admins can access issued certificates anytime.",
+        question: t("faq.questions.autoCertificates.question"),
+        answer: t("faq.questions.autoCertificates.answer"),
         icon: faTrophy,
       },
       {
-        question: "Can external certificates with proof be managed?",
-        answer: "Yes. You can maintain external qualifications incl. PDF proofs and track expiration dates.",
+        question: t("faq.questions.externalCertificates.question"),
+        answer: t("faq.questions.externalCertificates.answer"),
         icon: faFilePdf,
       },
       {
-        question: "For which industries is IQrew best suitable?",
-        answer: "IQrew is not fixed to any special industry, as our solution was designed universally.",
+        question: t("faq.questions.industries.question"),
+        answer: t("faq.questions.industries.answer"),
         icon: faIndustry,
       },
       {
-        question: "Is there English-speaking support?",
-        answer: "Yes, we have Englisch-speaking support to facilitate communication.",
+        question: t("faq.questions.support.question"),
+        answer: t("faq.questions.support.answer"),
         icon: faHeadset,
       },
       {
-        question: "Does IQrew offer courses?",
-        answer: "No, IQrew does not offer pre-made courses \"off the shelf\" at the current time, as standardized courses represent no great added value. For our customers, however, we offer course creation service at a discounted rate. Contact us to learn more about this.",
+        question: t("faq.questions.courses.question"),
+        answer: t("faq.questions.courses.answer"),
         icon: faBookOpen,
       },
     ], 
-    []
+    [t]
   );
 
   const toggleFAQ = (index) => {
@@ -321,11 +274,8 @@ export default function Home() {
   }, [faqs]);
 
   const socials = [
-    { icon: faFacebookF, label: "Facebook", url: "https://www.facebook.com/iqrew" },
-    { icon: faTwitter, label: "Twitter", url: "https://www.twitter.com/iqrew" },
-    { icon: faInstagram, label: "Instagram", url: "https://www.instagram.com/iqrew" },
+    { icon: faInstagram, label: "Instagram", url: "https://www.instagram.com/iqrew.de?igsh=MW4ybnF2NTl1ZTNvdA%3D%3D&utm_source=qr" },
     { icon: faLinkedinIn, label: "LinkedIn", url: "https://www.linkedin.com/company/iqrew" },
-    { icon: faYoutube, label: "YouTube", url: "https://www.youtube.com/@iqrew" },
   ];
 
   return (
@@ -336,23 +286,22 @@ export default function Home() {
           <div className="hero-content">
             <div className="hero-left">
               {/* <div className="sec-label">CORPORATE TRAINING TOOL</div> */}
-              <h1 className="sec-title-lg">IQrew – Corporate Training Tool</h1>
-              <h2 className="sec-subtitle">Accelerate Onboarding, Make Qualifications Verifiable</h2>
+              <h1 className="sec-title-lg">{t("hero.title")}</h1>
+              <h2 className="sec-subtitle">{t("hero.subtitle")}</h2>
               <p className="sec-desc">
-                With IQrew, you can create trainings for your employees in just a few clicks. Modular, efficient, clear.
-                Create courses from reusable modules and contents, set deadlines, check knowledge with quizzes, and document learning success with automatically generated certificates.
+                {t("hero.description1")}
               </p>
               <p className="sec-desc">
-                For admins, the dashboard delivers all information for cross-departmental tracking of learning progress, qualifications, and certificate databases, including user management with powerful tagging and filtering options.
+                {t("hero.description2")}
               </p>
-              <p className="hero-tagline">Ideal tool for Reporting, Controlling, Qualifications and Knowledge Management!</p>
+              <p className="hero-tagline">{t("hero.tagline")}</p>
               <div className="hero-cta">
                 <a 
                   href="#contact" 
                   className="btn btn--orange btn--lg"
                   onClick={handleScrollToContact}
                 >
-                  Start with IQrew
+                  {t("hero.cta")}
                 </a>
                 {/* <Link to="/contact" className="btn btn--outline-white btn--lg">Request an Offer</Link> */}
               </div>
@@ -407,10 +356,10 @@ export default function Home() {
       <section id="why-iqrew" className="home-why-iqrew-sec">
         <div className="container">
           <div className="section-header">
-            <h4 className="sec-label">WHY IQREW</h4>
-            <h2 className="sec-title-lg">Because In Practice, Training Must Be Fast, Consistent, and Verifiable</h2>
+            <h4 className="sec-label">{t("whyIqrew.label")}</h4>
+            <h2 className="sec-title-lg">{t("whyIqrew.title")}</h2>
             <p className="sec-desc">
-              Whether onboarding, compliance, data privacy, IT security, AI basics, or internal process training: Companies need training that doesn't start from scratch but is reusable and delivers learning results that can be concretely implemented in everyday work.
+              {t("whyIqrew.description")}
             </p>
                   </div>
           <div className="features-flex">
@@ -439,9 +388,9 @@ export default function Home() {
         <div className="container">
           <div className="banner-flex">
             <div className="banner-content" data-aos="fade-right">
-              <h4 className="banner-title">Our Customer Success Story with IQrew Platform</h4>
+              <h4 className="banner-title">{t("successStory.title")}</h4>
               <p className="banner-desc">
-                IQrew helps companies scale training with modular structure, deadlines, quizzes, and certificates. Our customers report up to a <strong>33% reduction in onboarding time</strong>. Create modular trainings, check knowledge, issue certificates automatically, and track everything in the dashboard.
+                {t("successStory.description")}
               </p>
             </div>
             <a 
@@ -450,7 +399,7 @@ export default function Home() {
               data-aos="fade-left" 
               onClick={handleScrollToContact}
             >
-              Get Started Today
+              {t("successStory.cta")}
             </a>
           </div>
         </div>
@@ -460,40 +409,40 @@ export default function Home() {
       <section id="how-it-works" className="home-hiw-sec">
         <div className="container">
           <div className="section-header">
-            <h4 className="sec-label">HOW IT WORKS</h4>
-            <h2 className="sec-title-lg">Modular, Flexible, Efficient</h2>
+            <h4 className="sec-label">{t("howItWorks.label")}</h4>
+            <h2 className="sec-title-lg">{t("howItWorks.title")}</h2>
           </div>
           <div className="rows-flex">
             <div className="row-item">
               <div className="content-container" data-aos="fade-right">
                 <h3 className="content-title">
-                  Courses, Modules, Contents – A Construction Kit for Modern Employee Training
+                  {t("howItWorks.coursesModules.title")}
                 </h3>
-                <p className="content-desc">In IQrew, training is structured logically:</p>
+                <p className="content-desc">{t("howItWorks.coursesModules.description")}</p>
                 <ul className="checks-list orange-checks">
                   <li>
                     <FontAwesomeIcon className="icon" icon={faCircleCheck} />
-                    <span>Courses consist of multiple modules.</span>
+                    <span>{t("howItWorks.coursesModules.points.courses")}</span>
                   </li>
                   <li>
                     <FontAwesomeIcon className="icon" icon={faCircleCheck} />
-                    <span>Modules consist of various content types: videos, audios, PDFs, and images.</span>
+                    <span>{t("howItWorks.coursesModules.points.modules")}</span>
                   </li>
                   <li>
                     <FontAwesomeIcon className="icon" icon={faCircleCheck} />
-                    <span>Modularity saves time and enables precise course creation.</span>
+                    <span>{t("howItWorks.coursesModules.points.modularity")}</span>
                   </li>
                   <li>
                     <FontAwesomeIcon className="icon" icon={faCircleCheck} />
-                    <span>A module can be used in multiple courses.</span>
+                    <span>{t("howItWorks.coursesModules.points.moduleReuse")}</span>
                   </li>
                   <li>
                     <FontAwesomeIcon className="icon" icon={faCircleCheck} />
-                    <span>A content can be part of multiple modules.</span>
+                    <span>{t("howItWorks.coursesModules.points.contentReuse")}</span>
                   </li>
                 </ul>
                 <p className="content-desc">
-                  This creates a central and efficient knowledge management system that you can continuously expand.
+                  {t("howItWorks.coursesModules.conclusion")}
                 </p>
               </div>
               <div className="img-container" data-aos="fade-left">
@@ -502,11 +451,11 @@ export default function Home() {
             </div>
             <div className="row-item">
               <div className="content-container" data-aos="fade-left">
-                <h3 className="content-title">Set Deadlines and Steer Progress Cleanly</h3>
+                <h3 className="content-title">{t("howItWorks.deadlines.title")}</h3>
                 <p className="content-desc">
-                  When creating courses, you can define deadlines for your employees. This ensures that onboardings, training sessions, or mandatory training are completed on time and simply do not get lost.
+                  {t("howItWorks.deadlines.description1")}
                 </p>
-                <p>IQrew enables transparent expectation management for admins and learners.</p>
+                <p>{t("howItWorks.deadlines.description2")}</p>
               </div>
               <div className="img-container" data-aos="fade-right">
                 <img src={useCaseVector2} alt="Use Case" />
@@ -545,20 +494,20 @@ export default function Home() {
         <div className="container">
           <div className="stats-flex">
             <div className="stat-item" data-aos="fade-up">
-              <h2 className="stat-number">33%</h2>
-              <h5 className="stat-label">Reduction in Onboarding Time</h5>
+              <h2 className="stat-number">{t("stats.reduction.number")}</h2>
+              <h5 className="stat-label">{t("stats.reduction.label")}</h5>
             </div>
             <div className="stat-item" data-aos="fade-up">
-              <h2 className="stat-number">100%</h2>
-              <h5 className="stat-label">Automated Certificates</h5>
+              <h2 className="stat-number">{t("stats.automated.number")}</h2>
+              <h5 className="stat-label">{t("stats.automated.label")}</h5>
             </div>
             <div className="stat-item" data-aos="fade-up">
-              <h2 className="stat-number">∞</h2>
-              <h5 className="stat-label">Reusable Modules</h5>
+              <h2 className="stat-number">{t("stats.reusable.number")}</h2>
+              <h5 className="stat-label">{t("stats.reusable.label")}</h5>
               </div>
             <div className="stat-item" data-aos="fade-up">
-              <h2 className="stat-number">24/7</h2>
-              <h5 className="stat-label">Access & Support</h5>
+              <h2 className="stat-number">{t("stats.access.number")}</h2>
+              <h5 className="stat-label">{t("stats.access.label")}</h5>
             </div>
           </div>
         </div>
@@ -568,8 +517,8 @@ export default function Home() {
       <section id="features" className="home-quizzes-sec">
         <div className="container">
           <div className="section-header">
-            <h4 className="sec-label">QUIZZES & CERTIFICATES</h4>
-            <h2 className="sec-title-lg">How Does Knowledge Become Verifiable in the Company?</h2>
+            <h4 className="sec-label">{t("quizzes.label")}</h4>
+            <h2 className="sec-title-lg">{t("quizzes.title")}</h2>
           </div>
           <div className="quizzes-layout">
             {/* <div className="quizzes-left">
@@ -598,16 +547,16 @@ export default function Home() {
               <div className="icon-container">
                 <FontAwesomeIcon className="icon" icon={faFileAlt} />
               </div>
-              <h4 className="title">Quiz Creation for Contents and Complete Courses</h4>
-              <p className="desc">With IQrew, you create quizzes both:</p>
+              <h4 className="title">{t("quizzes.quizCreation.title")}</h4>
+              <p className="desc">{t("quizzes.quizCreation.description")}</p>
               <ul className="checks-list blue-checks">
                 <li>
                   <FontAwesomeIcon className="icon" icon={faCircleCheck} />
-                  <span>For individual contents (e.g., after a video or PDF).</span>
+                  <span>{t("quizzes.quizCreation.points.individual")}</span>
                 </li>
                 <li>
                   <FontAwesomeIcon className="icon" icon={faCircleCheck} />
-                  <span>As well as for complete courses (final tests).</span>
+                  <span>{t("quizzes.quizCreation.points.complete")}</span>
                 </li>
               </ul>
             </div>
@@ -615,24 +564,24 @@ export default function Home() {
               <div className="icon-container">
                 <FontAwesomeIcon className="icon" icon={faVideo} />
               </div>
-              <h4 className="title">Video Contents: Prevent Skipping</h4>
+              <h4 className="title">{t("quizzes.videoSkipping.title")}</h4>
               <p className="desc">
-                For videos, you can determine whether skipping should be prevented. Ideal for mandatory contents such as safety instructions, data privacy, or compliance training.
+                {t("quizzes.videoSkipping.description")}
               </p>
             </div>
             <div className="quiz-card" data-aos="fade-up">
               <div className="icon-container">
                 <FontAwesomeIcon className="icon" icon={faTrophy} />
               </div>
-              <h4 className="title">Automatic Certificates, As Soon As Everything Is Passed</h4>
+              <h4 className="title">{t("quizzes.autoCertificates.title")}</h4>
               <p className="desc">
-                When all quizzes have been successfully completed according to the creator's specifications, IQrew automatically generates and saves a certificate.
+                {t("quizzes.autoCertificates.description1")}
               </p>
-              <p className="desc">Reliable proofs are created without manual checking or additional tools.</p>
+              <p className="desc">{t("quizzes.autoCertificates.description2")}</p>
             </div>
             <div className="quiz-card quiz-types-card" data-aos="fade-up">
-              <h3 className="title">These Quiz Types Are Available for Selection</h3>
-              <p className="desc">Depending on the learning objective, you can choose the appropriate question type:</p>
+              <h3 className="title">{t("quizzes.quizTypes.title")}</h3>
+              <p className="desc">{t("quizzes.quizTypes.description")}</p>
               <div className="quiz-types-list">
                 {quizTypes.map((type, index) => (
                   <div key={index} className="quiz-type">
@@ -654,133 +603,126 @@ export default function Home() {
       <section className="home-admin-sec">
         <div className="container">
           <div className="section-header">
-            <h4 className="sec-label">ADMIN DASHBOARD</h4>
-            <h2 className="sec-title-lg">Learning Progress Overview</h2>
+            <h4 className="sec-label">{t("adminDashboard.label")}</h4>
+            <h2 className="sec-title-lg">{t("adminDashboard.title")}</h2>
             <p className="sec-desc">
-              Administrators get comprehensive visibility into learning progress, 
-              qualifications, and certifications across the organization. Track completion 
-              rates, manage user access, and maintain detailed records of internal and 
-              external qualifications.
+              {t("adminDashboard.description")}
             </p>
           </div>
           <div className="rows-flex">
             <div className="row-item">
               <div className="content-container" data-aos="fade-right">
-                <h3 className="content-title">Detailed Dashboard for Clarity</h3>
+                <h3 className="content-title">{t("adminDashboard.detailedDashboard.title")}</h3>
                 <p className="content-desc">
-                  Administrators receive a dashboard that makes learning successes and 
-                  qualifications visible company-wide. This allows you to:
+                  {t("adminDashboard.detailedDashboard.description")}
                 </p>
                 <ul className="checks-list blue-checks">
                   <li>
                     <FontAwesomeIcon className="icon" icon={faCircleCheck} />
-                    <span>Trace progress and completion rates.</span>
+                    <span>{t("adminDashboard.detailedDashboard.points.trace")}</span>
                   </li>
                   <li>
                     <FontAwesomeIcon className="icon" icon={faCircleCheck} />
-                    <span>Compare qualification statuses.</span>
+                    <span>{t("adminDashboard.detailedDashboard.points.compare")}</span>
                   </li>
                   <li>
                     <FontAwesomeIcon className="icon" icon={faCircleCheck} />
-                    <span>Check onboarding status per team/department.</span>
+                    <span>{t("adminDashboard.detailedDashboard.points.check")}</span>
                   </li>
                   <li>
                     <FontAwesomeIcon className="icon" icon={faCircleCheck} />
-                    <span>Organize cross-departmental knowledge competitions.</span>
+                    <span>{t("adminDashboard.detailedDashboard.points.organize")}</span>
                   </li>
                 </ul>
               </div>
               <div className="img-container" data-aos="fade-left">
-                <img src={adminDashboardImg} alt="Admin Dashboard" />
+                <img src={language === 'de' ? adminDashboardImgDe : adminDashboardImgEng} alt="Admin Dashboard" />
               </div>
             </div>
             <div className="row-item">
               <div className="content-container" data-aos="fade-left">
                 <h3 className="content-title">
-                  User Management with Extensive Search and Filter Options
+                  {t("adminDashboard.userManagement.title")}
                 </h3>
                 <p className="content-desc">
-                  In user management, you quickly filter user lists according to relevant 
-                  criteria. Especially valuable for: 
+                  {t("adminDashboard.userManagement.description")}
                 </p>
                 <ul className="checks-list blue-checks">
                   <li>
                     <FontAwesomeIcon className="icon" icon={faCircleCheck} />
-                    <span>Growing teams.</span>
+                    <span>{t("adminDashboard.userManagement.points.growing")}</span>
                   </li>
                   <li>
                     <FontAwesomeIcon className="icon" icon={faCircleCheck} />
-                    <span>Multiple locations.</span>
+                    <span>{t("adminDashboard.userManagement.points.locations")}</span>
                   </li>
                   <li>
                     <FontAwesomeIcon className="icon" icon={faCircleCheck} />
-                    <span>Different role profiles.</span>
+                    <span>{t("adminDashboard.userManagement.points.roles")}</span>
                   </li>
                   <li>
                     <FontAwesomeIcon className="icon" icon={faCircleCheck} />
-                    <span>user lists for reporting or licensed activities</span>
+                    <span>{t("adminDashboard.userManagement.points.reporting")}</span>
                   </li>
                 </ul>
               </div>
               <div className="img-container" data-aos="fade-right">
-                <img src={adminUsersImg} alt="Admin Dashboard" />
+                <img src={language === 'de' ? adminUsersImgDe : adminUsersImgEng} alt="Admin Dashboard" />
               </div>
             </div>
             <div className="row-item">
               <div className="content-container" data-aos="fade-right">
-                <h3 className="content-title">User-Tags</h3>
+                <h3 className="content-title">{t("adminDashboard.userTags.title")}</h3>
                 <p className="content-desc">
-                  With the tagging feature, you can tag users according to their qualifications 
-                  and filter specifically later. This supports, for example: 
+                  {t("adminDashboard.userTags.description")}
                 </p>
                 <ul className="checks-list blue-checks">
                   <li>
                     <FontAwesomeIcon className="icon" icon={faCircleCheck} />
-                    <span>Role-based training assignments.</span>
+                    <span>{t("adminDashboard.userTags.points.roleBased")}</span>
                   </li>
                   <li>
                     <FontAwesomeIcon className="icon" icon={faCircleCheck} />
-                    <span>Employee lists for qualification proofs within the scope of audit preparations.</span>
+                    <span>{t("adminDashboard.userTags.points.employeeLists")}</span>
                   </li>
                   <li>
                     <FontAwesomeIcon className="icon" icon={faCircleCheck} />
-                    <span>Skill overviews in the company.</span>
+                    <span>{t("adminDashboard.userTags.points.skillOverviews")}</span>
                   </li>
                 </ul>
               </div>
               <div className="img-container" data-aos="fade-left">
-                <img src={adminTagsImg} alt="Admin Dashboard" />
+                <img src={language === 'de' ? adminTagsImgDe : adminTagsImgEng} alt="Admin Dashboard" />
               </div>
             </div>
             <div className="row-item">
               <div className="content-container" data-aos="fade-left">
                 <h3 className="content-title">
-                  Manage External Qualifications & Certificate Expiry Dates
+                  {t("adminDashboard.externalQualifications.title")}
                 </h3>
                 <p className="content-desc">
-                  Not every qualification is created internally. IQrew also allows you to: 
+                  {t("adminDashboard.externalQualifications.description")}
                 </p>
                 <ul className="checks-list blue-checks">
                   <li>
                     <FontAwesomeIcon className="icon" icon={faCircleCheck} />
-                    <span>Capture and maintain external qualifications.</span>
+                    <span>{t("adminDashboard.externalQualifications.points.capture")}</span>
                   </li>
                   <li>
                     <FontAwesomeIcon className="icon" icon={faCircleCheck} />
-                    <span>Deposit PDF proofs and certificates.</span>
+                    <span>{t("adminDashboard.externalQualifications.points.deposit")}</span>
                   </li>
                   <li>
                     <FontAwesomeIcon className="icon" icon={faCircleCheck} />
-                    <span>Track expiration dates of certificates & Certificate Lifecycle Management.</span>
+                    <span>{t("adminDashboard.externalQualifications.points.track")}</span>
                   </li>
                 </ul>
                 <p className="content-desc">
-                  This makes IQrew the central point for documenting internal and external 
-                  qualifications in a structured manner.
+                  {t("adminDashboard.externalQualifications.conclusion")}
                 </p>
               </div>
               <div className="img-container" data-aos="fade-right">
-                <img src={adminCertificatesImg} alt="Admin Dashboard" />
+                <img src={language === 'de' ? adminCertificatesImgDe : adminCertificatesImgEng} alt="Admin Dashboard" />
               </div>
             </div>
           </div>
@@ -793,10 +735,10 @@ export default function Home() {
         <img className="vector-bottom" src={shapeThree} alt="Vector" /> */}
         <div className="container">
           <div className="section-header">
-            <h4 className="sec-label">BULK IMPORT</h4>
-            <h2 className="sec-title-lg">Invite Many Users in Minutes</h2>
+            <h4 className="sec-label">{t("bulkImport.label")}</h4>
+            <h2 className="sec-title-lg">{t("bulkImport.title")}</h2>
             <p className="sec-desc">
-              With our bulk import, you invite a multitude of users with just a few clicks. This saves time especially with large-scale operations and helps streamline your onboarding process efficiently.
+              {t("bulkImport.description")}
             </p>
           </div>
           <div className="bulk-items-flex">
@@ -804,43 +746,43 @@ export default function Home() {
               <div className="icon-container">
                 <FontAwesomeIcon icon={faMapMarkerAlt} />
               </div>
-              <h4 className="item-title">New Locations</h4>
-              <p className="item-desc">Easily onboard employees at new office locations or branches.</p>
+              <h4 className="item-title">{t("bulkImport.items.newLocations.title")}</h4>
+              <p className="item-desc">{t("bulkImport.items.newLocations.description")}</p>
                   </div>
             <div className="item" data-aos="fade-up">
               <div className="icon-container">
                 <FontAwesomeIcon icon={faUserPlus} />
                   </div>
-              <h4 className="item-title">Large-Scale Hiring</h4>
-              <p className="item-desc">Invite multiple new employees simultaneously during recruitment drives.</p>
+              <h4 className="item-title">{t("bulkImport.items.largeHiring.title")}</h4>
+              <p className="item-desc">{t("bulkImport.items.largeHiring.description")}</p>
                   </div>
             <div className="item" data-aos="fade-up">
               <div className="icon-container">
                 <FontAwesomeIcon icon={faCalendarAlt} />
                 </div>
-              <h4 className="item-title">Seasonal Teams</h4>
-              <p className="item-desc">Quickly set up training for temporary or seasonal workforce.</p>
+              <h4 className="item-title">{t("bulkImport.items.seasonalTeams.title")}</h4>
+              <p className="item-desc">{t("bulkImport.items.seasonalTeams.description")}</p>
               </div>
             <div className="item" data-aos="fade-up">
               <div className="icon-container">
                 <FontAwesomeIcon icon={faBook} />
             </div>
-              <h4 className="item-title">Mandatory Training</h4>
-              <p className="item-desc">Roll out mandatory training programs across your entire organization.</p>
+              <h4 className="item-title">{t("bulkImport.items.mandatoryTraining.title")}</h4>
+              <p className="item-desc">{t("bulkImport.items.mandatoryTraining.description")}</p>
                 </div>
             <div className="item" data-aos="fade-up">
               <div className="icon-container">
                 <FontAwesomeIcon icon={faExchangeAlt} />
                 </div>
-              <h4 className="item-title">High Turnover</h4>
-              <p className="item-desc">Manage frequent employee changes and short-term working power demands efficiently.</p>
+              <h4 className="item-title">{t("bulkImport.items.highTurnover.title")}</h4>
+              <p className="item-desc">{t("bulkImport.items.highTurnover.description")}</p>
                 </div>
             <div className="item" data-aos="fade-up">
               <div className="icon-container">
                 <FontAwesomeIcon icon={faHandshake} />
               </div>
-              <h4 className="item-title">Mergers & Acquisitions</h4>
-              <p className="item-desc">Integrate teams from merged or acquired companies seamlessly.</p>
+              <h4 className="item-title">{t("bulkImport.items.mergers.title")}</h4>
+              <p className="item-desc">{t("bulkImport.items.mergers.description")}</p>
             </div>
           </div>
         </div>
@@ -850,15 +792,11 @@ export default function Home() {
       <section id="content-creation" className="home-content-sec">
         <div className="container">
           <div className="section-header">
-            <h4 className="sec-label">CONTENT CREATION</h4>
-            <h2 className="sec-title-lg">Have Training Content Created</h2>
+            <h4 className="sec-label">{t("contentCreation.label")}</h4>
+            <h2 className="sec-title-lg">{t("contentCreation.title")}</h2>
             {/* <h3 className="sec-title-sm">You Want to Offer Your Team High-Quality Training Content, But You Lack Time, Resources, or an Established Content Team?</h3> */}
             <p className="sec-desc">
-              <span>You Want to Offer Your Team High-Quality Training Content, But You Lack Time, 
-              Resources, or an Established Content Team?</span> We take over the creation of 
-              contents for your IQrew training. AI-supported, target-group-oriented, and based on 
-              your documents and data. We create videos, audios, and PDFs exactly so that they fit 
-              your roles, language, and internal specifications.
+              {t("contentCreation.description")}
             </p>
           </div>
           <div  className="content-rows-flex">
@@ -935,12 +873,9 @@ export default function Home() {
         <div className="container">
           <div className="banner-flex">
             <div className="banner-content" data-aos="fade-right">
-              <h4 className="banner-title">Prices for IQrew Training and Content Creation</h4>
+              <h4 className="banner-title">{t("pricing.title")}</h4>
               <p className="banner-desc">
-                Costs vary depending on the type, scope, and complexity of the content (e.g., video 
-                length, number of videos, desired depth, design/brand adjustments, number of iterations).
-                Therefore, we are happy to create an individual offer on request, fitting your goals 
-                and schedule.
+                {t("pricing.description")}
               </p>
                 </div>
             <a 
@@ -949,7 +884,7 @@ export default function Home() {
               data-aos="fade-left" 
               onClick={handleScrollToContact}
             >
-              Request Content creation
+              {t("pricing.cta")}
             </a>
           </div>
         </div>
@@ -959,43 +894,43 @@ export default function Home() {
       <section id="use-cases" className="home-use-cases-sec">
         <div className="container">
           <div className="section-header">
-            <h4 className="sec-label">USE CASES</h4>
-            <h2 className="sec-title-lg">Streamlined Company Onboarding</h2>
+            <h4 className="sec-label">{t("useCases.label")}</h4>
+            <h2 className="sec-title-lg">{t("useCases.title")}</h2>
             <p className="sec-desc">
-              Create fast, precise, and reusable onboarding training for companies of every size. Build comprehensive training programs in just a few clicks.
+              {t("useCases.description")}
             </p>
           </div>
           <div className="rows-flex">
             <div className="row-item">
               <div className="content-container" data-aos="fade-right">
-                <h3 className="content-title">Create Onboarding Training<br/>in Few Clicks</h3>
+                <h3 className="content-title">{t("useCases.onboardingTraining.title")}</h3>
                 <p className="content-desc">
-                  Team leads and admins can build precise onboarding training by combining relevant modules from different company areas, e.g.:
+                  {t("useCases.onboardingTraining.description")}
                 </p>
                 <ul className="checks-list orange-checks">
                   <li>
                     <FontAwesomeIcon className="icon" icon={faCircleCheck} />
-                    <span>IT & Security</span>
+                    <span>{t("useCases.onboardingTraining.points.itSecurity")}</span>
                   </li>
                   <li>
                     <FontAwesomeIcon className="icon" icon={faCircleCheck} />
-                    <span>HR & Processes</span>
+                    <span>{t("useCases.onboardingTraining.points.hrProcesses")}</span>
                   </li>
                   <li>
                     <FontAwesomeIcon className="icon" icon={faCircleCheck} />
-                    <span>Data Privacy & Compliance</span>
+                    <span>{t("useCases.onboardingTraining.points.dataPrivacy")}</span>
                   </li>
                   <li>
                     <FontAwesomeIcon className="icon" icon={faCircleCheck} />
-                    <span>Team-specific workflows</span>
+                    <span>{t("useCases.onboardingTraining.points.teamWorkflows")}</span>
                   </li>
                   <li>
                     <FontAwesomeIcon className="icon" icon={faCircleCheck} />
-                    <span>AI basics in everyday work</span>
+                    <span>{t("useCases.onboardingTraining.points.aiBasics")}</span>
                   </li>
                 </ul>
                 <p className="content-desc">
-                  The result: New employees receive comprehensive, consistent onboarding without every team creating training completely from scratch.
+                  {t("useCases.onboardingTraining.conclusion")}
                 </p>
               </div>
               <div className="img-container" data-aos="fade-left">
@@ -1005,10 +940,10 @@ export default function Home() {
             <div className="row-item">
               <div className="content-container" data-aos="fade-left">
                 <h3 className="content-title">
-                  Typical Training That Becomes Particularly Easy with IQrew:
+                  {t("useCases.typicalTraining.title")}
                 </h3>
                 <p className="content-desc">
-                  IQrew simplifies the creation and management of various training types, making it easy to deliver effective, trackable training across your organization.
+                  {t("useCases.typicalTraining.description")}
                 </p>
                 <ul className="checks-list orange-checks">
                   {trainingTypes.map((type, index) => (
@@ -1072,10 +1007,10 @@ export default function Home() {
             </svg>
           </ShapeSvgComponent>
           <div className="section-header">
-            <h4 className="sec-label">TARGET AUDIENCE</h4>
-            <h2 className="sec-title-lg">Who Is IQrew Made For?</h2>
+            <h4 className="sec-label">{t("targetAudience.label")}</h4>
+            <h2 className="sec-title-lg">{t("targetAudience.title")}</h2>
             <p className="sec-desc">
-              IQrew is designed for companies and organizations that need efficient, scalable training solutions. Whether you're managing onboarding, compliance, or continuous learning, IQrew helps you standardize training processes and track qualifications effectively.
+              {t("targetAudience.description")}
             </p>
                 </div>
           <div className="audience-cards-flex">
@@ -1102,9 +1037,9 @@ export default function Home() {
         <div className="container">
           <div className="section-header">
             {/* <h4 className="sec-label">FAQ</h4> */}
-            <h2 className="sec-title-lg">Frequently Asked Questions</h2>
+            <h2 className="sec-title-lg">{t("faq.title")}</h2>
             <p className="sec-desc">
-              Find answers to common questions about IQrew, our training platform, and how it can help your organization. Explore our comprehensive FAQ section to learn more about features, pricing, implementation, and support options.
+              {t("faq.description")}
             </p>
           </div>
           <dl className="faq-list" data-aos="fade-up">
@@ -1174,9 +1109,9 @@ export default function Home() {
         <div className="container">
           <div className="banner-flex">
             <div className="banner-content" data-aos="fade-right">
-              <h4 className="banner-title">IQrew Brings Structure to Training and Speed to Onboarding</h4>
+              <h4 className="banner-title">{t("finalCta.title")}</h4>
               <p className="banner-desc">
-                IQrew is a platform for companies that want to scale training with modular structure, deadlines, quizzes, and certificates. Our customers report up to a 33% reduction in onboarding time. Create modular trainings, check knowledge, issue certificates automatically, and track everything in the dashboard.
+                {t("finalCta.description")}
               </p>
               </div>
             <a 
@@ -1184,7 +1119,7 @@ export default function Home() {
               className="btn btn--white btn--lg" data-aos="fade-left"
               onClick={handleScrollToContact}
             >
-              Get Started Now
+              {t("finalCta.cta")}
             </a>
           </div>
         </div>
@@ -1227,10 +1162,9 @@ export default function Home() {
             </svg>
           </ShapeSvgComponent>
           <div className="section-header">
-            <h2 className="sec-title-lg">Let’s Stay Connected</h2>
+            <h2 className="sec-title-lg">{t("contact.title")}</h2>
             <p className="sec-desc">
-              It is a long established fact that a reader will be distracted by the readable 
-              content of a page when looking at its layout. The point of using.
+              {t("contact.description")}
             </p>
           </div>
           <div className="footer-flex">
@@ -1245,26 +1179,25 @@ export default function Home() {
             <div className="footer-left footer-card" data-aos="fade-up">
               <div className="contact-info-items">
                 <div className="item">
-                  <h4 className="title">Email Address</h4>
+                  <h4 className="title">{t("contact.email.title")}</h4>
                   <p className="text">
-                    <a href="mailto:info@iqrew.com">info@iqrew.com</a>
+                    <a href="mailto:info@iqrew.com">{t("contact.email.value")}</a>
                     </p>
                 </div>
                 <div className="item">
-                  <h4 className="title">Office Location</h4>
+                  <h4 className="title">{t("contact.office.title")}</h4>
                   <p className="text">
-                    Navakethan Complex, 6th Floor, 605, 606 A&P opp, CLock Tower, SD Road, 
-                    Secunderabad, Telangana 500003
+                    {t("contact.office.value")}
                   </p>
                 </div>
                 <div className="item">
-                  <h4 className="title">Phone Number</h4>
+                  <h4 className="title">{t("contact.phone.title")}</h4>
                   <p className="text">
-                    <a href="tel:+478888899999">+47 88888 99999</a>
+                    <a href="tel:+478888899999">{t("contact.phone.value")}</a>
                   </p>
                 </div>
                 <div className="item">
-                  <h4 className="title">Social Media</h4>
+                  <h4 className="title">{t("contact.social.title")}</h4>
                   <div className="social-links">
                     {socials.map((social, index) => (
                       <a 

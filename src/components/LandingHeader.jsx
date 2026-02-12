@@ -3,21 +3,23 @@ import logo from "../assets/images/iqrew-logo.png";
 import { useEffect, useState } from "react";
 import hamburgerIcon from "../assets/icons/icon-hamburger.svg";
 import { useIsMobile } from "../hooks/useIsMobile";
+import { useLanguage } from "../contexts/LanguageContext";
 import Sidebar from "./Sidebar";
-
-const navLinks = [
-  { label: "Why IQrew", path: "#why-iqrew" },
-  { label: "How It Works", path: "#how-it-works" },
-  { label: "Features", path: "#features" },
-  { label: "Content Creation", path: "#content-creation" },
-  { label: "Use Cases", path: "#use-cases" },
-  { label: "FAQ", path: "#faq" },
-];
 
 export default function LandingHeader() {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const [activeSection, setActiveSection] = useState("");
   const isMobile = useIsMobile();
+  const { t, language, changeLanguage } = useLanguage();
+
+  const navLinks = [
+    { label: t("navigation.whyIqrew"), path: "#why-iqrew" },
+    { label: t("navigation.howItWorks"), path: "#how-it-works" },
+    { label: t("navigation.features"), path: "#features" },
+    { label: t("navigation.contentCreation"), path: "#content-creation" },
+    { label: t("navigation.useCases"), path: "#use-cases" },
+    { label: t("navigation.faq"), path: "#faq" },
+  ];
 
   const handleToggleMenu = () => {
     setIsMenuToggled((prev) => !prev);
@@ -76,8 +78,9 @@ export default function LandingHeader() {
 
   // Intersection Observer for active section detection
   useEffect(() => {
-    const sections = navLinks.map((link) => {
-      const id = link.path.replace("#", "");
+    const sectionPaths = ["#why-iqrew", "#how-it-works", "#features", "#content-creation", "#use-cases", "#faq"];
+    const sections = sectionPaths.map((path) => {
+      const id = path.replace("#", "");
       return document.getElementById(id);
     }).filter(Boolean);
 
@@ -156,7 +159,7 @@ export default function LandingHeader() {
             <a
               href="#"
               className="brand-logo"
-              aria-label="iQrew Home"
+              aria-label={t("aria.iqrewHome")}
               onClick={(e) => {
                 e.preventDefault();
                 window.scrollTo({ top: 0, behavior: "smooth" });
@@ -181,15 +184,33 @@ export default function LandingHeader() {
                       </a>
                     );
                   })}
-                </nav>
-                <div className="header-actions">
                   <a
                     href="#contact"
                     onClick={(e) => handleNavClick(e, "#contact")}
-                    className="btn btn--md btn--orange"
+                    className="nav__link"
                   >
-                    Contact Us
+                    {t("navigation.contactUs")}
                   </a>
+                </nav>
+                <div className="header-actions">
+                  <div className="language-switcher">
+                    <button
+                      className={`lang-btn ${language === 'en' ? 'active' : ''}`}
+                      onClick={() => changeLanguage('en')}
+                      aria-label="Switch to English"
+                      type="button"
+                    >
+                      EN
+                    </button>
+                    <button
+                      className={`lang-btn ${language === 'de' ? 'active' : ''}`}
+                      onClick={() => changeLanguage('de')}
+                      aria-label="Switch to German"
+                      type="button"
+                    >
+                      DE
+                    </button>
+                  </div>
                 </div>
               </>
             )}
@@ -197,7 +218,7 @@ export default function LandingHeader() {
               <button
                 className="btn-hamburger"
                 onClick={handleToggleMenu}
-                aria-label={isMenuToggled ? "Close menu" : "Open menu"}
+                aria-label={isMenuToggled ? t("aria.closeMenu") : t("aria.openMenu")}
                 aria-expanded={isMenuToggled}
                 type="button"
               >
