@@ -395,7 +395,7 @@ export default function Home() {
             </div>
             <a 
               href="#contact" 
-              className="btn btn--white btn--lg" 
+              className="btn btn--orange btn--lg" 
               data-aos="fade-left" 
               onClick={handleScrollToContact}
             >
@@ -894,7 +894,7 @@ export default function Home() {
                 </div>
             <a 
               href="#contact" 
-              className="btn btn--white btn--lg" 
+              className="btn btn--orange btn--lg" 
               data-aos="fade-left" 
               onClick={handleScrollToContact}
             >
@@ -1130,7 +1130,7 @@ export default function Home() {
               </div>
             <a 
               href="#contact" 
-              className="btn btn--white btn--lg" data-aos="fade-left"
+              className="btn btn--orange btn--lg" data-aos="fade-left"
               onClick={handleScrollToContact}
             >
               {t("finalCta.cta")}
@@ -1207,7 +1207,7 @@ export default function Home() {
                 <div className="item">
                   <h4 className="title">{t("contact.phone.title")}</h4>
                   <p className="text">
-                    <a href="tel:+4980312205190">{t("contact.phone.value")}</a>
+                    <a href="tel:+4989248819270">{t("contact.phone.value")}</a>
                   </p>
                 </div>
                 <div className="item">
