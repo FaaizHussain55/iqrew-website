@@ -76,7 +76,7 @@
     },
     "reusable": {
       "number": "∞",
-      "label": "Reusable Modules"
+      "label": "Courses and Contents"
     },
     "access": {
       "number": "24/7",
@@ -332,19 +332,52 @@
     "description": "Ready to transform your company's training process? Get in touch to learn how IQrew can streamline employee training and automate certifications.",
     "email": {
       "title": "Email Address",
-      "value": "info@iqrew.com"
+      "value": "info@iqrew.app"
     },
     "office": {
       "title": "Office Location",
-      "value": "Navakethan Complex, 6th Floor, 605, 606 A&P opp, CLock Tower, SD Road, Secunderabad, Telangana 500003"
+      "value": "RoutineX GmbH, Inselkammerstr. 8, 82008 Unterhaching Germany"
     },
     "phone": {
       "title": "Phone Number",
-      "value": "+47 88888 99999"
+      "value": "+49 8031 2205190"
     },
     "social": {
       "title": "Social Media"
     }
+  },
+  "form": {
+    "ariaLabel": "Contact form",
+    "name": {
+      "label": "Full name",
+      "placeholder": "Devid Wonder",
+      "description": "Enter your full name"
+    },
+    "email": {
+      "label": "Email Address",
+      "placeholder": "you@example.com",
+      "description": "Enter your email address"
+    },
+    "phone": {
+      "label": "Phone Number",
+      "placeholder": "+49 123 4567890",
+      "description": "Enter your phone number"
+    },
+    "issue": {
+      "label": "Subject",
+      "placeholder": "Enter subject",
+      "description": "Enter the subject of your inquiry"
+    },
+    "message": {
+      "label": "Your message",
+      "placeholder": "Type your message....",
+      "description": "Enter your message or inquiry"
+    },
+    "submit": {
+      "label": "Send Message",
+      "ariaLabel": "Submit contact form"
+    },
+    "required": "required"
   },
   "aria": {
     "openMenu": "Open menu",

@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { useLanguage } from "../contexts/LanguageContext";
 
 export default function HomeForm() {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -25,19 +27,19 @@ export default function HomeForm() {
   };
 
   return (
-    <form className="contact-form" onSubmit={handleSubmit} aria-label="Contact form" noValidate>
+    <form className="contact-form" onSubmit={handleSubmit} aria-label={t("form.ariaLabel")} noValidate>
       <div className="fields-flex">
         <div className="form-row">
           <div className="form-item">
             <label className="form-label" htmlFor="name">
-              Full name<span aria-label="required">*</span>
+              {t("form.name.label")}<span aria-label={t("form.required")}>*</span>
             </label>
             <input
               className="form-field"
               type="text"
               id="name"
               name="name"
-              placeholder="Devid Wonder"
+              placeholder={t("form.name.placeholder")}
               value={formData.name}
               onChange={handleChange}
               required
@@ -46,19 +48,19 @@ export default function HomeForm() {
               autoComplete="name"
             />
             <span id="name-description" className="sr-only">
-              Enter your full name
+              {t("form.name.description")}
             </span>
           </div>
           <div className="form-item">
             <label className="form-label" htmlFor="email">
-              Email Address<span aria-label="required">*</span>
+              {t("form.email.label")}<span aria-label={t("form.required")}>*</span>
             </label>
             <input
               className="form-field"
               type="email"
               id="email"
               name="email"
-              placeholder="you@example.com"
+              placeholder={t("form.email.placeholder")}
               value={formData.email}
               onChange={handleChange}
               required
@@ -67,21 +69,21 @@ export default function HomeForm() {
               autoComplete="email"
             />
             <span id="email-description" className="sr-only">
-              Enter your email address
+              {t("form.email.description")}
             </span>
           </div>
         </div>
         <div className="form-row">
           <div className="form-item">
             <label className="form-label" htmlFor="phone">
-              Phone Number<span aria-label="required">*</span>
+              {t("form.phone.label")}<span aria-label={t("form.required")}>*</span>
             </label>
             <input
               className="form-field"
               type="tel"
               id="phone"
               name="phone"
-              placeholder="+49 123 4567890"
+              placeholder={t("form.phone.placeholder")}
               value={formData.phone}
               onChange={handleChange}
               required
@@ -90,35 +92,34 @@ export default function HomeForm() {
               autoComplete="tel"
             />
             <span id="phone-description" className="sr-only">
-              Enter your phone number
+              {t("form.phone.description")}
             </span>
           </div>
           <div className="form-item">
             <label className="form-label" htmlFor="issue">
-              Issue Related to<span aria-label="required">*</span>
+              {t("form.issue.label")}<span aria-label={t("form.required")}>*</span>
             </label>
-            <select
-              className="form-field form-select"
+            <input
+              className="form-field"
+              type="text"
               id="issue"
               name="issue"
+              placeholder={t("form.issue.placeholder")}
               value={formData.issue}
               onChange={handleChange}
               required
               aria-required="true"
               aria-describedby="issue-description"
-            >
-              <option value="Course Structure">Course Structure</option>
-              <option value="Payment Failure">Payment Failure</option>
-              <option value="Other">Other</option>
-            </select>
+              autoComplete="off"
+            />
             <span id="issue-description" className="sr-only">
-              Select the issue category
+              {t("form.issue.description")}
             </span>
           </div>
         </div>
         <div className="form-item">
           <label className="form-label" htmlFor="message">
-            Your message<span aria-label="required">*</span>
+            {t("form.message.label")}<span aria-label={t("form.required")}>*</span>
           </label>
           <textarea
             className="form-field form-textarea"
@@ -126,19 +127,19 @@ export default function HomeForm() {
             name="message"
             value={formData.message}
             onChange={handleChange}
-            placeholder="Type your message...."
+            placeholder={t("form.message.placeholder")}
             rows="5"
             required
             aria-required="true"
             aria-describedby="message-description"
           ></textarea>
           <span id="message-description" className="sr-only">
-            Enter your message or inquiry
+            {t("form.message.description")}
           </span>
         </div>
         <div className="form-actions">
-          <button type="submit" className="btn btn--blue btn--md btn--send" aria-label="Submit contact form">
-            Send Message
+          <button type="submit" className="btn btn--blue btn--md btn--send" aria-label={t("form.submit.ariaLabel")}>
+            {t("form.submit.label")}
           </button>
         </div>
       </div>

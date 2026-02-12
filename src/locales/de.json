@@ -1,11 +1,11 @@
 {
   "navigation": {
     "whyIqrew": "Warum IQrew?",
-    "howItWorks": "So funktioniert IQrew",
-    "features": "Quizze, Lernkontrolle und Zertifikate",
-    "contentCreation": "Schulungsinhalte erstellen lassen",
-    "useCases": "Use Case – Onboarding",
-    "faq": "Häufige Fragen zu IQrew (FAQ)",
+    "howItWorks": "Wie funktioniert's?",
+    "features": "Features",
+    "contentCreation": "Content erstellen",
+    "useCases": "Use Cases",
+    "faq": "FAQ",
     "contactUs": "Kontakt"
   },
   "hero": {
@@ -34,7 +34,7 @@
         "description": "Automatisierte Zertifikatserstellung (ohne manuellen Aufwand)"
       },
       "trackProgress": {
-        "title": "Qualifikationsmanagement",
+        "title": "Qualifikations-management",
         "description": "Qualifikationsmanagement (inkl. externe Nachweise) und Tracking der Zertifikate und Ablaufdaten"
       }
     }
@@ -42,11 +42,11 @@
   "successStory": {
     "title": "IQrew bringt Struktur in Unternehmensschulungen und Tempo ins Onboarding",
     "description": "IQrew ist eine Plattform für Unternehmen, die Schulungen nicht nur erstellen, sondern skalieren wollen: modularer Aufbau, Deadlines, Quizze, Zertifikate und ein Admin-Bereich, der Qualifikationen wirklich sichtbar macht. Unsere Kunden berichten von bis zur 33% Reduktion der Einarbeitungszeit neuer Kollegen.",
-    "cta": "Jetzt starten"
+    "cta": "Jetzt loslegen"
   },
   "howItWorks": {
     "label": "SO FUNKTIONIERT IQREW",
-    "title": "modular, flexibel, effizient",
+    "title": "Modular, flexibel, effizient",
     "coursesModules": {
       "title": "Kurse, Module, Inhalte – ein Baukasten für moderne Mitarbeiterschulungen",
       "description": "In IQrew sind Schulungen logisch aufgebaut:",
@@ -76,7 +76,7 @@
     },
     "reusable": {
       "number": "∞",
-      "label": "Wiederverwendbare Module"
+      "label": "Kurse & Lerninhalte"
     },
     "access": {
       "number": "24/7",
@@ -87,21 +87,26 @@
     "label": "QUIZZE, LERNKONTROLLE UND ZERTIFIKATE",
     "title": "Wie wird Wissen im Unternehmen nachweisbar?",
     "quizCreation": {
-      "title": "Quizerstellung für Inhalte und komplette Kurse",
-      "description": "Mit IQrew erstellst du Quizze sowohl:",
+      "title": "Quizerstellung",
+      "description": "Mit IQrew kannst du zwei Arten von Quizzen erstellen:",
       "points": {
-        "individual": "für einzelne Inhalte (z. B. nach einem Video oder PDF)",
-        "complete": "als auch für komplette Kurse (Abschlusstests)"
+        "individual": "Für einzelne Inhalte, um z.B. nach einem Video das Verständnis zu prüfen",
+        "complete": "Als Abschlusstest auf Basis der Lerninhalte aller Module und Contents"
       }
     },
     "videoSkipping": {
-      "title": "Video-Contents: Überspringen verhindern",
-      "description": "Für Videos kannst du festlegen, ob das Überspringen verhindert werden soll. Ideal für Pflichtinhalte wie Sicherheitsunterweisungen, Datenschutz- oder Compliance-Schulungen."
+      "title": "Videoinhalte",
+      "description": "Du kannst festlegen, ob das Überspringen erlaubt oder verhindert werden soll. Ideal für:",
+      "points": {
+          "point1": "Pflichtinhalte wie Sicherheitsunterweisungen",
+          "point2": "Datenschutzschulungen",
+          "point3": "Compliance-Schulungen"
+        }
     },
     "autoCertificates": {
-      "title": "Automatische Zertifikate, sobald alles bestanden ist",
-      "description1": "Wenn alle Quizze gemäß den Vorgaben der Ersteller erfolgreich abgeschlossen wurden, generiert und speichert IQrew automatisch ein Zertifikat.",
-      "description2": "Es entstehen belastbare Nachweise, ohne manuelle Prüfung oder Zusatztools."
+      "title": "Automatisierte Zertifikats-erstellung",
+      "description1": "Wenn alle Quizze gemäß den Vorgaben der Ersteller erfolgreich abgeschlossen wurden, generiert und speichert IQrew automatisch ein Zertifikat, das für User und Admin jederzeit zum Download bereitsteht.",
+      "description2": "So entstehen belastbare Wissensnachweise, ohne manuelle Prüfung oder komplexe Zusatztools."
     },
     "quizTypes": {
       "title": "Diese Quizarten stehen zur Auswahl",
@@ -161,7 +166,7 @@
   },
   "bulkImport": {
     "label": "MASSENIMPORT",
-    "title": "viele User in Minuten einladen",
+    "title": "Viele User in Minuten einladen",
     "description": "Mit unserem Massenimport lädst du eine Vielzahl von Usern mit wenigen Klicks ein. Das spart Zeit besonders bei:",
     "items": {
       "newLocations": {
@@ -224,14 +229,14 @@
     }
   },
   "pricing": {
-    "title": "Preise für IQrew Schulungscontenterstellung",
+    "title": "Erstellung von Schulungsinhalten durch IQrew",
     "description": "Die Kosten variieren je nach Art, Umfang und Komplexität des Contents (z. B. Videolänge, Anzahl der Videos, gewünschte Tiefe, Design-/Brand-Anpassungen, Anzahl der Iterationen). Deshalb erstellen wir gerne ein individuelles Angebot auf Anfrage, passend zu deinen Zielen und Zeitplan.",
-    "cta": "Content-Erstellung anfragen"
+    "cta": "Contenterstellung anfragen"
   },
   "useCases": {
     "label": "USE CASE – ONBOARDING",
-    "title": "Onboarding für Unternehmen jeder Größe (schnell, passgenau, wiederverwendbar)",
-    "description": "Erstelle schnelle, präzise und wiederverwendbare Onboarding-Schulungen für Unternehmen jeder Größe. Erstelle umfassende Schulungsprogramme in wenigen Klicks.",
+    "title": "Onboarding für Unternehmen jeder Größe",
+    "description": "Erstelle schnelle, passgenaue und wiederverwendbare Onboarding-Schulungen für neue Kollegen und spare wertvolle Zeit bei der Einarbeitung! Unabhängig von deiner Unternehmensgröße und -Branche kannst du Schulungen in wenigen Klicks erstellen.",
     "onboardingTraining": {
       "title": "Onboarding-Schulung in wenigen Klicks erstellen",
       "description": "Team-Leads und Admins können eine passgenaue Onboarding-Schulung bauen, indem sie relevante Module aus verschiedenen Unternehmensbereichen kombinieren, z. B.:",
@@ -325,26 +330,59 @@
   "finalCta": {
     "title": "IQrew bringt Struktur in Schulungen und Tempo ins Onboarding",
     "description": "IQrew ist eine Plattform für Unternehmen, die Schulungen nicht nur erstellen, sondern skalieren wollen: modularer Aufbau, Deadlines, Quizze, Zertifikate und ein Admin-Bereich, der Qualifikationen wirklich sichtbar macht. Unsere Kunden berichten von bis zur 33% Reduktion der Einarbeitungszeit neuer Kollegen.",
-    "cta": "Jetzt starten"
+    "cta": "Jetzt loslegen"
   },
   "contact": {
-    "title": "Lass uns in Verbindung bleiben",
-    "description": "Bereit, den Schulungsprozess Ihres Unternehmens zu transformieren? Kontaktieren Sie uns, um zu erfahren, wie IQrew die Mitarbeiterschulung optimieren und Zertifikate automatisieren kann.",
+    "title": "Kontaktiere uns!",
+    "description": "Bereit, den Schulungsprozess deines Unternehmens zu transformieren? Kontaktiere uns, um mehr über IQrew Schulungsportal zu erfahren.",
     "email": {
-      "title": "E-Mail-Adresse",
-      "value": "info@iqrew.com"
+      "title": "E-Mail",
+      "value": "info@iqrew.app"
     },
     "office": {
       "title": "Bürostandort",
-      "value": "Navakethan Complex, 6th Floor, 605, 606 A&P opp, CLock Tower, SD Road, Secunderabad, Telangana 500003"
+      "value": "RoutineX GmbH, Inselkammerstr. 8, 82008 Unterhaching Germany"
     },
     "phone": {
       "title": "Telefonnummer",
-      "value": "+47 88888 99999"
+      "value": "+49 8031 2205190"
     },
     "social": {
       "title": "Soziale Medien"
     }
+  },
+  "form": {
+    "ariaLabel": "Kontaktformular",
+    "name": {
+      "label": "Name",
+      "placeholder": "Max Mustermann",
+      "description": "Geben Sie Ihren vollständigen Namen ein"
+    },
+    "email": {
+      "label": "Deine Email",
+      "placeholder": "ihre@email.de",
+      "description": "Geben Sie Ihre E-Mail-Adresse ein"
+    },
+    "phone": {
+      "label": "Telefonnummer",
+      "placeholder": "+49 123 4567890",
+      "description": "Geben Sie Ihre Telefonnummer ein"
+    },
+    "issue": {
+      "label": "Betreff",
+      "placeholder": "Betreff eingeben",
+      "description": "Geben Sie den Betreff Ihrer Anfrage ein"
+    },
+    "message": {
+      "label": "Deine Nachricht",
+      "placeholder": "Beschreibe dein Anliegen oder deine Anfrage möglichst detailiert...",
+      "description": "Geben Sie Ihre Nachricht oder Anfrage ein"
+    },
+    "submit": {
+      "label": "Nachricht senden",
+      "ariaLabel": "Kontaktformular absenden"
+    },
+    "required": "erforderlich"
   },
   "aria": {
     "openMenu": "Menü öffnen",

@@ -455,7 +455,7 @@ export default function Home() {
                 <p className="content-desc">
                   {t("howItWorks.deadlines.description1")}
                 </p>
-                <p>{t("howItWorks.deadlines.description2")}</p>
+                <p className="content-desc">{t("howItWorks.deadlines.description2")}</p>
               </div>
               <div className="img-container" data-aos="fade-right">
                 <img src={useCaseVector2} alt="Use Case" />
@@ -568,6 +568,20 @@ export default function Home() {
               <p className="desc">
                 {t("quizzes.videoSkipping.description")}
               </p>
+              <ul className="checks-list blue-checks">
+                <li>
+                  <FontAwesomeIcon className="icon" icon={faCircleCheck} />
+                  <span>{t("quizzes.videoSkipping.points.point1")}</span>
+                </li>
+                <li>
+                  <FontAwesomeIcon className="icon" icon={faCircleCheck} />
+                  <span>{t("quizzes.videoSkipping.points.point2")}</span>
+                </li>
+                <li>
+                  <FontAwesomeIcon className="icon" icon={faCircleCheck} />
+                  <span>{t("quizzes.videoSkipping.points.point3")}</span>
+                </li>
+              </ul>
             </div>
             <div className="quiz-card" data-aos="fade-up">
               <div className="icon-container">
@@ -1181,7 +1195,7 @@ export default function Home() {
                 <div className="item">
                   <h4 className="title">{t("contact.email.title")}</h4>
                   <p className="text">
-                    <a href="mailto:info@iqrew.com">{t("contact.email.value")}</a>
+                    <a href="mailto:info@iqrew.app">{t("contact.email.value")}</a>
                     </p>
                 </div>
                 <div className="item">
@@ -1193,7 +1207,7 @@ export default function Home() {
                 <div className="item">
                   <h4 className="title">{t("contact.phone.title")}</h4>
                   <p className="text">
-                    <a href="tel:+478888899999">{t("contact.phone.value")}</a>
+                    <a href="tel:+4980312205190">{t("contact.phone.value")}</a>
                   </p>
                 </div>
                 <div className="item">
