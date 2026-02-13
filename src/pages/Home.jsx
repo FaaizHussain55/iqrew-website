@@ -14,6 +14,8 @@ import shapeThree from "../assets/images/line-vector-3.svg";
 import shapeFour from "../assets/images/line-vector-4.svg";
 // import shapeFive from "../assets/images/line-vector-5.svg";
 import heroImage from "../assets/images/img-hero.png";
+import HiwVector1 from "../assets/images/home-hiw-vector1.png";
+import HiwVector2 from "../assets/images/home-hiw-vector2.png";
 import adminDashboardImgEng from "../assets/images/eng-dashboard-ss.png";
 import adminUsersImgEng from "../assets/images/eng-users-ss.png";
 import adminTagsImgEng from "../assets/images/eng-tags-ss.png";
@@ -25,8 +27,8 @@ import adminCertificatesImgDe from "../assets/images/german-certificates-ss.png"
 import contentTypeImg1 from "../assets/images/img-content-sec-type1.jpg";
 import contentTypeImg2 from "../assets/images/img-content-sec-type2.jpg";
 import contentTypeImg3 from "../assets/images/img-content-sec-type3.jpg";
-import useCaseVector1 from "../assets/images/home-use-case-vector1.jpg";
-import useCaseVector2 from "../assets/images/home-use-case-vector2.jpg";
+import useCaseVector1 from "../assets/images/home-hiw-vector1.png";
+import useCaseVector2 from "../assets/images/home-hiw-vector2.png";
 import quizTypeIcon1 from "../assets/icons/icon-quiz-type1.gif";
 import quizTypeIcon2 from "../assets/icons/icon-quiz-type2.gif";
 import quizTypeIcon3 from "../assets/icons/icon-quiz-type3.gif";
@@ -80,12 +82,14 @@ export default function Home() {
   const homeSecAudienceRef = useRef(null);
   const { t, language } = useLanguage();
 
-  const handleScrollToContact = (e) => {
+  const handleScrollToTarget = (e, targetId) => {
     e.preventDefault();
-    const contactSection = document.getElementById("contact");
-    if (contactSection) {
-      const headerOffset = 80;
-      const elementPosition = contactSection.getBoundingClientRect().top;
+    const targetSection = document.getElementById(targetId);
+    if (targetSection) {
+      // Check viewport width directly at click time for accurate mobile detection
+      const isMobileView = window.innerWidth < 768;
+      const headerOffset = isMobileView ? 61 : 78;
+      const elementPosition = targetSection.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
       window.scrollTo({
@@ -294,16 +298,22 @@ export default function Home() {
               <p className="sec-desc">
                 {t("hero.description2")}
               </p>
-              <p className="tagline">{t("hero.tagline")}</p>
+              <p className="sec-desc">{t("hero.tagline")}</p>
               <div className="btns-flex">
                 <a 
-                  href="#contact" 
+                  href="#why-iqrew" 
                   className="btn btn--orange btn--lg"
-                  onClick={handleScrollToContact}
+                  onClick={(e) => handleScrollToTarget(e, "why-iqrew")}
                 >
                   {t("hero.cta")}
                 </a>
-                <Link to="/contact" className="btn btn--outline-white btn--lg">Request an Offer</Link>
+                <a 
+                  href="#contact" 
+                  className="btn btn--outline-white btn--lg"
+                  onClick={(e) => handleScrollToTarget(e, "contact")}
+                >
+                  Request an Offer
+                </a>
               </div>
             </div>
             <div className="img-container" data-aos="fade-left">
@@ -391,7 +401,7 @@ export default function Home() {
               href="#contact" 
               className="btn btn--orange btn--lg" 
               data-aos="fade-left" 
-              onClick={handleScrollToContact}
+              onClick={(e) => handleScrollToTarget(e, "contact")}
             >
               {t("successStory.cta")}
             </a>
@@ -440,7 +450,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="img-container" data-aos="fade-left">
-                <img src={useCaseVector1} alt="Use Case" />
+                <img src={HiwVector1} alt="Use Case" />
               </div>
             </div>
             <div className="row-item">
@@ -452,7 +462,7 @@ export default function Home() {
                 <p className="content-desc">{t("howItWorks.deadlines.description2")}</p>
               </div>
               <div className="img-container" data-aos="fade-right">
-                <img src={useCaseVector2} alt="Use Case" />
+                <img src={HiwVector2} alt="Use Case" />
               </div>
             </div>
           </div>
@@ -810,7 +820,7 @@ export default function Home() {
               href="#contact" 
               className="btn btn--orange btn--lg" 
               data-aos="fade-left" 
-              onClick={handleScrollToContact}
+              onClick={(e) => handleScrollToTarget(e, "contact")}
             >
               {t("pricing.cta")}
             </a>
@@ -1016,7 +1026,7 @@ export default function Home() {
             <a 
               href="#contact" 
               className="btn btn--orange btn--lg" data-aos="fade-left"
-              onClick={handleScrollToContact}
+              onClick={(e) => handleScrollToTarget(e, "contact")}
             >
               {t("finalCta.cta")}
             </a>

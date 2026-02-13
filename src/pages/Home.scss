@@ -72,20 +72,16 @@
         font-weight: 500;
         color: #ff8c1d;
         line-height: 1.3;
+        margin-bottom: 24px;
       }
       .sec-desc {
         color: #ededed;
-      }
-      .tagline {
-        font-size: 16px;
-        font-weight: 500;
-        color: #ff8c1d;
-        line-height: 1.5;
-        margin: 24px 0 28px;
+        margin-top: 16px;
       }
       .btns-flex {
         display: flex;
         gap: 16px;
+        margin-top: 28px;
       }
     }
     .img-container {
@@ -163,7 +159,7 @@
   .rows-flex{
     display: flex;
     flex-direction: column;
-    row-gap: 72px;
+    row-gap: 80px;
   }
   .row-item{
     display: flex;
@@ -178,7 +174,7 @@
       }
     }
     .content-container{
-      width: 560px;
+      width: 530px;
       .content-title{
         font-size: 32px;
         font-weight: 600;
@@ -207,12 +203,12 @@
     }
     &:nth-of-type(1){
       .img-container{
-        width: 600px;
+        width: 620px;
       }
     }
     &:nth-of-type(2){
       .img-container{
-        width: 520px;
+        width: 480px;
       }
     }
   }
