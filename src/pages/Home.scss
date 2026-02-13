@@ -1175,6 +1175,68 @@
     }
   }
 
+  .home-hero-sec {
+    padding: 32px 0 48px;
+    .hero-flex {
+      display: block;
+      .content-container {
+        width: 100%;
+        .sec-title-lg {
+          font-size: 36px;
+          line-height: 1.25;
+          margin-bottom: 16px;
+        }
+        .sec-subtitle {
+          font-size: 16px;
+          margin-bottom: 20px;
+        }
+        .sec-desc {
+          margin-top: 12px;
+        }
+        .btns-flex {
+          gap: 12px;
+          .btn{
+            flex: 1;
+            padding: 10px 12px !important;
+          }
+        }
+      }
+      .img-container {
+        display: none;
+        width: 100%;
+      }
+    }
+  }
+
+  .home-why-iqrew-sec{
+    padding: 48px 0 48px;
+    .section-header{
+      max-width: 100%;
+    }
+    .features-flex {
+      flex-direction: column;
+      gap: 16px;
+    }
+    .item {
+      width: 100%;
+      padding: 24px 20px 20px;
+      border-width: 2px;
+      .icon-container {
+        svg {
+          font-size: 24px;
+        }
+      }
+      .item-title {
+        font-size: 20px;
+        margin-bottom: 14px;
+      }
+      .item-desc {
+        font-size: 14px;
+        line-height: 1.5;
+      }
+    }
+  }
+
   .home-hiw-sec {
     padding: 48px 0 44px;
     .section-header{
@@ -1252,35 +1314,6 @@
         line-height: 1.5;
         text-align: center;
         margin-top: 14px;
-      }
-    }
-  }
-
-  .home-why-iqrew-sec{
-    padding: 48px 0 48px;
-    .section-header{
-      max-width: 100%;
-    }
-    .features-flex {
-      flex-direction: column;
-      gap: 16px;
-    }
-    .item {
-      width: 100%;
-      padding: 24px 20px 20px;
-      border-width: 2px;
-      .icon-container {
-        svg {
-          font-size: 24px;
-        }
-      }
-      .item-title {
-        font-size: 20px;
-        margin-bottom: 14px;
-      }
-      .item-desc {
-        font-size: 14px;
-        line-height: 1.5;
       }
     }
   }
@@ -1561,6 +1594,7 @@
           align-items: flex-start;
           column-gap: 10px;
           padding: 16px 12px;
+          cursor: default;
           .faq-icon {
             margin-top: 2px;
             svg {

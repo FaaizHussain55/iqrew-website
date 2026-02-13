@@ -14,7 +14,8 @@
     "description1": "Mit IQrew erstellst du Schulungen für Mitarbeitende in wenigen Klicks. Modular, effizient, übersichtlich. Erstelle Kurse aus wiederverwendbaren Modulen und Inhalten, setze Deadlines, prüfe Wissen mit Quizzen und dokumentiere Lernerfolge mit automatisch erstellten Zertifikaten.",
     "description2": "Für Admins liefert das Dashboard alle Infos für ein abteilungsübergreifendes Tracking der Lernerfortschritte, Qualifikationen und Zertifikatsdatenbanken, inklusive Usermanagement mit starken Tagging- und Filter- und Exportoptionen.",
     "tagline": "Ideal für Reporting, Controlling und Qualifikationsmanagement!",
-    "cta": "Jetzt Loslegen"
+    "cta": "Jetzt Loslegen",
+    "cta2": "Angebot anfragen"
   },
   "whyIqrew": {
     "label": "WARUM IQREW",
@@ -98,10 +99,10 @@
       "title": "Videoinhalte",
       "description": "Du kannst festlegen, ob das Überspringen erlaubt oder verhindert werden soll. Ideal für:",
       "points": {
-          "point1": "Pflichtinhalte wie Sicherheitsunterweisungen",
-          "point2": "Datenschutzschulungen",
-          "point3": "Compliance-Schulungen"
-        }
+        "point1": "Pflichtinhalte wie Sicherheitsunterweisungen",
+        "point2": "Datenschutzschulungen",
+        "point3": "Compliance-Schulungen"
+      }
     },
     "autoCertificates": {
       "title": "Automatisierte Zertifikats-erstellung",
@@ -115,8 +116,7 @@
         "multipleChoice": "Multiple Choice",
         "singleChoice": "Single Choice",
         "trueFalse": "True/False",
-        "sequencing": "Reihenfolgen",
-        "sequencingDesc": "z. B. Prozessschritte korrekt ordnen"
+        "sequencing": "Reihenfolgen"
       }
     }
   },

@@ -149,7 +149,7 @@ export default function Home() {
     { name: t("quizzes.quizTypes.types.multipleChoice"), iconImg: quizTypeIcon1 },
     { name: t("quizzes.quizTypes.types.singleChoice"), iconImg: quizTypeIcon2 },
     { name: t("quizzes.quizTypes.types.trueFalse"), iconImg: quizTypeIcon3 },
-    { name: t("quizzes.quizTypes.types.sequencing"), iconImg: quizTypeIcon4, description: t("quizzes.quizTypes.types.sequencingDesc") },
+    { name: t("quizzes.quizTypes.types.sequencing"), iconImg: quizTypeIcon4 },
   ], [t]);
 
   const contentTypes = useMemo(() => [
@@ -312,7 +312,7 @@ export default function Home() {
                   className="btn btn--outline-white btn--lg"
                   onClick={(e) => handleScrollToTarget(e, "contact")}
                 >
-                  Request an Offer
+                  {t("hero.cta2")}
                 </a>
               </div>
             </div>
@@ -569,10 +569,7 @@ export default function Home() {
                 {quizTypes.map((type, index) => (
                   <div key={index} className="quiz-type">
                     <img className="type-icon" src={type.iconImg} alt={type.name} />
-                    <div>
-                      <h4 className="type-name">{type.name}</h4>
-                      {type.description && <p className="type-desc">{type.description}</p>}
-                    </div>
+                    <h4 className="type-name">{type.name}</h4>
                   </div>
                 ))}
               </div>

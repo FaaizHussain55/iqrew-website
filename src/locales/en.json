@@ -14,7 +14,8 @@
     "description1": "With IQrew, you can create trainings for your employees in just a few clicks. Modular, efficient, clear. Create courses from reusable modules and contents, set deadlines, check knowledge with quizzes, and document learning success with automatically generated certificates.",
     "description2": "For admins, the dashboard delivers all information for cross-departmental tracking of learning progress, qualifications, and certificate databases, including user management with powerful tagging and filtering options.",
     "tagline": "Ideal tool for Reporting, Controlling, Qualifications and Knowledge Management!",
-    "cta": "Start with IQrew"
+    "cta": "Start with IQrew",
+    "cta2": "Request an Offer"
   },
   "whyIqrew": {
     "label": "WHY IQREW",
@@ -96,7 +97,12 @@
     },
     "videoSkipping": {
       "title": "Video Contents: Prevent Skipping",
-      "description": "For videos, you can determine whether skipping should be prevented. Ideal for mandatory contents such as safety instructions, data privacy, or compliance training."
+      "description": "For videos, you can determine whether skipping should be prevented. Ideal for mandatory contents such as safety instructions, data privacy, or compliance training.",
+      "points": {
+        "point1": "Mandatory content such as safety briefings",
+        "point2": "Data protection training",
+        "point3": "Compliance training"
+      }
     },
     "autoCertificates": {
       "title": "Automatic Certificates, As Soon As Everything Is Passed",
@@ -110,8 +116,7 @@
         "multipleChoice": "Multiple Choice",
         "singleChoice": "Single Choice",
         "trueFalse": "True/False",
-        "sequencing": "Sequencing",
-        "sequencingDesc": "e.g., ordering process steps correctly"
+        "sequencing": "Sequencing"
       }
     }
   },

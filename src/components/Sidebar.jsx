@@ -90,6 +90,13 @@ export default function Sidebar({ isOpen, onClose }) {
               {link.label}
             </a>
           ))}
+          <a
+            href="#contact"
+            onClick={(e) => handleNavClick(e, "#contact")}
+            className="link"
+          >
+            {t("navigation.contactUs")}
+          </a>
         </nav>
         <div className="sidebar-actions">
           <div className="language-switcher">
@@ -110,13 +117,6 @@ export default function Sidebar({ isOpen, onClose }) {
               DE
             </button>
           </div>
-          <a
-            href="#contact"
-            onClick={(e) => handleNavClick(e, "#contact")}
-            className="btn btn--md btn--orange"
-          >
-            {t("navigation.contactUs")}
-          </a>
         </div>
       </aside>
     </>
