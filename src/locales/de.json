@@ -388,6 +388,30 @@
     "openMenu": "Menü öffnen",
     "closeMenu": "Menü schließen",
     "iqrewHome": "iQrew Startseite"
+  },
+  "seo": {
+    "title": "IQrew - Corporate Training Tool | Mitarbeiterschulungsplattform",
+    "description": "IQrew ist ein Corporate Training Tool, das die Mitarbeiteronboarding beschleunigt und Qualifikationen überprüfbar macht. Erstellen Sie modulare Kurse, verfolgen Sie den Fortschritt und automatisieren Sie Zertifikate.",
+    "ogTitle": "IQrew - Corporate Training Tool",
+    "ogDescription": "Onboarding beschleunigen, Qualifikationen überprüfbar machen. Erstellen Sie modulare Schulungskurse mit automatisierten Zertifikaten und Fortschrittsverfolgung.",
+    "twitterTitle": "IQrew - Corporate Training Tool",
+    "twitterDescription": "Onboarding beschleunigen, Qualifikationen überprüfbar machen. Erstellen Sie modulare Schulungskurse mit automatisierten Zertifikaten."
+  },
+  "images": {
+    "hero": "IQrew Corporate Training Platform Dashboard",
+    "adminDashboard": "IQrew Admin-Dashboard mit Lernfortschritt und Analysen",
+    "adminUsers": "IQrew Benutzerverwaltung mit Tagging- und Filteroptionen",
+    "adminTags": "IQrew Benutzer-Tags und Filtersystem zur Organisation von Mitarbeitern",
+    "adminCertificates": "IQrew Zertifikatsverwaltung und Tracking externer Qualifikationen",
+    "howItWorks1": "IQrew modulare Kursstruktur und Content-Wiederverwendung",
+    "howItWorks2": "IQrew Fristenverwaltung und Schulungsplanungssystem",
+    "useCase1": "Mitarbeiter-Onboarding-Schulung mit IT-Sicherheit und HR-Prozessen",
+    "useCase2": "Typische Corporate-Training-Szenarien und Anwendungsfälle",
+    "contentType1": "Erstellung und Verwaltung von Schulungsvideos in IQrew",
+    "contentType2": "Erstellung von Audioinhalten für Mitarbeiterschulungen",
+    "contentType3": "PDF-Dokumentenverwaltung für Schulungsmaterialien",
+    "quizType": "Interaktive Quiz-Typen: Multiple Choice, Single Choice, Richtig/Falsch und Sequenzierung",
+    "vector": "Dekorative Vektorillustration"
   }
 }
 

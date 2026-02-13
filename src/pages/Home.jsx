@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useEffect, useRef, useMemo, useState } from "react";
+import { useEffect, useRef, useMemo, useState, useCallback } from "react";
 // import { Swiper, SwiperSlide } from "swiper/react";
 // import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import ShapeSvgComponent from "../components/ShapeSvgComponent";
@@ -82,7 +82,7 @@ export default function Home() {
   const homeSecAudienceRef = useRef(null);
   const { t, language } = useLanguage();
 
-  const handleScrollToTarget = (e, targetId) => {
+  const handleScrollToTarget = useCallback((e, targetId) => {
     e.preventDefault();
     const targetSection = document.getElementById(targetId);
     if (targetSection) {
@@ -97,18 +97,21 @@ export default function Home() {
         behavior: "smooth",
       });
     }
-  };
+  }, []);
 
   // Initialize AOS only for home-audience-sec section (optimized)
   useEffect(() => {
     // Only initialize if the section exists
     if (homeSecAudienceRef.current) {
+      // Check if mobile device to disable animations for better performance
+      const isMobile = window.innerWidth < 768;
+      
       AOS.init({
         duration: 800,
         easing: "ease-in-out",
         once: true, // Animation happens only once for better performance
         offset: 100,
-        disable: false,
+        disable: isMobile ? 'mobile' : false, // Disable on mobile for better performance
         startEvent: "DOMContentLoaded",
       });
 
@@ -278,10 +281,10 @@ export default function Home() {
     };
   }, [faqs]);
 
-  const socials = [
+  const socials = useMemo(() => [
     { icon: faInstagram, label: "Instagram", url: "https://www.instagram.com/iqrew.de?igsh=MW4ybnF2NTl1ZTNvdA%3D%3D&utm_source=qr" },
     { icon: faLinkedinIn, label: "LinkedIn", url: "https://www.linkedin.com/company/iqrew" },
-  ];
+  ], []);
 
   return (
     <div className="home-page">
@@ -317,7 +320,7 @@ export default function Home() {
               </div>
             </div>
             <div className="img-container" data-aos="fade-left">
-              <img src={heroImage} alt="Hero Image" />
+              <img src={heroImage} alt={t("images.hero")} />
               {/* <div className="hero-images-grid">
                 <div className="hero-image hero-image--top-left">
                   <div className="image-placeholder">
@@ -388,7 +391,7 @@ export default function Home() {
 
       {/* Success Story Section */}
       <section className="blue-banner-sec home-success-story-sec">
-        <img className="vector" src={shapeFour} alt="Vector" />
+        <img className="vector" src={shapeFour} alt={t("images.vector")} />
         <div className="container">
           <div className="banner-flex">
             <div className="banner-content" data-aos="fade-right">
@@ -450,7 +453,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="img-container" data-aos="fade-left">
-                <img src={HiwVector1} alt="Use Case" />
+                <img src={HiwVector1} alt={t("images.howItWorks1")} />
               </div>
             </div>
             <div className="row-item">
@@ -462,7 +465,7 @@ export default function Home() {
                 <p className="content-desc">{t("howItWorks.deadlines.description2")}</p>
               </div>
               <div className="img-container" data-aos="fade-right">
-                <img src={HiwVector2} alt="Use Case" />
+                <img src={HiwVector2} alt={t("images.howItWorks2")} />
               </div>
             </div>
           </div>
@@ -471,7 +474,7 @@ export default function Home() {
 
       {/* Stats Section */}
       <section className="home-stats-sec">
-        <img className="vector" src={shapeOne} alt="Vector" />
+        <img className="vector" src={shapeOne} alt={t("images.vector")} />
         <ShapeSvgComponent className="shape1" fillColor="#ef7600">
           <svg width="80" height="69" viewBox="0 0 80 69" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M40 0L79.8372 69H0.16283L40 0Z" fill="#fff"/>
@@ -568,7 +571,7 @@ export default function Home() {
               <div className="quiz-types-list">
                 {quizTypes.map((type, index) => (
                   <div key={index} className="quiz-type">
-                    <img className="type-icon" src={type.iconImg} alt={type.name} />
+                    <img className="type-icon" src={type.iconImg} alt={type.name} loading="lazy" />
                     <h4 className="type-name">{type.name}</h4>
                   </div>
                 ))}
@@ -616,7 +619,7 @@ export default function Home() {
                 </ul>
               </div>
               <div className="img-container" data-aos="fade-left">
-                <img src={language === 'de' ? adminDashboardImgDe : adminDashboardImgEng} alt="Admin Dashboard" />
+                <img src={language === 'de' ? adminDashboardImgDe : adminDashboardImgEng} alt={t("images.adminDashboard")} loading="lazy" />
               </div>
             </div>
             <div className="row-item">
@@ -647,7 +650,7 @@ export default function Home() {
                 </ul>
               </div>
               <div className="img-container" data-aos="fade-right">
-                <img src={language === 'de' ? adminUsersImgDe : adminUsersImgEng} alt="Admin Dashboard" />
+                <img src={language === 'de' ? adminUsersImgDe : adminUsersImgEng} alt={t("images.adminUsers")} loading="lazy" />
               </div>
             </div>
             <div className="row-item">
@@ -672,7 +675,7 @@ export default function Home() {
                 </ul>
               </div>
               <div className="img-container" data-aos="fade-left">
-                <img src={language === 'de' ? adminTagsImgDe : adminTagsImgEng} alt="Admin Dashboard" />
+                <img src={language === 'de' ? adminTagsImgDe : adminTagsImgEng} alt={t("images.adminTags")} loading="lazy" />
               </div>
             </div>
             <div className="row-item">
@@ -702,7 +705,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="img-container" data-aos="fade-right">
-                <img src={language === 'de' ? adminCertificatesImgDe : adminCertificatesImgEng} alt="Admin Dashboard" />
+                <img src={language === 'de' ? adminCertificatesImgDe : adminCertificatesImgEng} alt={t("images.adminCertificates")} loading="lazy" />
               </div>
             </div>
           </div>
@@ -783,7 +786,7 @@ export default function Home() {
             {contentTypes.map((type, index) => (
               <div key={index} className="content-type-row" data-aos="fade-up">
                 <div className="img-container">
-                  <img src={type.img} alt={type.title} />
+                  <img src={type.img} alt={type.title} loading="lazy" />
                 </div>
                 <div className="content-container">
                   <h3 className="content-title">{type.title}</h3>
@@ -804,7 +807,7 @@ export default function Home() {
 
       {/* Pricing Section */}
       <section className="blue-banner-sec home-pricing-sec">
-        <img className="vector" src={shapeFour} alt="Vector" />
+        <img className="vector" src={shapeFour} alt={t("images.vector")} />
         <div className="container">
           <div className="banner-flex">
             <div className="banner-content" data-aos="fade-right">
@@ -869,7 +872,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="img-container" data-aos="fade-left">
-                <img src={useCaseVector1} alt="Use Case" />
+                <img src={useCaseVector1} alt={t("images.useCase1")} loading="lazy" />
               </div>
             </div>
             <div className="row-item">
@@ -890,7 +893,7 @@ export default function Home() {
                 </ul>
               </div>
               <div className="img-container" data-aos="fade-right">
-                <img src={useCaseVector2} alt="Use Case" />
+                <img src={useCaseVector2} alt={t("images.useCase2")} loading="lazy" />
               </div>
             </div>
           </div>
@@ -899,8 +902,8 @@ export default function Home() {
 
       {/* Target Audience Section */}
       <section className="home-audience-sec" ref={homeSecAudienceRef}>
-        <img className="vector-top" src={shapeTwo} alt="Vector" />
-        <img className="vector-bottom" src={shapeThree} alt="Vector" />
+        <img className="vector-top" src={shapeTwo} alt={t("images.vector")} />
+        <img className="vector-bottom" src={shapeThree} alt={t("images.vector")} />
         <div className="container">
           <ShapeSvgComponent className="shape1" fillColor="#ef7600">
             <svg width="43" height="86" viewBox="0 0 43 86" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1011,7 +1014,7 @@ export default function Home() {
 
       {/* Onboarding Section */}
       <section className="blue-banner-sec home-onboarding-sec">
-        <img className="vector" src={shapeFour} alt="Vector" />
+        <img className="vector" src={shapeFour} alt={t("images.vector")} />
         <div className="container">
           <div className="banner-flex">
             <div className="banner-content" data-aos="fade-right">
@@ -1033,8 +1036,8 @@ export default function Home() {
 
       {/* Form Section */}
       <section id="contact" className="home-sec-footer">
-        <img className="vector-top" src={shapeTwo} alt="Vector" />
-        <img className="vector-bottom" src={shapeThree} alt="Vector" />
+        <img className="vector-top" src={shapeTwo} alt={t("images.vector")} />
+        <img className="vector-bottom" src={shapeThree} alt={t("images.vector")} />
         <div className="container">
           <ShapeSvgComponent className="shape1" fillColor="#ef7600">
             <svg width="43" height="86" viewBox="0 0 43 86" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -388,6 +388,30 @@
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
     "iqrewHome": "iQrew Home"
+  },
+  "seo": {
+    "title": "IQrew - Corporate Training Tool | Employee Onboarding Platform",
+    "description": "IQrew is a corporate training tool that accelerates employee onboarding and makes qualifications verifiable. Create modular courses, track progress, and automate certifications.",
+    "ogTitle": "IQrew - Corporate Training Tool",
+    "ogDescription": "Accelerate onboarding, make qualifications verifiable. Create modular training courses with automated certificates and progress tracking.",
+    "twitterTitle": "IQrew - Corporate Training Tool",
+    "twitterDescription": "Accelerate onboarding, make qualifications verifiable. Create modular training courses with automated certificates."
+  },
+  "images": {
+    "hero": "IQrew Corporate Training Platform Dashboard",
+    "adminDashboard": "IQrew Admin Dashboard showing learning progress and analytics",
+    "adminUsers": "IQrew User Management interface with tagging and filtering options",
+    "adminTags": "IQrew User Tags and filtering system for organizing employees",
+    "adminCertificates": "IQrew Certificate Management and external qualifications tracking",
+    "howItWorks1": "IQrew modular course structure and content reuse workflow",
+    "howItWorks2": "IQrew deadline management and training scheduling system",
+    "useCase1": "Employee onboarding training with IT security and HR processes",
+    "useCase2": "Typical corporate training scenarios and use cases",
+    "contentType1": "Training videos creation and management in IQrew",
+    "contentType2": "Audio content creation for employee training",
+    "contentType3": "PDF document management for training materials",
+    "quizType": "Interactive quiz types: multiple choice, single choice, true/false, and sequencing",
+    "vector": "Decorative vector illustration"
   }
 }
 

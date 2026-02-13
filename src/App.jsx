@@ -2,6 +2,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import LandingHeader from "./components/LandingHeader";
+import SEOHead from "./components/SEOHead";
 // import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import SignUp from "./pages/auth/SignUp";
@@ -30,6 +31,7 @@ function ScrollToTop() {
 function App() {
   return (
     <LanguageProvider>
+      <SEOHead />
       <ScrollToTop />
       <LandingHeader />
       <main>

@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext, useState, useEffect } from 'react';
 import enTranslations from '../locales/en.json';
 import deTranslations from '../locales/de.json';
@@ -14,9 +15,9 @@ export const useLanguage = () => {
 
 export const LanguageProvider = ({ children }) => {
   const [language, setLanguage] = useState(() => {
-    // Get language from localStorage or default to 'en'
+    // Get language from localStorage or default to 'de'
     const savedLanguage = localStorage.getItem('iqrew-language');
-    return savedLanguage || 'en';
+    return savedLanguage || 'de';
   });
 
   const translations = {
@@ -59,4 +60,6 @@ export const LanguageProvider = ({ children }) => {
     </LanguageContext.Provider>
   );
 };
+
+LanguageProvider.displayName = 'LanguageProvider';
 
