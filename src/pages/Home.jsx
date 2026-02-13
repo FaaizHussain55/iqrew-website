@@ -27,8 +27,8 @@ import adminCertificatesImgDe from "../assets/images/german-certificates-ss.png"
 import contentTypeImg1 from "../assets/images/img-content-sec-type1.jpg";
 import contentTypeImg2 from "../assets/images/img-content-sec-type2.jpg";
 import contentTypeImg3 from "../assets/images/img-content-sec-type3.jpg";
-import useCaseVector1 from "../assets/images/home-hiw-vector1.png";
-import useCaseVector2 from "../assets/images/home-hiw-vector2.png";
+import useCaseVector1 from "../assets/images/home-use-cases-vector1.png";
+import useCaseVector2 from "../assets/images/home-use-cases-vector2.png";
 import quizTypeIcon1 from "../assets/icons/icon-quiz-type1.gif";
 import quizTypeIcon2 from "../assets/icons/icon-quiz-type2.gif";
 import quizTypeIcon3 from "../assets/icons/icon-quiz-type3.gif";
@@ -423,7 +423,7 @@ export default function Home() {
                   {t("howItWorks.coursesModules.title")}
                 </h3>
                 <p className="content-desc">{t("howItWorks.coursesModules.description")}</p>
-                <ul className="checks-list orange-checks">
+                <ul className="checks-list blue-checks">
                   <li>
                     <FontAwesomeIcon className="icon" icon={faCircleCheck} />
                     <span>{t("howItWorks.coursesModules.points.courses")}</span>
@@ -845,7 +845,7 @@ export default function Home() {
                 <p className="content-desc">
                   {t("useCases.onboardingTraining.description")}
                 </p>
-                <ul className="checks-list orange-checks">
+                <ul className="checks-list blue-checks">
                   <li>
                     <FontAwesomeIcon className="icon" icon={faCircleCheck} />
                     <span>{t("useCases.onboardingTraining.points.itSecurity")}</span>
@@ -883,7 +883,7 @@ export default function Home() {
                 <p className="content-desc">
                   {t("useCases.typicalTraining.description")}
                 </p>
-                <ul className="checks-list orange-checks">
+                <ul className="checks-list blue-checks">
                   {trainingTypes.map((type, index) => (
                     <li key={index}>
                       <FontAwesomeIcon className="icon" icon={faCircleCheck} />
