@@ -106,7 +106,7 @@ img {
       box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
     }
   }
-  &-outline-orange {
+  &--outline-orange {
     background: transparent;
     color: var(--brand-orange);
     border: 1px solid var(--brand-orange);
@@ -115,12 +115,21 @@ img {
     }
   }
 
-  &-outline-blue {
+  &--outline-blue {
     background: transparent;
     color: var(--brand-blue);
     border: 1px solid var(--brand-blue);
     &:hover {
       background: rgba(255, 122, 0, 0.05);
+    }
+  }
+
+  &--outline-white {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    &:hover {
+      background: rgba(255, 255, 255, 0.05);
     }
   }
 

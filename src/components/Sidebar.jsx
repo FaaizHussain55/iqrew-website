@@ -26,7 +26,7 @@ export default function Sidebar({ isOpen, onClose }) {
     if (targetElement) {
       // Check viewport width directly at click time for accurate mobile detection
       const isMobileView = window.innerWidth < 768;
-      const headerOffset = isMobileView ? 61 : 80;
+      const headerOffset = isMobileView ? 61 : 78;
       const elementPosition = targetElement.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 

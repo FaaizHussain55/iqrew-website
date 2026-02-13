@@ -2,9 +2,8 @@
   width: 100%;
   position: sticky;
   top: 0;
-  background-color: transparent;
+  background-color: #ffffff;
   padding: 16px 0;
-  border-bottom: 1px solid transparent;
   z-index: 20;
   transition: all 0.2s;
   .header-flex {
@@ -96,8 +95,7 @@
     }
   }
   &.scrolled {
-    background-color: #fff;
-    border-bottom-color: rgba(7, 33, 68, 0.08);
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   }
 }
 

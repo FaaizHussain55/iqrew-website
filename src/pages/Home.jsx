@@ -13,6 +13,7 @@ import shapeTwo from "../assets/images/line-vector-2.svg";
 import shapeThree from "../assets/images/line-vector-3.svg";
 import shapeFour from "../assets/images/line-vector-4.svg";
 // import shapeFive from "../assets/images/line-vector-5.svg";
+import heroImage from "../assets/images/img-hero.png";
 import adminDashboardImgEng from "../assets/images/eng-dashboard-ss.png";
 import adminUsersImgEng from "../assets/images/eng-users-ss.png";
 import adminTagsImgEng from "../assets/images/eng-tags-ss.png";
@@ -94,7 +95,7 @@ export default function Home() {
     }
   };
 
-  // Initialize AOS only for home-sec-audience section (optimized)
+  // Initialize AOS only for home-audience-sec section (optimized)
   useEffect(() => {
     // Only initialize if the section exists
     if (homeSecAudienceRef.current) {
@@ -281,11 +282,10 @@ export default function Home() {
   return (
     <div className="home-page">
       {/* Hero Section - Dark Blue Background */}
-      <section className="home-hero">
+      <section className="home-hero-sec">
         <div className="container">
-          <div className="hero-content">
-            <div className="hero-left">
-              {/* <div className="sec-label">CORPORATE TRAINING TOOL</div> */}
+          <div className="hero-flex">
+            <div className="content-container" data-aos="fade-right">
               <h1 className="sec-title-lg">{t("hero.title")}</h1>
               <h2 className="sec-subtitle">{t("hero.subtitle")}</h2>
               <p className="sec-desc">
@@ -294,8 +294,8 @@ export default function Home() {
               <p className="sec-desc">
                 {t("hero.description2")}
               </p>
-              <p className="hero-tagline">{t("hero.tagline")}</p>
-              <div className="hero-cta">
+              <p className="tagline">{t("hero.tagline")}</p>
+              <div className="btns-flex">
                 <a 
                   href="#contact" 
                   className="btn btn--orange btn--lg"
@@ -303,11 +303,11 @@ export default function Home() {
                 >
                   {t("hero.cta")}
                 </a>
-                {/* <Link to="/contact" className="btn btn--outline-white btn--lg">Request an Offer</Link> */}
+                <Link to="/contact" className="btn btn--outline-white btn--lg">Request an Offer</Link>
               </div>
-              <div className="hero-dots-pattern"></div>
             </div>
-            <div className="hero-right">
+            <div className="img-container" data-aos="fade-left">
+              <img src={heroImage} alt="Hero Image" />
               {/* <div className="hero-images-grid">
                 <div className="hero-image hero-image--top-left">
                   <div className="image-placeholder">
@@ -373,13 +373,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-          {/* <div className="success-highlight">
-            <div className="success-badge">SUCCESS STORY</div>
-            <p className="success-text">
-              IQrew is a platform for companies that want to not only create training but scale it: modular structure, deadlines, quizzes, certificates, and an admin area that makes qualifications truly visible. Our customers report up to a <strong>33% reduction in the onboarding time</strong> for new colleagues.
-            </p>
-          </div> */}
-                </div>
+        </div>
       </section>
 
       {/* Success Story Section */}
@@ -462,24 +456,11 @@ export default function Home() {
               </div>
             </div>
           </div>
-
-          {/* <div className="works-layout">
-            <div className="works-right">
-              <div className="works-content-item">
-                <h3>Set Deadlines and Steer Progress Cleanly</h3>
-                <p>
-                  When creating courses, you can define deadlines for your employees. This ensures that onboardings, training sessions, or mandatory training are completed on time and simply do not get lost.
-                </p>
-                <p>IQrew enables transparent expectation management for admins and learners.</p>
-            </div>
-            </div>
-          </div> */}
-          
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="home-sec-stats">
+      <section className="home-stats-sec">
         <img className="vector" src={shapeOne} alt="Vector" />
         <ShapeSvgComponent className="shape1" fillColor="#ef7600">
           <svg width="80" height="69" viewBox="0 0 80 69" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -521,28 +502,6 @@ export default function Home() {
             <h2 className="sec-title-lg">{t("quizzes.title")}</h2>
           </div>
           <div className="quizzes-layout">
-            {/* <div className="quizzes-left">
-              <div className="quiz-feature-card">
-                <div className="quiz-card-icon">📝</div>
-                <h3>Quiz Creation for Contents and Complete Courses</h3>
-                <p>With IQrew, you create quizzes both:</p>
-                <ul className="quiz-list">
-                  <li>For individual contents (e.g., after a video or PDF).</li>
-                  <li>As well as for complete courses (final tests).</li>
-                </ul>
-              </div>
-              <div className="quiz-feature-card">
-                <div className="quiz-card-icon">🎬</div>
-                <h3>Video Contents: Prevent Skipping</h3>
-                <p>
-                  For videos, you can determine whether skipping should be prevented. Ideal for mandatory contents such as safety instructions, data privacy, or compliance training.
-                </p>
-              </div>
-            </div>
-            <div className="quizzes-right">
-              
-            </div> */}
-
             <div className="quiz-card" data-aos="fade-up">
               <div className="icon-container">
                 <FontAwesomeIcon className="icon" icon={faFileAlt} />
@@ -762,7 +721,7 @@ export default function Home() {
               </div>
               <h4 className="item-title">{t("bulkImport.items.newLocations.title")}</h4>
               <p className="item-desc">{t("bulkImport.items.newLocations.description")}</p>
-                  </div>
+            </div>
             <div className="item" data-aos="fade-up">
               <div className="icon-container">
                 <FontAwesomeIcon icon={faUserPlus} />
@@ -835,51 +794,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* <section className="content-creation-section">
-        <div className="container">
-          <div className="section-header">
-            <h4 className="sec-label">CONTENT CREATION</h4>
-            <h2 className="sec-title-lg">Have Training Content Created</h2>
-            <h3 className="sec-subtitle">You Want to Offer Your Team High-Quality Training Content, But You Lack Time, Resources, or an Established Content Team?</h3>
-            <p className="sec-desc">
-              We take over the creation of contents for your IQrew training. AI-supported, target-group-oriented, and based on your documents and data.
-              We create videos, audios, and PDFs exactly so that they fit your roles, language, and internal specifications.
-            </p>
-          </div>
-          <div className="content-types-carousel-wrapper">
-            <Swiper
-              modules={[Navigation, Pagination, Autoplay]}
-              spaceBetween={30}
-              slidesPerView={1}
-              navigation={true}
-              pagination={{ clickable: true }}
-              autoplay={{ delay: 4000, disableOnInteraction: false }}
-              loop={true}
-              breakpoints={{
-                640: { slidesPerView: 2 },
-                992: { slidesPerView: 3 },
-              }}
-              className="content-types-carousel"
-            >
-              {contentTypes.map((type, index) => (
-                <SwiperSlide key={index}>
-                  <div className="content-type-card">
-                    <div className="content-type-header">
-                      <div className="content-type-icon">{type.icon}</div>
-                      <h3>{type.title}</h3>
-                    </div>
-                    <ul className="content-type-list">
-                      {type.items.map((item, itemIndex) => (
-                        <li key={itemIndex}>{item}</li>
-                      ))}
-                    </ul>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-                </div>
-              </div>
-      </section> */}
 
       {/* Pricing Section */}
       <section className="blue-banner-sec home-pricing-sec">
@@ -904,7 +818,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Use Cases Section use-cases-section */} 
+      {/* Use Cases Section */}
       <section id="use-cases" className="home-use-cases-sec">
         <div className="container">
           <div className="section-header">
@@ -973,40 +887,11 @@ export default function Home() {
               </div>
             </div>
           </div>
-          {/* <div className="use-cases-layout">
-            <div className="use-case-card">
-              <div className="use-case-icon">🚀</div>
-              <h3>Create Onboarding Training in Few Clicks</h3>
-              <p>
-                Team leads and admins can build precise onboarding training by combining relevant modules from different company areas, e.g.:
-              </p>
-              <ul className="use-case-list">
-                <li>IT & Security</li>
-                <li>HR & Processes</li>
-                <li>Data Privacy & Compliance</li>
-                <li>Team-specific workflows</li>
-                <li>AI basics in everyday work</li>
-              </ul>
-              <p>The result: New employees receive comprehensive, consistent onboarding without every team creating training completely from scratch.</p>
-            </div>
-            <div className="use-case-card">
-              <div className="use-case-icon">✨</div>
-              <h3>Typical Training That Becomes Particularly Easy with IQrew</h3>
-              <div className="training-types-list">
-                {trainingTypes.map((type, index) => (
-                  <div key={index} className="training-type-item">
-                    <div className="training-type-bullet"></div>
-                    <span>{type}</span>
-                </div>
-                ))}
-              </div>
-            </div>
-          </div> */}
         </div>
       </section>
 
       {/* Target Audience Section */}
-      <section className="home-sec-audience" ref={homeSecAudienceRef}>
+      <section className="home-audience-sec" ref={homeSecAudienceRef}>
         <img className="vector-top" src={shapeTwo} alt="Vector" />
         <img className="vector-bottom" src={shapeThree} alt="Vector" />
         <div className="container">
@@ -1138,27 +1023,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* <section className="blue-banner-sec final-cta-section">
-        <img className="vector" src={shapeFour} alt="Vector" />
-        <div className="container">
-          <div className="cta-content">
-            <div className="cta-label">READY TO START</div>
-            <h2 className="cta-title">IQrew Brings Structure to Training and Speed to Onboarding</h2>
-            <p className="cta-description">
-              IQrew is a platform for companies that want to not only create training but scale it: modular structure, deadlines, quizzes, certificates, and an admin area that makes qualifications truly visible.
-              Our customers report up to a 33% reduction in the onboarding time for new colleagues.
-            </p>
-            <p className="cta-message">
-              Start with IQrew and create training that truly advances your team.
-              Onboarding, compliance, or AI basics: create modular trainings, check knowledge, issue certificates automatically, and track everything in the dashboard.
-            </p>
-            <div className="cta-buttons">
-              <Link to="/contact" className="btn btn--orange btn--lg">Start with IQrew</Link>
-              <Link to="/contact" className="btn btn--outline btn--lg">Request an Offer</Link>
-            </div>
-          </div>
-        </div>
-      </section> */}
 
       {/* Form Section */}
       <section id="contact" className="home-sec-footer">
