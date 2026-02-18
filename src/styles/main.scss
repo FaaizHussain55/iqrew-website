@@ -367,7 +367,6 @@ img {
   .btn {
     font-size: 14px;
     padding: 6px 14px;
-    border-radius: 6px;
     &--md {
       height: 40px;
     }
@@ -375,6 +374,17 @@ img {
       height: 44px;
     }
   }
+
+  .form-label {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  .form-field {
+    padding: 12px 14px;
+    font-size: 14px;
+    border-radius: 6px;
+  }
+
 }
 
 @media (max-width: 768px) {
