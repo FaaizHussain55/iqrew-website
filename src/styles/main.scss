@@ -27,7 +27,7 @@
 body {
   max-width: 1920px;
   font-family: "Inter", sans-serif;
-  background: var(--white);
+  background-color: var(--white);
   color: #79808a;
   margin: 0 auto;
 }
@@ -312,6 +312,25 @@ img {
     background-color: var(--brand-blue);
     &::before {
       background-color: var(--brand-blue);
+    }
+  }
+}
+
+// Dark theme styles
+[data-theme="dark"] {
+  body {
+    background-color: #181c31;
+    color: #8d9197;
+  }
+  .form-label {
+    color: #8d9197;
+  }
+  .form-field {
+    background-color: transparent;
+    color: #fff;
+    border-color: #3c4556;
+    &::placeholder {
+      color: #3c4556;
     }
   }
 }

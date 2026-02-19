@@ -5,7 +5,7 @@ import { useIsMobile } from "../hooks/useIsMobile";
 import { useLanguage } from "../contexts/LanguageContext";
 import "./Sidebar.scss";
 
-export default function Sidebar({ isOpen, onClose }) {
+export default function Sidebar({ isOpen, onClose, isDarkTheme, onToggleTheme }) {
   const isMobile = useIsMobile();
   const { t, language, changeLanguage } = useLanguage();
 
@@ -99,6 +99,32 @@ export default function Sidebar({ isOpen, onClose }) {
           </a>
         </nav>
         <div className="sidebar-actions">
+          <div className="theme-switcher">
+            <button
+              className={`theme-btn ${!isDarkTheme ? 'active' : ''}`}
+              onClick={() => {
+                if (isDarkTheme) {
+                  onToggleTheme();
+                }
+              }}
+              aria-label="Switch to light theme"
+              type="button"
+            >
+              Light
+            </button>
+            <button
+              className={`theme-btn ${isDarkTheme ? 'active' : ''}`}
+              onClick={() => {
+                if (!isDarkTheme) {
+                  onToggleTheme();
+                }
+              }}
+              aria-label="Switch to dark theme"
+              type="button"
+            >
+              Dark
+            </button>
+          </div>
           <div className="language-switcher">
             <button
               className={`lang-btn ${language === 'en' ? 'active' : ''}`}

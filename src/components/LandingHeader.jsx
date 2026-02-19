@@ -9,6 +9,11 @@ import Sidebar from "./Sidebar";
 export default function LandingHeader() {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const [activeSection, setActiveSection] = useState("");
+  const [isDarkTheme, setIsDarkTheme] = useState(() => {
+    // Get theme from localStorage or default to false (light theme)
+    const savedTheme = localStorage.getItem('iqrew-theme');
+    return savedTheme === 'dark';
+  });
   const isMobile = useIsMobile();
   const { t, language, changeLanguage } = useLanguage();
 
@@ -27,6 +32,19 @@ export default function LandingHeader() {
 
   const handleCloseMenu = () => {
     setIsMenuToggled(false);
+  };
+
+  const handleToggleTheme = () => {
+    const newTheme = !isDarkTheme;
+    setIsDarkTheme(newTheme);
+    localStorage.setItem('iqrew-theme', newTheme ? 'dark' : 'light');
+    
+    // Update HTML data-theme attribute
+    if (newTheme) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+    }
   };
 
   const handleNavClick = (e, path) => {
@@ -75,6 +93,15 @@ export default function LandingHeader() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  // Initialize theme on mount
+  useEffect(() => {
+    if (isDarkTheme) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+    }
+  }, [isDarkTheme]);
 
   // Intersection Observer for active section detection
   useEffect(() => {
@@ -193,6 +220,31 @@ export default function LandingHeader() {
                   </a>
                 </nav>
                 <div className="header-actions">
+                  <button
+                    className="theme-toggle-btn"
+                    onClick={handleToggleTheme}
+                    aria-label={isDarkTheme ? "Switch to light theme" : "Switch to dark theme"}
+                    type="button"
+                    title={isDarkTheme ? "Light mode" : "Dark mode"}
+                  >
+                    {isDarkTheme ? (
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" y1="1" x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1" y1="12" x2="3" y2="12"/>
+                        <line x1="21" y1="12" x2="23" y2="12"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                      </svg>
+                    ) : (
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                      </svg>
+                    )}
+                  </button>
                   <div className="language-switcher">
                     <button
                       className={`lang-btn ${language === 'en' ? 'active' : ''}`}
@@ -228,7 +280,7 @@ export default function LandingHeader() {
           </div>
         </div>
       </header>
-      {isMobile && <Sidebar isOpen={isMenuToggled} onClose={handleCloseMenu} />}
+      {isMobile && <Sidebar isOpen={isMenuToggled} onClose={handleCloseMenu} isDarkTheme={isDarkTheme} onToggleTheme={handleToggleTheme} />}
     </>
   );
 }
