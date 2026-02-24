@@ -9,11 +9,16 @@ import Sidebar from "./Sidebar";
 export default function LandingHeader() {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const [activeSection, setActiveSection] = useState("");
-  const [isDarkTheme, setIsDarkTheme] = useState(() => {
-    // Get theme from localStorage or default to false (light theme)
+  const getInitialTheme = () => {
     const savedTheme = localStorage.getItem('iqrew-theme');
-    return savedTheme === 'dark';
-  });
+    return savedTheme ? savedTheme === 'dark' : true;
+  };
+  const [isDarkTheme, setIsDarkTheme] = useState(getInitialTheme);
+  // const [isDarkTheme, setIsDarkTheme] = useState(() => {
+  //   // Get theme from localStorage or default to false (light theme)
+  //   const savedTheme = localStorage.getItem('iqrew-theme');
+  //   return savedTheme === 'dark';
+  // });
   const isMobile = useIsMobile();
   const { t, language, changeLanguage } = useLanguage();
 
