@@ -1148,9 +1148,14 @@
         }
         .quiz-types-list{
           .quiz-type{
-            background: #ffffff;
+            background: #181c31;
+            .type-icon{
+              filter: invert(1) hue-rotate(215deg);
+              mix-blend-mode: difference;
+            }
             .type-name{
-              color: #181c31;
+              font-weight: 400;
+              color: #fff;
             }
           }
         }
